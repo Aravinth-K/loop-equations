@@ -1,0 +1,21 @@
+\section{General solution strategy}
+
+In practice, for complicated multi-matrix models, one needs to consider a large number of loop equations - on the order of hundreds for many of the highly symmetric three-matrix models we will consider. Each of these encode a combinatorial relation relating a random graph with prescribed boundary conditions to  a different set of random graphs with various boundary conditions when a marked edge has been removed. Many of these are not independent, and so we need a systematic approach for eliminating the higher-order resolvent functions.
+
+For all $v\in \mathcal{V}_n$ we obtain a corresponding loop equation, which we denote
+%
+\begin{equation}
+    \label{loopEq}
+    \sum_{w\in\mathcal{W}_n} M_{v,w}^{(n)}\left(\{t_i\},\{p_i\}\right) \, W_{w}(z) + \mathcal{R}_v \big[ \bigcup_{n'<n} \mathcal{W}_{n'} \big] = 0,
+\end{equation}
+%
+where $\mathcal{R}_v$ denotes the remaining terms in the loop equation containing resolvent functions with level $m < n$. The coefficient matrix $M^{(n)}_{v,w}$ will generically depend on resolvent functions of level $m \leqslant \lfloor n/2 \rfloor$, which has been suppressed in \eref{loopEq}. Starting with \eref{loopEq} for level $n=n_{\mathrm{max}}$, one may identify a linearly independent set of constraints with respect to the level-$n$ resolvent functions by using the Gaussian elimination algorithm on $(M^{(n)})^T$. Gaussian elimination reduces $(M^{(n)})^T$ to a matrix, $T^{(n)}$, in row echelon form. The rows of $(M^{(n)})_{ji}$ which form a linearly independent basis are then the rows for which $j\in\mathcal{I}_n$ where 
+%
+\begin{equation}
+    \label{linInd}
+    \mathcal{I}_n = \bigcup_i \, \{ \min{j} : T_{ij}^{(n)} = 0 \, \, \forall j \}.
+\end{equation}
+%
+One may then solve the linearly independent set of equations to express the level-$n$ resolvent functions in terms of lower order resolvent functions. Using these expressions to remove the level-$n$ resolvent functions from the remaining constraints, one obtains a set of constraints linear in resolvent functions of top-level $n_{\mathrm{max}}-1$, which may include distinct loop equations from those computed using variations $v\in\mathcal{V}_{n-1}$. Together with \eref{loopEq} for $v\in\mathcal{V}_{n_{\mathrm{max}}-1}$ we obtain an augmented set of relations at level $n_{\mathrm{max}}-1$. 
+
+We can then iterate this calculation, going from level $n_{\mathrm{max}}-1$ to $n_{\mathrm{max}}-2$, then $n_{\mathrm{max}}-2$ to $n_{\mathrm{max}}-3$, and so on. This procedure fails at a level, say $m$, where the level-$m$ resolvent functions enter non-linearly in the loop equations. The critical level at which this occurs is $n_{\mathrm{crit.}}=\lfloor \frac{n}{2} \rfloor$, as there are variations for which the Jacobian contribution is quadratic in level-$n_{\mathrm{crit.}}$ resolvent functions.

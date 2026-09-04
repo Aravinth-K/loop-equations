@@ -1,0 +1,127 @@
+\appendix
+\section{Analytic Structure and Asymptotics}
+\label{app:asympt}
+
+In this appendix we provide the asymptotic expansions for the resolvents of Chapter 5. Labelling of sheets corresponds to the figures describing the analytic structure therein. Source code implementing these calculations may be found in the GitHub repository \cite{github:ak}.
+
+\section{3-state Potts Model}
+
+\subsection{Fixed boundary conditions}
+
+The asymptotic behaviour of the planar resolvent $W_{(1)}(z)$ is given by:
+%
+\begin{eqnarray}
+    W_{(1)}(z)_0 & =   \frac{1}{z} + \mathcal{O}(z^{-2}) \nonumber\\
+    W_{(1)}(z)_1 & =  t_3 z^2 + (t_2 -1)z - 2t_3^{-1/2} z^{1/2} + \frac{t_2 -2}{t_3} - \frac{(t_2-2)^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(1)}(z)_2 & =  t_3 z^2 + (t_2 -1)z + 2t_3^{-1/2}z^{1/2} + \frac{t_2 -2}{t_3} + \frac{(t_2-2)^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(1)}(z)_3 & =  t_3 z^2 + \frac{(t_2-2)}{2} z - \frac{t_3^{-1/2}}{2\sqrt{2}} z^{1/2} + \frac{(10t_2-1)}{8t_3}  \nonumber\\ & - \frac{(4t_2^2 - 20t_2  -1)} {32\sqrt{2}t_3^{3/2}}z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(1)}(z)_4 & =  t_3 z^2 + \frac{(t_2-2)}{2} z + \frac{t_3^{1/2}}{2\sqrt{2}} z^{1/2} + \frac{(10t_2-1)}{8t_3} \nonumber\\ & + \frac{(4t_2^2 - 20t_2  -1)}{32\sqrt{2}t_3^{3/2}}z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber
+\end{eqnarray}
+
+\subsection{Mixed boundary conditions}
+
+The asymptotic behaviour of the planar resolvent $W_{(2)}(z)$ is given by:
+%
+\begin{eqnarray}
+    W_{(2)}(z)_0 & =   z^{-1} + \mathcal{O}(z^{-2}) \nonumber\\
+    W_{(2)}(z)_1 & = \frac{t_3 z^2}{4}+\frac{\left(t_2 - 2\right)}{2}z -t_3^{-1/2}z^{1/2} +\frac{(t_2-1)^2}{8 t_3^{3/2}}z^{1/2}+\frac{t_2-1}{2 t_3}+\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber \\
+    W_{(2)}(z)_2 & = \frac{t_3 z^2}{4}+\frac{\left(t_2 - 2\right)}{2}z+t_3^{-1/2}z^{1/2}+\frac{(t_2-1)^2}{8 t_3^{3/2}}z^{1/2}+\frac{t_2-1}{2 t_3}+\frac{1}{2}z^{-1}+ \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(2)}(z)_3 & = -2 z + (1+i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  +\frac{\left(1-i\right) \left(t_2^2-(6-4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2}) \nonumber \\
+    W_{(2)}(z)_4 & = -2 z -(1-i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  - \frac{\left(1+i\right) \left(t_2^2-(6+4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2}) \nonumber \\
+    W_{(2)}(z)_5 & = -2 z -(1+i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  -\frac{\left(1-i\right) \left(t_2^2-(6-4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2}+ \mathcal{O}(z^{-3/2}) \nonumber \\
+    W_{(2)}(z)_6 & = -2 z + (1-i) t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  +\frac{\left(1+i\right) \left(t_2^2-(6+4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(2)}(z)_7 & = \frac{t_3 z^2}{4}+\frac{1}{2} \left(t_2-6\right) z+it_3^{-1/2}z^{1/2}-\frac{3 t_2+1}{2 t_3}-\frac{i \left(t_2^2-10 t_2+1\right)}{8 t_3^{3/2}}z^{-1/2} \nonumber\\
+    & -\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(2)}(z)_8 & = \frac{t_3 z^2}{4}+\frac{1}{2} \left(t_2-6\right) z-it_3^{-1/2}z^{1/2}-\frac{3 t_2+1}{2 t_3} +\frac{i \left(t_2^2-10 t_2+1\right)}{8 t_3^{3/2}}z^{-1/2} \nonumber\\
+    & -\frac{1}{2}z^{-1}  +\mathcal{O}(z^{-3/2}) \nonumber\\ 
+    W_{(2)}(z)_9 & = -4z - \frac{4t_{2}}{t_3} - z^{-1} + \mathcal{O}(z^{-2}) \nonumber
+\end{eqnarray}
+
+\subsection{Free boundary conditions}
+
+The asymptotic behaviour of the planar resolvent $W_{(3)}(z)$ is given by:
+%
+\begin{eqnarray}
+    W_{(3)}(z)_0 & = z^{-1} + \mathcal{O}(z^{-2}) \nonumber\\
+    W_{(3)}(z)_1 & = \frac{t_3}{9} z^2 + \frac{(t_2-3)}{3} z + \frac{1}{z} + \mathcal{O}(z^{-2}) \nonumber\\
+    W_{(3)}(z)_2 & = -\frac{3}{2} z + \frac{3i}{2\sqrt{2}t_3^{3/2}}z^{1/2} - \frac{(18t_2 -9)}{8t_3} - \frac{3i(4t_2^2 - 36t_2 + 9)}{32\sqrt{2} t_3^{3/2}} z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber \\
+    W_{(3)}(z)_3 & = -\frac{3}{2} z - \frac{3i}{2\sqrt{2}t_3^{3/2}}z^{1/2} - \frac{(18t_2 -9)}{8t_3} + \frac{3i(4t_2^2 - 36t_2 + 9)}{32\sqrt{2} t_3^{3/2}} z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber \\
+    W_{(3)}(z)_4 & = - \frac{4}{3} z - \frac{2t_2}{t_3} - z^{-1} + \mathcal{O}(z^{-2}) \nonumber
+\end{eqnarray}
+
+\section{Dilute Ising Model}
+
+\subsection{Vacant boundary conditions}
+
+The asymptotic behaviour of the planar resolvent $W_Y(z)$ is given by:
+%
+\begin{eqnarray}
+    W_Y (z)_0 & = z^{-1} + \mathcal{O}(z^{-2}) \nonumber\\
+    W_Y (z)_1 & = t_0 z^2 + z  - 2t_3^{-1/2}z^{1/2} + \frac{t_2}{t_3} - \frac{t_2^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_Y(z)_2 & = t_0 z^2 + z  + 2t_3^{-1/2}z^{1/2} + \frac{t_2}{t_3} + \frac{t_2^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_Y(z)_3 & = 2t_0 z^2 + 2z + \frac{2t_2}{t_3} - z^{-1} + \mathcal{O}(z^{-2}) \nonumber
+\end{eqnarray}
+
+
+\subsection{Fixed boundary conditions}
+
+The asymptotic behaviour of the planar resolvent $W_{(1)}(z)$ is given by:
+%
+\begin{eqnarray}
+    W_{(1)}(z)_0 & = z^{-1} + \mathcal{O}(z^{-1/2}) \nonumber\\
+    W_{(1)}(z)_1 & = t_3 z^2 + t_2 z + t_0 z^{-1/2} + \frac{1}{2t_0} - \frac{i}{2t_0^{3/4}t_3^{1/2}}z^{-1/4} + \frac{(t_3-2t_0t_2)}{8t_0^{3/2}t_3}z^{-1/2} \nonumber \\ & + \frac{i(t_0t_2^2-2t_3)}{16t_0^{5/4}t_3^{3/2}}z^{-3/4} - \frac{1}{4} z^{-1} + \mathcal{O}(z^{-5/4}) \nonumber\\
+    W_{(1)}(z)_2 & = t_3 z^2 + t_2 z - t_0 z^{-1/2} + \frac{1}{2t_0} - \frac{1}{2t_0^{3/4}t_3^{1/2}}z^{-1/4} - \frac{(t_3-2t_0t_2)}{8t_0^{3/2}t_3}z^{-1/2} \nonumber\\ & - \frac{(t_0t_2^2-2t_3)}{16t_0^{5/4}t_3^{3/2}}z^{-3/4} - \frac{1}{4} z^{-1} + \mathcal{O}(z^{-5/4}) \nonumber\\
+    W_{(1)}(z)_3 & = t_3 z^2 + t_2 z + t_0 z^{-1/2} + \frac{1}{2t_0} + \frac{i}{2t_0^{3/4}t_3^{1/2}}z^{-1/4} + \frac{(t_3-2t_0t_2)}{8t_0^{3/2}t_3}z^{-1/2} \nonumber\\ & - \frac{i(t_0t_2^2-2t_3)}{16t_0^{5/4}t_3^{3/2}}z^{-3/4} - \frac{1}{4} z^{-1} + \mathcal{O}(z^{-5/4}) \nonumber\\
+    W_{(1)}(z)_4 & = t_3 z^2 + t_2 z - t_0 z^{-1/2} + \frac{1}{2t_0} + \frac{1}{2t_0^{3/4}t_3^{1/2}}z^{-1/4} - \frac{(t_3-2t_0t_2)}{8t_0^{3/2}t_3}z^{-1/2} \nonumber\\ & + \frac{(t_0t_2^2-2t_3)}{16t_0^{5/4}t_3^{3/2}}z^{-3/4} - \frac{1}{4} z^{-1} + \mathcal{O}(z^{-5/4}) \nonumber
+\end{eqnarray}
+
+\subsection{Free boundary conditions}
+
+The asymptotic behaviour of the planar resolvent $W_{(2)}(z)$ is given by:
+%
+\begin{eqnarray}
+    W_{(2)}(z)_0 & = z^{-1} + \mathcal{O}(z^{-2})\nonumber\\
+    W_{(2)}(z)_1 & = \frac{t_3}{4}z^2 + \frac{t_2}{2}z - t_0^{1/2} z^{1/2} + \frac{1}{2t_0} - \frac{1}{8}t_0^{-3/2}z^{-1/2} + \frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(2)}(z)_2 & = \frac{t_3}{4}z^2 + \frac{t_2}{2}z + t_0^{1/2} z^{1/2} + \frac{1}{2t_0} + \frac{1}{8}t_0^{-3/2}z^{-1/2} + \frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(2)}(z)_3 & = (1+i)t_0^{-1/2}z^{1/2} + \frac{(1+i)(4(1+i)t_0t_2+t_3)}{8t_0^{3/2}t_3}z^{-1/2} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(2)}(z)_4 & = -(1-i)t_0^{-1/2}z^{1/2} + \frac{8it_0t_2-(1-i)t_3}{8t_0^{3/2}t_3}z^{-1/2} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(2)}(z)_5 & = -(1+i)t_0^{-1/2}z^{1/2} - \frac{(1+i)(4(1+i)t_0t_2+t_3)}{8t_0^{3/2}t_3}z^{-1/2} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(2)}(z)_6 & = (1-i)t_0^{-1/2}z^{1/2} - \frac{8it_0t_2-(1-i)t_3}{8t_0^{3/2}t_3}z^{-1/2} + \mathcal{O}(z^{-3/2})\nonumber\\
+    W_{(2)}(z)_7 & = it_0^{-1/2}z^{1/2} -\frac{1}{2t_0} + \frac{i(8t_0t_2-t_3)}{8t_0^{3/2}t_3}z^{-1/2} -\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(2)}(z)_8 & = -it_0^{-1/2}z^{1/2} -\frac{1}{2t_0} - \frac{i(8t_0t_2-t_3)}{8t_0^{3/2}t_3}z^{-1/2} -\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_{(2)}(z)_9 & = -z^{-1} + \mathcal{O}(z^{-2}) \nonumber
+\end{eqnarray}
+
+\section{Dilute Potts Model}
+
+\subsection{Vacant boundary conditions}
+
+The asymptotic behaviour of the planar resolvent $W_Y(z)$ is given by:
+%
+\begin{eqnarray}
+    W_Y(z)_0 & = z^{-1} + \mathcal{O}(z^{-2}) \nonumber\\
+    W_Y(z)_1 & = t_0 z^2 + z - 3t_3^{-1/2}z^{1/2} + \frac{3t_2}{2t_3} - \frac{3t_2^2}{8t_3^{3/2}}z^{-1/2} + \frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_Y(z)_2 & = t_0 z^2 + z + 3t_3^{-1/2}z^{1/2} + \frac{3t_2}{2t_3} + \frac{3t_2^2}{8t_3^{3/2}}z^{-1/2} + \frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_Y(z)_3 & = 3t_0 z^2 + 3z + 3t_3^{-1/2}z^{1/2} + \frac{9t_2}{2t_3} + \frac{3t_2^2}{8t_3^{3/2}}z^{-1/2} -\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_Y(z)_4 & = 3t_0 z^2 + 3z - 3t_3^{-1/2}z^{1/2} + \frac{9t_2}{2t_3} - \frac{3t_2^2}{8t_3^{3/2}}z^{-1/2} -\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \nonumber\\
+    W_Y(z)_5 & = 4z + \frac{6t_2}{t_3} + z^{-1} + \mathcal{O}(z^{-2}) \nonumber
+\end{eqnarray}
+
+\subsection{Fixed boundary conditions}
+
+The asymptotic behaviour of the planar resolvent $W_{(1)}(z)$ is given by:
+%
+\begin{eqnarray}
+    W_{(1)}(z)_0 & = z^{-1} + \mathcal{O}(z^{-2}) \nonumber\\
+    W_{(1)}(z)_1 & = t_3 z^2 + t_2 z - t_0^{-1/2}z^{1/2} + \frac{1}{2t_0} - \frac{1}{t_0^{3/4}t_3^{1/2}}z^{-1/4} - \frac{(t_3-4t_0t_2)}{8t_0^{3/2}t_3}z^{-1/2} \nonumber \\ & - \frac{(t_0t_2^2 -2t_3)}{8t_0^{5/4}t_3^{3/2}}z^{-3/4} + \mathcal{O}(z^{-5/4}) \nonumber\\
+    W_{(1)}(z)_2 & = t_3 z^2 + t_2 z + t_0^{-1/2}z^{1/2} + \frac{1}{2t_0} + \frac{i}{t_0^{3/4}t_3^{1/2}}z^{-1/4} + \frac{(t_3-4t_0t_2)}{8t_0^{3/2}t_3}z^{-1/2} \nonumber \\ & - \frac{i(t_0t_2^2 -2t_3)}{8t_0^{5/4}t_3^{3/2}}z^{-3/4} + \mathcal{O}(z^{-5/4}) \nonumber\\
+    W_{(1)}(z)_3 = & t_3 z^2 + t_2 z - t_0^{-1/2}z^{1/2} + \frac{1}{2t_0} + \frac{1}{t_0^{3/4}t_3^{1/2}}z^{-1/4} - \frac{(t_3-4t_0t_2)}{8t_0^{3/2}t_3}z^{-1/2} \nonumber \\ & + \frac{(t_0t_2^2 -2t_3)}{8t_0^{5/4}t_3^{3/2}}z^{-3/4} + \mathcal{O}(z^{-5/4}) \nonumber\\
+    W_{(1)}(z)_4 & = t_3 z^2 + t_2 z + t_0^{-1/2}z^{1/2} + \frac{1}{2t_0} - \frac{i}{t_0^{3/4}t_3^{1/2}}z^{-1/4} + \frac{(t_3-4t_0t_2)}{8t_0^{3/2}t_3}z^{-1/2} \nonumber\\ & + \frac{i(t_0t_2^2 -2t_3)}{8t_0^{5/4}t_3^{3/2}}z^{-3/4} + \mathcal{O}(z^{-5/4}) \nonumber\\
+    W_{(1)}(z)_5 & = t_3 z^2 + t_2 z - \frac{1}{\sqrt{2}t_0^{1/2}}z^{1/2} + \frac{1}{2t_0} - \frac{1}{2^{7/4}t_0^{3/4}t_3^{1/2}} z^{-1/4} - \frac{(t_3-5t_0 t_2)}{4\sqrt{2}t_0^{3/2}t_3}z^{-1/2} \nonumber\\ & - \frac{(t_0t_2^2 - 2t_3)}{2^{17/4}t_0^{5/4}t_3^{3/2}}z^{-3/4} - \frac{1}{4}z^{-1} + \mathcal{O}(z^{-5/4}) \nonumber \\
+    W_{(1)}(z)_6 & = t_3 z^2 + t_2 z + \frac{1}{\sqrt{2}t_0^{1/2}}z^{1/2} + \frac{1}{2t_0} + \frac{i}{2^{7/4}t_0^{3/4}t_3^{1/2}} z^{-1/4} + \frac{(t_3-5t_0 t_2)}{4\sqrt{2}t_0^{3/2}t_3}z^{-1/2} \nonumber \\ & - \frac{i(t_0t_2^2 - 2t_3)}{2^{17/4}t_0^{5/4}t_3^{3/2}}z^{-3/4} - \frac{1}{4}z^{-1} + \mathcal{O}(z^{-5/4}) \nonumber \\
+    W_{(1)}(z)_7 & = t_3 z^2 + t_2 z - \frac{1}{\sqrt{2}t_0^{1/2}}z^{1/2} + \frac{1}{2t_0} + \frac{1}{2^{7/4}t_0^{3/4}t_3^{1/2}} z^{-1/4} - \frac{(t_3-5t_0 t_2)}{4\sqrt{2}t_0^{3/2}t_3}z^{-1/2} \nonumber\\ & + \frac{(t_0t_2^2 - 2t_3)}{2^{17/4}t_0^{5/4}t_3^{3/2}}z^{-3/4} - \frac{1}{4}z^{-1} + \mathcal{O}(z^{-5/4}) \nonumber\\
+    W_{(1)}(z)_8 & = t_3 z^2 + t_2 z + \frac{1}{\sqrt{2}t_0^{1/2}}z^{1/2} + \frac{1}{2t_0} - \frac{i}{2^{7/4}t_0^{3/4}t_3^{1/2}} z^{-1/4} + \frac{(t_3-5t_0 t_2)}{4\sqrt{2}t_0^{3/2}t_3}z^{-1/2} \nonumber\\ & + \frac{i(t_0t_2^2 - 2t_3)}{2^{17/4}t_0^{5/4}t_3^{3/2}}z^{-3/4} - \frac{1}{4}z^{-1} + \mathcal{O}(z^{-5/4}) \nonumber
+\end{eqnarray}
+
+
+

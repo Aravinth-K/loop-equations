@@ -28,7 +28,7 @@ Furthermore, we define the following trace correlation functions analogously,
 %
 \begin{equation}
     \label{trace}
-    p_{w(\mathbf{X})}= \frac{1}{N} \left\langle \Tr w(\mathbf{X}))\right\rangle.
+    p_{w(\mathbf{X})}= \frac{1}{N} \left\langle \Tr w(\mathbf{X})\right\rangle.
 \end{equation}
 %
 Define the level of a resolvent function of the form \eref{loopRes} as the length of the associated word, $L(w(\mathbf{X}))$, such that, for example, \eref{resExample} with $L(X_1 X_0 X_2)=3$ denotes a level-3 resolvent function. Similarly, we index trace correlation functions of a given level by the set of words of appropriate length. 
@@ -54,7 +54,7 @@ Similarly we define the set of irreducible resolvent functions of level $k$ as $
 \begin{eqnarray}
     \label{delta}
     \Delta^k W_{w(\mathbf{X})}(z) & : = & \frac{1}{N} \left\langle \Tr  X^k w(\mathbf{X}) \frac{1}{z-X}\right\rangle\\
-    & = & z^k W_{w(\mathbf{X})}(z) - \sum_{i=1}^k z^{k-i} p_{X^{k-1}w(\mathbf{X})}.
+    & = & z^k W_{w(\mathbf{X})}(z) - \sum_{i=1}^k z^{k-i} p_{X^{i-1}w(\mathbf{X})}.
 \end{eqnarray}
 %
 We may omit words for which any sub-word consisting only of the matrix $X$ adjoins the loop operator $(z-X)^{-1}$, since these may be expressed in terms of the $\Delta$ operator to a power given by the length of the adjoining sub-word in $X$, acting on a lower-level resolvent function. Moreover, the presence of the loop operator means that the dihedral symmetry is removed. Finally, having fixed $X$ as the representative matrix of the loop operator, the defining word only respects the subgroup $G'\subseteq G$, consisting of elements $g\in\mathrm{Aut}(\tilde{\mathbf{X}})$, where $\tilde{\mathbf{X}}=\mathbf{X} \setminus X$. Therefore we may write

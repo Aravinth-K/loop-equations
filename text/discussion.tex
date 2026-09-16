@@ -1,11 +1,53 @@
 \section{Discussion}
 
-In this work we developed an algorithm for systematically computing and solving the loop equations of general multi-matrix models, in the goal of finding the spectral curve for the planar resolvent of a given matrix degree of freedom. We then focused our attention on the 3-state Potts model, where we successfully computed the planar resolvents describing fixed, mixed, and free boundary conditions using this technique. While the fixed and free boundary conditions were manifestly in agreement with the literature, more care was required for the mixed boundary condition. Through studying the analytic structure predicted by the saddle-point solution, we were able to show that this too was consistent with the results of Atkin et al. We then considered some non-standard resolvents, including a new `odd' boundary condition, which was susceptible to the loop equation strategy, and a $U$ boundary condition which we were not able to solve. Following this, we discussed the dilute Ising and Potts models, where we computed the resolvents corresponding to various boundary conditions, in agreement with the results of Zinn-Justin.
+In this work we developed an algorithm for systematically computing and solving the loop equations
+of general multi-matrix models, in the goal of finding the spectral curve for the planar resolvent
+of a given matrix degree of freedom. We then focused our attention on the 3-state Potts model,
+where we successfully computed the planar resolvents describing fixed, mixed, and free boundary
+conditions using this technique. While the fixed and free boundary conditions were manifestly in
+agreement with the literature, more care was required for the mixed boundary condition. Through
+studying the analytic structure predicted by the saddle-point solution, we were able to show that
+this too was consistent with the results of Atkin et al. We then considered some non-standard
+resolvents, including a new `odd' boundary condition, which was susceptible to the loop equation
+strategy, and a $U$ boundary condition which we were not able to solve. Following this, we
+discussed the dilute Ising and Potts models, where we computed the resolvents corresponding to
+various boundary conditions, in agreement with the results of Zinn-Justin.
 
+There are many ways to continue this work. Our procedure is algorithmic in nature and so it would
+be interesting to apply this to a wide variety of models for which the planar resolvent is known or
+unknown. In the context of three-matrix models more generally, it would be interesting to
+understand the criteria under which a resolvent is calculable. As we have seen from our results, we
+were able to calculate the planar resolvent for particular systems with full $S_3$ symmetry under
+interchange of the matrix degrees of freedom \eref{mixedAction}, and for systems where there is a
+residual $\mathbb{Z}_2$ symmetry under the remaining degrees of freedom, with an auxiliary
+condition reducing the number of level-1 resolvent functions \eref{freeAction}. Determining whether
+this can be elevated to a general principle governing solvability of correlators in the
+three-matrix model would be an exciting challenge. One immediate offshoot of this would be the
+calculation of planar resolvents describing boundary conditions that interpolate between the fixed,
+mixed and free boundary states analogous to \cite{Carroll:1997tr,Atkin:2012fx}. This would allow us
+to directly study the boundary renormalisation group flow relating the different boundary states,
+which is expected to induce a partial ordering of the spectrum of boundary states, conforming with
+the boundary analogue of the $c$-theorem \cite{Zamolodchikov:1986gt}, which was first conjectured
+in \cite{Affleck:1991tk}, and subsequently proven by Friedan and Konechny \cite{Friedan:2003yc}.
 
+Another interesting avenue of research would be to investigate whether we could generalise the
+algorithm developed in this chapter for a wider variety of correlators and matrix models, such as
+the $q$-state Potts model where $q$ is taken to be non-integer. This is possible for the simple
+example of the fixed-spin boundary condition \cite{Bonnet:1999nf}. Whether we could do the same for
+general boundary conditions and reproduce the saddle-point results of Chapter 3 is an open
+question. This would provide further insight into the nature of the allowed $G$-functions and
+corresponding boundary conditions in the $q$-state Potts model. It would also be useful for
+studying the expression for the New boundary condition determined in Chapter 4, which is given by a
+non-standard resolvent function that would not immediately be amenable to calculation through the
+loop equation method devised in this chapter.
 
-There are many ways to continue this work. Our procedure is algorithmic in nature and so it would be interesting to apply this to a wide variety of models for which the planar resolvent is known or unknown. In the context of three-matrix models more generally, it would be interesting to understand the criteria under which a resolvent is calculable. As we have seen from our results, we were able to calculate the planar resolvent for particular systems with full $S_3$ symmetry under interchange of the matrix degrees of freedom \eref{mixedAction}, and for systems where there is a residual $\mathbb{Z}_2$ symmetry under the remaining degrees of freedom, with an auxiliary condition reducing the number of level-1 resolvent functions \eref{freeAction}. Determining whether this can be elevated to a general principle governing solvability of correlators in the three-matrix model would be an exciting challenge. One immediate offshoot of this would be the calculation of planar resolvents describing boundary conditions that interpolate between the fixed, mixed and free boundary states analogous to \cite{Carroll:1997tr,Atkin:2012fx}. This would allow us to directly study the boundary renormalisation group flow relating the different boundary states, which is expected to induce a partial ordering of the spectrum of boundary states, conforming with the boundary analogue of the $c$-theorem \cite{Zamolodchikov:1986gt}, which was first conjectured in \cite{Affleck:1991tk}, and subsequently proven by Friedan and Konechny \cite{Friedan:2003yc}. 
-
-Another interesting avenue of research would be to investigate whether we could generalise the algorithm developed in this chapter for a wider variety of correlators and matrix models, such as the $q$-state Potts model where $q$ is taken to be non-integer. This is possible for the simple example of the fixed-spin boundary condition \cite{Bonnet:1999nf}. Whether we could do the same for general boundary conditions and reproduce the saddle-point results of Chapter 3 is an open question. This would provide further insight into the nature of the allowed $G$-functions and corresponding boundary conditions in the $q$-state Potts model. It would also be useful for studying the expression for the New boundary condition determined in Chapter 4, which is given by a non-standard resolvent function that would not immediately be amenable to calculation through the loop equation method devised in this chapter. 
-
-Finally, it would be fruitful to extend our work to the calculation of observables in multi-matrix models beyond the planar limit. It is well known that the planar resolvent forms the initial data for higher-genus and multi-boundary correlators in the one- and two-matrix models \cite{Eynard:2002kg,Eynard:2004mh,Eynard:2008we}, and that this may be extended to certain multi-matrix models \cite{Borot:2009ia}. It would be interesting to see whether one could reframe the method of loop equations for various boundary conditions in the 3-state Potts model such that one can calculate higher-order correlation functions in an analogous topological recursion procedure. This would allow, for example, the computation of cylinder amplitudes for different boundary states, and might provide valuable information as to how to interpret the results of Chapter 3. 
+Finally, it would be fruitful to extend our work to the calculation of observables in multi-matrix
+models beyond the planar limit. It is well known that the planar resolvent forms the initial data
+for higher-genus and multi-boundary correlators in the one- and two-matrix models
+\cite{Eynard:2002kg,Eynard:2004mh,Eynard:2008we}, and that this may be extended to certain
+multi-matrix models \cite{Borot:2009ia}. It would be interesting to see whether one could reframe
+the method of loop equations for various boundary conditions in the 3-state Potts model such that
+one can calculate higher-order correlation functions in an analogous topological recursion
+procedure. This would allow, for example, the computation of cylinder amplitudes for different
+boundary states, and might provide valuable information as to how to interpret the results of
+Chapter 3.

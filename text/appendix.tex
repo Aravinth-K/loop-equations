@@ -2,14 +2,12 @@
 \section{Analytic Structure and Asymptotics}
 \label{app:asympt}
 
-In this appendix we list the asymptotic expansions sheet by sheet, with
-coefficients in the parameters of the corresponding potential, retaining
-terms through $z^{-1}$. The physical
-sheet is labelled $0$ and has $W(z)_0=z^{-1}+\mathcal O(z^{-2})$.
-The remaining labels enumerate the local branches at infinity, keeping
-ramified families together. We follow the presentation of the expansions
-in \cite{Atkin:2015ksy}; the labels here do not prescribe the finite branch cuts.
-The accompanying notebooks contain the complete calculations \cite{github:ak}.
+In this appendix we list the asymptotic expansions sheet by sheet, with coefficients in the
+parameters of the corresponding potential, retaining terms through $z^{-1}$. The physical sheet is
+labelled $0$ and has $W(z)_0=z^{-1}+\mathcal O(z^{-2})$. The remaining labels enumerate the local
+branches at infinity, keeping ramified families together. We follow the presentation of the
+expansions in \cite{Atkin:2015ksy}; the labels here do not prescribe the finite branch cuts. The
+accompanying notebooks contain the complete calculations \cite{github:ak}.
 
 \subsection{Generic Cubic Two-Matrix Model}
 The four sheets of the generic cubic two-matrix curve have the expansions
@@ -19,12 +17,9 @@ The four sheets of the generic cubic two-matrix curve have the expansions
 
 \subsubsection{Quartic two-matrix models}
 For $(\alpha,\beta,\gamma)=(g,g,g)$ and $(g,-g,g)$, the four sheets are
-\input{text/asymptotics/quartic_ggg}
-\Needspace{7\baselineskip}
-For $(\alpha,\beta,\gamma)=(g,g,-g)$, the six sheets are
-\input{text/asymptotics/quartic_ggm}
-\Needspace{7\baselineskip}
-For $(\alpha,\beta,\gamma)=(-g,g,g)$, the six sheets are
+\input{text/asymptotics/quartic_ggg} \Needspace{7\baselineskip} For
+$(\alpha,\beta,\gamma)=(g,g,-g)$, the six sheets are \input{text/asymptotics/quartic_ggm}
+\Needspace{7\baselineskip} For $(\alpha,\beta,\gamma)=(-g,g,g)$, the six sheets are
 \input{text/asymptotics/quartic_mgg}
 
 \subsubsection{Cubic three-matrix model}
@@ -38,13 +33,15 @@ For $(\alpha,\beta,\gamma)=(-g,g,g)$, the six sheets are
 The asymptotic behaviour of the planar resolvent $W_{(1)}(z)$ is given by:
 %
 \begin{sheetasymptotics}
-\begin{align*}
-    \sheetlabel{W_{(1)}(z)_0} &={}   \frac{1}{z} + \mathcal{O}(z^{-2}) \\[4pt]
-    \sheetlabel{W_{(1)}(z)_1} &={}  t_3 z^2 + (t_2 -1)z - 2t_3^{-1/2} z^{1/2} + \frac{t_2 -2}{t_3} - \frac{(t_2-2)^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
-    \sheetlabel{W_{(1)}(z)_2} &={}  t_3 z^2 + (t_2 -1)z + 2t_3^{-1/2}z^{1/2} + \frac{t_2 -2}{t_3} + \frac{(t_2-2)^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
-    \sheetlabel{W_{(1)}(z)_3} &={}  t_3 z^2 + \left(t_2-\frac12\right) z - \frac{t_3^{-1/2}}{2\sqrt{2}} z^{1/2} + \frac{(10t_2-1)}{8t_3}  \\* &\quad{}- \frac{(4t_2^2 - 20t_2 +1)} {32\sqrt{2}t_3^{3/2}}z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2}) \\[4pt]
-    \sheetlabel{W_{(1)}(z)_4} &={}  t_3 z^2 + \left(t_2-\frac12\right) z + \frac{t_3^{-1/2}}{2\sqrt{2}} z^{1/2} + \frac{(10t_2-1)}{8t_3} \\* &\quad{}+ \frac{(4t_2^2 - 20t_2 +1)}{32\sqrt{2}t_3^{3/2}}z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2})
-\end{align*}
+    \begin{align*}
+        \sheetlabel{W_{(1)}(z)_0} & ={}   \frac{1}{z} + \mathcal{O}(z^{-2}) \\[4pt]
+        \sheetlabel{W_{(1)}(z)_1} & ={}  t_3 z^2 + (t_2 -1)z - 2t_3^{-1/2} z^{1/2} + \frac{t_2 -2}{t_3} - \frac{(t_2-2)^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(1)}(z)_2} & ={}  t_3 z^2 + (t_2 -1)z + 2t_3^{-1/2}z^{1/2} + \frac{t_2 -2}{t_3} + \frac{(t_2-2)^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(1)}(z)_3} & ={}  t_3 z^2 + \left(t_2-\frac12\right) z - \frac{t_3^{-1/2}}{2\sqrt{2}} z^{1/2} + \frac{(10t_2-1)}{8t_3} \\*
+                                  & \quad{}- \frac{(4t_2^2 - 20t_2 +1)} {32\sqrt{2}t_3^{3/2}}z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(1)}(z)_4} & ={}  t_3 z^2 + \left(t_2-\frac12\right) z + \frac{t_3^{-1/2}}{2\sqrt{2}} z^{1/2} + \frac{(10t_2-1)}{8t_3} \\*
+                                  & \quad{}+ \frac{(4t_2^2 - 20t_2 +1)}{32\sqrt{2}t_3^{3/2}}z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2})
+    \end{align*}
 \end{sheetasymptotics}
 
 \subsubsection{Mixed boundary conditions}
@@ -52,20 +49,20 @@ The asymptotic behaviour of the planar resolvent $W_{(1)}(z)$ is given by:
 The asymptotic behaviour of the planar resolvent $W_{(2)}(z)$ is given by:
 %
 \begin{sheetasymptotics}
-\begin{align*}
-    \sheetlabel{W_{(2)}(z)_0} &={}   z^{-1} + \mathcal{O}(z^{-2}) \\[4pt]
-    \sheetlabel{W_{(2)}(z)_1} &={} \frac{t_3 z^2}{4}+\frac{\left(t_2 - 2\right)}{2}z -t_3^{-1/2}z^{1/2} +\frac{t_2-1}{2 t_3}-\frac{(t_2-1)^2}{8 t_3^{3/2}}z^{-1/2}+\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2})  \\[4pt]
-    \sheetlabel{W_{(2)}(z)_2} &={} \frac{t_3 z^2}{4}+\frac{\left(t_2 - 2\right)}{2}z+t_3^{-1/2}z^{1/2}+\frac{t_2-1}{2 t_3}+\frac{(t_2-1)^2}{8 t_3^{3/2}}z^{-1/2}+\frac{1}{2}z^{-1}+ \mathcal{O}(z^{-3/2}) \\[4pt]
-    \sheetlabel{W_{(2)}(z)_3} &={} -2 z + (1+i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  +\frac{\left(1-i\right) \left(t_2^2-(6-4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2})  \\[4pt]
-    \sheetlabel{W_{(2)}(z)_4} &={} -2 z -(1-i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  - \frac{\left(1+i\right) \left(t_2^2-(6+4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2})  \\[4pt]
-    \sheetlabel{W_{(2)}(z)_5} &={} -2 z -(1+i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  -\frac{\left(1-i\right) \left(t_2^2-(6-4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2}+ \mathcal{O}(z^{-3/2})  \\[4pt]
-    \sheetlabel{W_{(2)}(z)_6} &={} -2 z + (1-i) t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  +\frac{\left(1+i\right) \left(t_2^2-(6+4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
-    \sheetlabel{W_{(2)}(z)_7} &={} \frac{t_3 z^2}{4}+\frac{1}{2} \left(t_2-6\right) z+it_3^{-1/2}z^{1/2}-\frac{3 t_2+1}{2 t_3}-\frac{i \left(t_2^2-10 t_2+1\right)}{8 t_3^{3/2}}z^{-1/2} \\*
-    &\quad{}-\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \\[4pt]
-    \sheetlabel{W_{(2)}(z)_8} &={} \frac{t_3 z^2}{4}+\frac{1}{2} \left(t_2-6\right) z-it_3^{-1/2}z^{1/2}-\frac{3 t_2+1}{2 t_3} +\frac{i \left(t_2^2-10 t_2+1\right)}{8 t_3^{3/2}}z^{-1/2} \\*
-    &\quad{}-\frac{1}{2}z^{-1}  +\mathcal{O}(z^{-3/2}) \\[4pt]
-    \sheetlabel{W_{(2)}(z)_9} &={} -4z - \frac{4t_{2}}{t_3} - z^{-1} + \mathcal{O}(z^{-2})
-\end{align*}
+    \begin{align*}
+        \sheetlabel{W_{(2)}(z)_0} & ={}   z^{-1} + \mathcal{O}(z^{-2}) \\[4pt]
+        \sheetlabel{W_{(2)}(z)_1} & ={} \frac{t_3 z^2}{4}+\frac{\left(t_2 - 2\right)}{2}z -t_3^{-1/2}z^{1/2} +\frac{t_2-1}{2 t_3}-\frac{(t_2-1)^2}{8 t_3^{3/2}}z^{-1/2}+\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(2)}(z)_2} & ={} \frac{t_3 z^2}{4}+\frac{\left(t_2 - 2\right)}{2}z+t_3^{-1/2}z^{1/2}+\frac{t_2-1}{2 t_3}+\frac{(t_2-1)^2}{8 t_3^{3/2}}z^{-1/2}+\frac{1}{2}z^{-1}+ \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(2)}(z)_3} & ={} -2 z + (1+i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  +\frac{\left(1-i\right) \left(t_2^2-(6-4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(2)}(z)_4} & ={} -2 z -(1-i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  - \frac{\left(1+i\right) \left(t_2^2-(6+4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(2)}(z)_5} & ={} -2 z -(1+i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  -\frac{\left(1-i\right) \left(t_2^2-(6-4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2}+ \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(2)}(z)_6} & ={} -2 z + (1-i) t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  +\frac{\left(1+i\right) \left(t_2^2-(6+4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(2)}(z)_7} & ={} \frac{t_3 z^2}{4}+\frac{1}{2} \left(t_2-6\right) z+it_3^{-1/2}z^{1/2}-\frac{3 t_2+1}{2 t_3}-\frac{i \left(t_2^2-10 t_2+1\right)}{8 t_3^{3/2}}z^{-1/2} \\*
+                                  & \quad{}-\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(2)}(z)_8} & ={} \frac{t_3 z^2}{4}+\frac{1}{2} \left(t_2-6\right) z-it_3^{-1/2}z^{1/2}-\frac{3 t_2+1}{2 t_3} +\frac{i \left(t_2^2-10 t_2+1\right)}{8 t_3^{3/2}}z^{-1/2} \\*
+                                  & \quad{}-\frac{1}{2}z^{-1}  +\mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(2)}(z)_9} & ={} -4z - \frac{4t_{2}}{t_3} - z^{-1} + \mathcal{O}(z^{-2})
+    \end{align*}
 \end{sheetasymptotics}
 
 \subsubsection{Free boundary conditions}
@@ -73,20 +70,19 @@ The asymptotic behaviour of the planar resolvent $W_{(2)}(z)$ is given by:
 The asymptotic behaviour of the planar resolvent $W_{(3)}(z)$ is given by:
 %
 \begin{sheetasymptotics}
-\begin{align*}
-    \sheetlabel{W_{(3)}(z)_0} &={} z^{-1} + \mathcal{O}(z^{-2}) \\[4pt]
-    \sheetlabel{W_{(3)}(z)_1} &={} \frac{t_3}{9} z^2 + \frac{(t_2-3)}{3} z + \frac{1}{z} + \mathcal{O}(z^{-2}) \\[4pt]
-    \sheetlabel{W_{(3)}(z)_2} &={} -\frac{3}{2} z + \frac{3i}{2\sqrt{2}t_3^{1/2}}z^{1/2} - \frac{(18t_2 -9)}{8t_3} - \frac{3i(4t_2^2 - 36t_2 + 9)}{32\sqrt{2} t_3^{3/2}} z^{-1/2} \\*
-    &\quad{}- \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2})  \\[4pt]
-    \sheetlabel{W_{(3)}(z)_3} &={} -\frac{3}{2} z - \frac{3i}{2\sqrt{2}t_3^{1/2}}z^{1/2} - \frac{(18t_2 -9)}{8t_3} + \frac{3i(4t_2^2 - 36t_2 + 9)}{32\sqrt{2} t_3^{3/2}} z^{-1/2} \\*
-    &\quad{}- \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2})  \\[4pt]
-    \sheetlabel{W_{(3)}(z)_4} &={} - \frac{4}{3} z - \frac{2t_2}{t_3} - z^{-1} + \mathcal{O}(z^{-2})
-\end{align*}
+    \begin{align*}
+        \sheetlabel{W_{(3)}(z)_0} & ={} z^{-1} + \mathcal{O}(z^{-2}) \\[4pt]
+        \sheetlabel{W_{(3)}(z)_1} & ={} \frac{t_3}{9} z^2 + \frac{(t_2-3)}{3} z + \frac{1}{z} + \mathcal{O}(z^{-2}) \\[4pt]
+        \sheetlabel{W_{(3)}(z)_2} & ={} -\frac{3}{2} z + \frac{3i}{2\sqrt{2}t_3^{1/2}}z^{1/2} - \frac{(18t_2 -9)}{8t_3} - \frac{3i(4t_2^2 - 36t_2 + 9)}{32\sqrt{2} t_3^{3/2}} z^{-1/2} \\*
+                                  & \quad{}- \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(3)}(z)_3} & ={} -\frac{3}{2} z - \frac{3i}{2\sqrt{2}t_3^{1/2}}z^{1/2} - \frac{(18t_2 -9)}{8t_3} + \frac{3i(4t_2^2 - 36t_2 + 9)}{32\sqrt{2} t_3^{3/2}} z^{-1/2} \\*
+                                  & \quad{}- \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2}) \\[4pt]
+        \sheetlabel{W_{(3)}(z)_4} & ={} - \frac{4}{3} z - \frac{2t_2}{t_3} - z^{-1} + \mathcal{O}(z^{-2})
+    \end{align*}
 \end{sheetasymptotics}
 
 \subsection{General 3-state Potts}
 \input{text/asymptotics/potts_general}
-
 
 % Drop-in section. Requires amsmath and amssymb.
 % Citation keys are supplied in quartic_references.bib.
@@ -94,509 +90,471 @@ The asymptotic behaviour of the planar resolvent $W_{(3)}(z)$ is given by:
 \section{Planar solutions and critical behaviour}
 \label{sec:qtm-solutions}
 
-In this section we show that the four quartic two-matrix models are more
-tractable than their original interactions suggest. Their spectral curves
-fall into two pairs. One pair reduces to the ordinary quartic one-matrix
-problem, while the other admits a simple rational parametrization in the
-standard two-matrix framework. Routine methods then determine the remaining
-moments, the critical couplings, and the string susceptibility.
+In this section we show that the four quartic two-matrix models are more tractable than their
+original interactions suggest. Their spectral curves fall into two pairs. One pair reduces to the
+ordinary quartic one-matrix problem, while the other admits a simple rational parametrization in
+the standard two-matrix framework. Routine methods then determine the remaining moments, the
+critical couplings, and the string susceptibility.
 
-We use the normalization of \cite[Eq.~(4.1)]{khalkhali2025bootstrappingcriticalbehaviormultimatrix},
+We use the normalization of
+\cite[Eq.~(4.1)]{khalkhali2025bootstrappingcriticalbehaviormultimatrix},
 \begin{equation}
- \mathcal V_{g_0,\alpha,\beta}(A,B)
- =\frac12(A^2+B^2)+\frac{g_0}{4}(A^4+B^4)
-   +\frac{\alpha}{2}ABAB+\beta A^2B^2,
- \qquad
- Z_N=\int dA\,dB\,e^{-N\operatorname{Tr}\mathcal V}.
- \label{eq:qtm-potential}
+    \mathcal V_{g_0,\alpha,\beta}(A,B)
+    =\frac12(A^2+B^2)+\frac{g_0}{4}(A^4+B^4)
+    +\frac{\alpha}{2}ABAB+\beta A^2B^2,
+    \qquad
+    Z_N=\int dA\,dB\,e^{-N\operatorname{Tr}\mathcal V}.
+    \label{eq:qtm-potential}
 \end{equation}
 For reference, label the four coupling assignments by
 \begin{equation}
- \mathrm I:(g,g,g),\qquad
- \mathrm{II}:(g,-g,g),\qquad
- \mathrm{III}:(g,g,-g),\qquad
- \mathrm{IV}:(-g,g,g).
- \label{eq:qtm-models}
+    \mathrm I:(g,g,g),\qquad
+    \mathrm{II}:(g,-g,g),\qquad
+    \mathrm{III}:(g,g,-g),\qquad
+    \mathrm{IV}:(-g,g,g).
+    \label{eq:qtm-models}
 \end{equation}
-Throughout we consider the normalized formal planar solution obtained by
-expansion around the Gaussian point $g=0$, together with its analytic
-continuation. This specifies the solution of the algebraic equations; no
-identification of arbitrary integration contours or other phases is assumed.
-Write
+Throughout we consider the normalized formal planar solution obtained by expansion around the
+Gaussian point $g=0$, together with its analytic continuation. This specifies the solution of the
+algebraic equations; no identification of arbitrary integration contours or other phases is
+assumed. Write
 \begin{equation}
- m_k^{\mathrm M}(g)
- =\lim_{N\to\infty}\frac1N
-   \bigl\langle\operatorname{Tr}A^k\bigr\rangle_{\mathrm M}
- =\lim_{N\to\infty}\frac1N
-   \bigl\langle\operatorname{Tr}B^k\bigr\rangle_{\mathrm M},
- \qquad \mathrm M\in\{\mathrm I,\mathrm{II},\mathrm{III},\mathrm{IV}\}.
- \label{eq:qtm-moment-definition}
+    m_k^{\mathrm M}(g)
+    =\lim_{N\to\infty}\frac1N
+    \bigl\langle\operatorname{Tr}A^k\bigr\rangle_{\mathrm M}
+    =\lim_{N\to\infty}\frac1N
+    \bigl\langle\operatorname{Tr}B^k\bigr\rangle_{\mathrm M},
+    \qquad \mathrm M\in\{\mathrm I,\mathrm{II},\mathrm{III},\mathrm{IV}\}.
+    \label{eq:qtm-moment-definition}
 \end{equation}
-Odd single-matrix moments vanish. Below, all normalized trace expectations
-are understood in the planar limit.
+Odd single-matrix moments vanish. Below, all normalized trace expectations are understood in the
+planar limit.
 
 \subsection{The two pairs of spectral curves}
 
-With the corresponding coefficient identifications, the curves obtained
-above for $(g,g,g)$ and $(g,-g,g)$ coincide. Selecting the same normalized
-solution at $g=0$ gives the same single-matrix moments. Likewise, the curves
-for $(-g,g,g)$ and $(g,g,-g)$ coincide after $g\mapsto-g$. Thus
+With the corresponding coefficient identifications, the curves obtained above for $(g,g,g)$ and
+$(g,-g,g)$ coincide. Selecting the same normalized solution at $g=0$ gives the same single-matrix
+moments. Likewise, the curves for $(-g,g,g)$ and $(g,g,-g)$ coincide after $g\mapsto-g$. Thus
 \begin{equation}
- \boxed{
- m_k^{\mathrm{II}}(g)=m_k^{\mathrm I}(g),\qquad
- m_k^{\mathrm{III}}(g)=m_k^{\mathrm{IV}}(-g).}
- \label{eq:qtm-pair-identities}
+    \boxed{
+        m_k^{\mathrm{II}}(g)=m_k^{\mathrm I}(g),\qquad
+        m_k^{\mathrm{III}}(g)=m_k^{\mathrm{IV}}(-g).}
+    \label{eq:qtm-pair-identities}
 \end{equation}
-The branch and coefficient identifications are important: equality of an
-algebraic curve alone does not select a solution. Moreover,
-\eqref{eq:qtm-pair-identities} is not an equality of all mixed moments.
-For example, the moment of $ABAB$ changes sign between I and II.\footnote{An
-algebraic check is the planar sign identity
-$\frac1N\langle\operatorname{Tr}W\rangle_{g_0,-\alpha,\beta}
-=(-1)^{I(W)}\frac1N\langle\operatorname{Tr}W\rangle_{g_0,\alpha,\beta}$,
-where $I(W)$ counts pairs of letters in which a $B$ precedes an $A$.
-It preserves the normalized planar loop equations after
-$\alpha\mapsto-\alpha$. The formal solution is unique recursively in coupling
-order and word length, so the transformed solution is the required one.
-Pure words have sign $+1$, whereas $ABAB$ has sign $-1$. This is a planar
-identity, not a finite-$N$ linear change of variables.}
-The first pair is particularly striking: its representative curve has
-precisely the quartic one-matrix form. The reason is an exact factorization.
+The branch and coefficient identifications are important: equality of an algebraic curve alone does
+not select a solution. Moreover, \eqref{eq:qtm-pair-identities} is not an equality of all mixed
+moments. For example, the moment of $ABAB$ changes sign between I and II.\footnote{An algebraic
+    check is the planar sign identity $\frac1N\langle\operatorname{Tr}W\rangle_{g_0,-\alpha,\beta}
+        =(-1)^{I(W)}\frac1N\langle\operatorname{Tr}W\rangle_{g_0,\alpha,\beta}$, where $I(W)$ counts pairs
+    of letters in which a $B$ precedes an $A$. It preserves the normalized planar loop equations after
+    $\alpha\mapsto-\alpha$. The formal solution is unique recursively in coupling order and word
+    length, so the transformed solution is the required one. Pure words have sign $+1$, whereas $ABAB$
+    has sign $-1$. This is a planar identity, not a finite-$N$ linear change of variables.} The first
+pair is particularly striking: its representative curve has precisely the quartic one-matrix form.
+The reason is an exact factorization.
 
 \subsection{The first pair: two independent one-matrix models}
 
 For model I, introduce the real orthogonal change of basis
 \begin{equation}
- X=\frac{A+B}{\sqrt2},\qquad Y=\frac{A-B}{\sqrt2}.
+    X=\frac{A+B}{\sqrt2},\qquad Y=\frac{A-B}{\sqrt2}.
 \end{equation}
 Expanding and using cyclicity of the trace gives
 \begin{equation}
- \operatorname{Tr}\mathcal V_{\mathrm I}
- =\operatorname{Tr}\bigl[V(X)+V(Y)\bigr],
- \qquad V(x)=\frac12x^2+\frac g2x^4.
- \label{eq:qtm-factorization}
+    \operatorname{Tr}\mathcal V_{\mathrm I}
+    =\operatorname{Tr}\bigl[V(X)+V(Y)\bigr],
+    \qquad V(x)=\frac12x^2+\frac g2x^4.
+    \label{eq:qtm-factorization}
 \end{equation}
 The Jacobian is constant, and the two matrices are independent:
 \begin{equation}
- \frac{Z_{\mathrm I,N}(g)}{Z_{\mathrm I,N}(0)}
- =\left[\frac{Z_{1,N}(g)}{Z_{1,N}(0)}\right]^2.
+    \frac{Z_{\mathrm I,N}(g)}{Z_{\mathrm I,N}(0)}
+    =\left[\frac{Z_{1,N}(g)}{Z_{1,N}(0)}\right]^2.
 \end{equation}
-This is the standard quartic one-matrix model, whose solution and
-pure-gravity critical behaviour are reviewed in
-\cite[Sec.~2]{DiFrancesco:1993cyw}. In the conventional potential
-$x^2/2+\lambda x^4/4$, the critical coupling is $\lambda_c=-1/12$.
-Since here $\lambda=2g$, we immediately obtain
+This is the standard quartic one-matrix model, whose solution and pure-gravity critical behaviour
+are reviewed in \cite[Sec.~2]{DiFrancesco:1993cyw}. In the conventional potential $x^2/2+\lambda
+    x^4/4$, the critical coupling is $\lambda_c=-1/12$. Since here $\lambda=2g$, we immediately obtain
 \begin{equation}
- \boxed{g_c^{\mathrm I}=g_c^{\mathrm{II}}=-\frac1{24},
- \qquad \gamma_s^{\mathrm I}=\gamma_s^{\mathrm{II}}=-\frac12.}
- \label{eq:qtm-first-critical}
+    \boxed{g_c^{\mathrm I}=g_c^{\mathrm{II}}=-\frac1{24},
+        \qquad \gamma_s^{\mathrm I}=\gamma_s^{\mathrm{II}}=-\frac12.}
+    \label{eq:qtm-first-critical}
 \end{equation}
-Factorization doubles the planar free energy, but leaves its critical
-exponent unchanged. Here and below our convention is
-$F_{0,\mathrm{sing}}\propto(g-g_c)^{2-\gamma_s}$.
+Factorization doubles the planar free energy, but leaves its critical exponent unchanged. Here and
+below our convention is $F_{0,\mathrm{sing}}\propto(g-g_c)^{2-\gamma_s}$.
 
-For completeness, the one-cut resolvent of $X$ and its endpoint parameter
-are
+For completeness, the one-cut resolvent of $X$ and its endpoint parameter are
 \begin{align}
- W_X(x)&=\frac12\left[x+2gx^3
- -(2gx^2+1+4gs)\sqrt{x^2-4s}\right],\label{eq:qtm-one-resolvent}\\
- s+6gs^2&=1,\qquad
- s(g)=\frac{2}{1+\sqrt{1+24g}},\qquad s(0)=1.
- \label{eq:qtm-s}
+    W_X(x)  & =\frac12\left[x+2gx^3
+                          -(2gx^2+1+4gs)\sqrt{x^2-4s}\right],\label{eq:qtm-one-resolvent} \\
+    s+6gs^2 & =1,\qquad
+    s(g)=\frac{2}{1+\sqrt{1+24g}},\qquad s(0)=1.
+    \label{eq:qtm-s}
 \end{align}
-Thus the one-matrix spectral coordinate $y_1=V'-2W_X$ satisfies
-$y_1^2=(2gx^2+1+4gs)^2(x^2-4s)$. At criticality $s=2$, and the density's
-quadratic prefactor vanishes at each cut endpoint.
+Thus the one-matrix spectral coordinate $y_1=V'-2W_X$ satisfies $y_1^2=(2gx^2+1+4gs)^2(x^2-4s)$. At
+criticality $s=2$, and the density's quadratic prefactor vanishes at each cut endpoint.
 
-The original second moment equals that of $X$, whereas the fourth moment
-also involves the two independent factors. Expanding $A=(X+Y)/\sqrt2$ gives
+The original second moment equals that of $X$, whereas the fourth moment also involves the two
+independent factors. Expanding $A=(X+Y)/\sqrt2$ gives
 \begin{align}
- m_2^{\mathrm I}=m_2^{\mathrm{II}}
- &=\frac{s(4-s)}3
- =\frac{(1+24g)^{3/2}-1-36g}{216g^2},\label{eq:qtm-first-m2}\\
- m_4^{\mathrm I}=m_4^{\mathrm{II}}
- &=\left[\frac{s(4-s)}3\right]^2+\frac12s^2(3-s)
- =(m_2^{\mathrm I})^2+\frac{1-m_2^{\mathrm I}}{4g}.
- \label{eq:qtm-first-m4}
+    m_2^{\mathrm I}=m_2^{\mathrm{II}}
+     & =\frac{s(4-s)}3
+    =\frac{(1+24g)^{3/2}-1-36g}{216g^2},\label{eq:qtm-first-m2} \\
+    m_4^{\mathrm I}=m_4^{\mathrm{II}}
+     & =\left[\frac{s(4-s)}3\right]^2+\frac12s^2(3-s)
+    =(m_2^{\mathrm I})^2+\frac{1-m_2^{\mathrm I}}{4g}.
+    \label{eq:qtm-first-m4}
 \end{align}
-The apparent singularities at $g=0$ are removable. Equivalently, the
-remaining second moment is constrained by
+The apparent singularities at $g=0$ are removable. Equivalently, the remaining second moment is
+constrained by
 \begin{equation}
- \boxed{108g^2m_2^2+(1+36g)m_2-1-32g=0,
- \qquad m_2(0)=1.}
- \label{eq:qtm-first-m2-polynomial}
+    \boxed{108g^2m_2^2+(1+36g)m_2-1-32g=0,
+        \qquad m_2(0)=1.}
+    \label{eq:qtm-first-m2-polynomial}
 \end{equation}
-In particular, the original $A$-resolvent should not itself be identified
-with the quartic $X$-resolvent: their second moments agree, but their fourth
-moments do not.
+In particular, the original $A$-resolvent should not itself be identified with the quartic
+$X$-resolvent: their second moments agree, but their fourth moments do not.
 
 \subsection{The second pair: a standard bilinear two-matrix model}
 
 It suffices to solve model IV. The complex linear transformation
 \begin{equation}
- U=\frac{A+iB}{\sqrt2},\qquad
- V=-\frac{A-iB}{\sqrt2},\qquad
- A=\frac{U-V}{\sqrt2},\qquad
- B=\frac{U+V}{i\sqrt2}
- \label{eq:qtm-complex-basis}
+    U=\frac{A+iB}{\sqrt2},\qquad
+    V=-\frac{A-iB}{\sqrt2},\qquad
+    A=\frac{U-V}{\sqrt2},\qquad
+    B=\frac{U+V}{i\sqrt2}
+    \label{eq:qtm-complex-basis}
 \end{equation}
 gives
 \begin{equation}
- \operatorname{Tr}\mathcal V_{\mathrm{IV}}
- =\operatorname{Tr}\left[-UV-\frac g2(U^4+V^4)\right]
- =\operatorname{Tr}\bigl[V_1(U)+V_2(V)-UV\bigr],
- \quad V_1(u)=V_2(u)=-\frac g2u^4.
- \label{eq:qtm-bilinear}
+    \operatorname{Tr}\mathcal V_{\mathrm{IV}}
+    =\operatorname{Tr}\left[-UV-\frac g2(U^4+V^4)\right]
+    =\operatorname{Tr}\bigl[V_1(U)+V_2(V)-UV\bigr],
+    \quad V_1(u)=V_2(u)=-\frac g2u^4.
+    \label{eq:qtm-bilinear}
 \end{equation}
-Unlike \eqref{eq:qtm-factorization}, this does not decouple the matrices.
-It does, however, put the model in the standard bilinear class studied by
-Eynard \cite{Eynard:2002kg}. The transformed Hermitian cycle satisfies
-$V=-U^\dagger$; replacing it by two independent Hermitian integrations would
-be a different prescription. The formal expansion is unambiguously
-inherited from the original Gaussian integral.
+Unlike \eqref{eq:qtm-factorization}, this does not decouple the matrices. It does, however, put the
+model in the standard bilinear class studied by Eynard \cite{Eynard:2002kg}. The transformed
+Hermitian cycle satisfies $V=-U^\dagger$; replacing it by two independent Hermitian integrations
+would be a different prescription. The formal expansion is unambiguously inherited from the
+original Gaussian integral.
 
 Set $a=-2g$, so $V_1'(x)=ax^3$. Introduce the remaining curve coefficients
 \begin{equation}
- m=-\frac1N\bigl\langle\operatorname{Tr}UV\bigr\rangle,
- \qquad
- q=\frac1N\bigl\langle\operatorname{Tr}U^2V^2\bigr\rangle.
- \label{eq:qtm-mq-definitions}
+    m=-\frac1N\bigl\langle\operatorname{Tr}UV\bigr\rangle,
+    \qquad
+    q=\frac1N\bigl\langle\operatorname{Tr}U^2V^2\bigr\rangle.
+    \label{eq:qtm-mq-definitions}
 \end{equation}
 The spectral curve derived above takes Eynard's form
 \begin{equation}
- E(x,y)=(ax^3-y)(ay^3-x)
-       -a^2(x^2y^2-mxy+q)+1=0.
- \label{eq:qtm-second-curve}
+    E(x,y)=(ax^3-y)(ay^3-x)
+    -a^2(x^2y^2-mxy+q)+1=0.
+    \label{eq:qtm-second-curve}
 \end{equation}
-In particular,
-$W_U(x(z))=V_1'(x(z))-y(z)$, where
+In particular, $W_U(x(z))=V_1'(x(z))-y(z)$, where
 $W_U(x)=\frac1N\langle\operatorname{Tr}(x-U)^{-1}\rangle$.
 
-For cubic $V_1'$ and $V_2'$, the genus-zero parametrization is
-\cite[Eqs.~(4.1), (4.4)--(4.5)]{Eynard:2002kg}
+For cubic $V_1'$ and $V_2'$, the genus-zero parametrization is \cite[Eqs.~(4.1),
+    (4.4)--(4.5)]{Eynard:2002kg}
 \begin{equation}
- x(z)=\gamma z+\sum_{k=0}^3\alpha_kz^{-k},\qquad
- y(z)=\frac\gamma z+\sum_{k=0}^3\beta_kz^k.
- \label{eq:qtm-general-rational}
+    x(z)=\gamma z+\sum_{k=0}^3\alpha_kz^{-k},\qquad
+    y(z)=\frac\gamma z+\sum_{k=0}^3\beta_kz^k.
+    \label{eq:qtm-general-rational}
 \end{equation}
-The symmetry $(U,V)\mapsto(iU,-iV)$ leaves only the coefficients with $k=3$,
-and exchange symmetry equates them. Hence
+The symmetry $(U,V)\mapsto(iU,-iV)$ leaves only the coefficients with $k=3$, and exchange symmetry
+equates them. Hence
 \begin{equation}
- \boxed{x(z)=\gamma(z+bz^{-3}),\qquad
- y(z)=\gamma(z^{-1}+bz^3).}
- \label{eq:qtm-rational}
+    \boxed{x(z)=\gamma(z+bz^{-3}),\qquad
+        y(z)=\gamma(z^{-1}+bz^3).}
+    \label{eq:qtm-rational}
 \end{equation}
-The symbol $\gamma$ here is a parametrization coefficient, not the string
-susceptibility $\gamma_s$.
+The symbol $\gamma$ here is a parametrization coefficient, not the string susceptibility
+$\gamma_s$.
 
-To fix the coefficients, impose $W_U(x)\sim1/x$ at infinity. Cancellation of
-the $z^3$ term gives $b=a\gamma^2=-2g\gamma^2$. The remaining leading term is
+To fix the coefficients, impose $W_U(x)\sim1/x$ at infinity. Cancellation of the $z^3$ term gives
+$b=a\gamma^2=-2g\gamma^2$. The remaining leading term is
 \begin{equation}
- W_U(x(z))
- =\gamma(3b^2-1)z^{-1}+3\gamma b^3z^{-5}
-   +\gamma b^4z^{-9},
+    W_U(x(z))
+    =\gamma(3b^2-1)z^{-1}+3\gamma b^3z^{-5}
+    +\gamma b^4z^{-9},
 \end{equation}
-so its normalization requires $\gamma^2(3b^2-1)=1$. The other infinity gives
-the same condition. Setting $r=-\gamma^2$, we obtain
+so its normalization requires $\gamma^2(3b^2-1)=1$. The other infinity gives the same condition.
+Setting $r=-\gamma^2$, we obtain
 \begin{equation}
- \boxed{\gamma^2=-r,\qquad b=2gr,\qquad
- 12g^2r^3-r+1=0,\qquad r(0)=1.}
- \label{eq:qtm-r-cubic}
+    \boxed{\gamma^2=-r,\qquad b=2gr,\qquad
+        12g^2r^3-r+1=0,\qquad r(0)=1.}
+    \label{eq:qtm-r-cubic}
 \end{equation}
 Equivalently,
 \begin{equation}
- r=\frac1{1-3b^2},\qquad
- g=\frac b2(1-3b^2).
- \label{eq:qtm-b-coupling}
+    r=\frac1{1-3b^2},\qquad
+    g=\frac b2(1-3b^2).
+    \label{eq:qtm-b-coupling}
 \end{equation}
-All parametrization coefficients are now fixed:
-$\alpha_3=\beta_3=b\gamma=-2g\gamma^3$, and
+All parametrization coefficients are now fixed: $\alpha_3=\beta_3=b\gamma=-2g\gamma^3$, and
 $\alpha_k=\beta_k=0$ for $k=0,1,2$.
 
 \subsection{Algebraic constraints and closed original-basis moments}
 
-Substitute \eqref{eq:qtm-rational} into \eqref{eq:qtm-second-curve} and use
-\eqref{eq:qtm-r-cubic}. The coefficients of $z^{\pm4}$ fix $m$, and the
-constant coefficient fixes $q$; the other coefficients then vanish.
-The result is
+Substitute \eqref{eq:qtm-rational} into \eqref{eq:qtm-second-curve} and use \eqref{eq:qtm-r-cubic}.
+The coefficients of $z^{\pm4}$ fix $m$, and the constant coefficient fixes $q$; the other
+coefficients then vanish. The result is
 \begin{equation}
- \boxed{m=\frac{1+3r-r^2}{3},\qquad
- q=\frac{1+9r+33r^2-16r^3}{27}.}
- \label{eq:qtm-mq-solution}
+    \boxed{m=\frac{1+3r-r^2}{3},\qquad
+        q=\frac{1+9r+33r^2-16r^3}{27}.}
+    \label{eq:qtm-mq-solution}
 \end{equation}
-Eliminating $r$ gives explicit polynomial constraints on the curve
-coefficients:
+Eliminating $r$ gives explicit polynomial constraints on the curve coefficients:
 \begin{align}
- 0={}&m-1+4g^2(18m^2-66m+47)+48g^4(3m-1)^3,
- \quad m(0)=1,\label{eq:qtm-m-polynomial}\\
- 0={}&16g^6(27q-1)^3-4g^4(27702q^2-9342q+65)
- \nonumber\\[-2pt]
- &\hspace{14mm}+g^2(8019q-7251)-64(q-1),
- \quad q(0)=1.
- \label{eq:qtm-q-polynomial}
+    0={} & m-1+4g^2(18m^2-66m+47)+48g^4(3m-1)^3,
+    \quad m(0)=1,\label{eq:qtm-m-polynomial} \\
+    0={} & 16g^6(27q-1)^3-4g^4(27702q^2-9342q+65)
+    \nonumber \\[-2pt]
+         & \hspace{14mm}+g^2(8019q-7251)-64(q-1),
+    \quad q(0)=1.
+    \label{eq:qtm-q-polynomial}
 \end{align}
-Their joint solution is specified by the common $r$ in
-\eqref{eq:qtm-mq-solution}.
+Their joint solution is specified by the common $r$ in \eqref{eq:qtm-mq-solution}.
 
 Next expand the resolvent as
 \begin{equation}
- W_U(x)=\frac1x+\frac h{x^5}+O(x^{-9}),\qquad
- h=\frac1N\bigl\langle\operatorname{Tr}U^4\bigr\rangle
-  =\frac1N\bigl\langle\operatorname{Tr}V^4\bigr\rangle.
+    W_U(x)=\frac1x+\frac h{x^5}+O(x^{-9}),\qquad
+    h=\frac1N\bigl\langle\operatorname{Tr}U^4\bigr\rangle
+    =\frac1N\bigl\langle\operatorname{Tr}V^4\bigr\rangle.
 \end{equation}
 Matching the coefficient of $z^{-5}$ gives
 \begin{equation}
- h=b\gamma^4(1+3b^2\gamma^2)
-   =\boxed{2gr^3(2-r)}.
- \label{eq:qtm-h}
+    h=b\gamma^4(1+3b^2\gamma^2)
+    =\boxed{2gr^3(2-r)}.
+    \label{eq:qtm-h}
 \end{equation}
-The scaling loop equation is $1=m-2gh$. Subtracting the planar loop
-equations with test words $U^2V$ and $UVU$ also gives
+The scaling loop equation is $1=m-2gh$. Subtracting the planar loop equations with test words
+$U^2V$ and $UVU$ also gives
 \begin{equation}
- \frac1N\bigl\langle\operatorname{Tr}UVUV\bigr\rangle=q+m.
- \label{eq:qtm-alternating-moment}
+    \frac1N\bigl\langle\operatorname{Tr}UVUV\bigr\rangle=q+m.
+    \label{eq:qtm-alternating-moment}
 \end{equation}
-These identities suffice to return to the original variables. Trace
-cyclicity gives $m_2^{\mathrm{IV}}=-\frac1N\langle\operatorname{Tr}UV\rangle=m$.
-Moreover, the discrete symmetry eliminates the $U^3V$ and $UV^3$ terms in
-the expansion of $A^4$, leaving
+These identities suffice to return to the original variables. Trace cyclicity gives
+$m_2^{\mathrm{IV}}=-\frac1N\langle\operatorname{Tr}UV\rangle=m$. Moreover, the discrete symmetry
+eliminates the $U^3V$ and $UV^3$ terms in the expansion of $A^4$, leaving
 \begin{equation}
- m_4^{\mathrm{IV}}
- =\frac14\left[2h+4q+2(q+m)\right]
- =\frac{3q+m+h}{2}.
- \label{eq:qtm-return-m4}
+    m_4^{\mathrm{IV}}
+    =\frac14\left[2h+4q+2(q+m)\right]
+    =\frac{3q+m+h}{2}.
+    \label{eq:qtm-return-m4}
 \end{equation}
 Using \eqref{eq:qtm-pair-identities}, both models are therefore solved by
 \begin{equation}
- \boxed{\begin{aligned}
- m_2^{\mathrm{III}}(g)=m_2^{\mathrm{IV}}(g)
- &=\frac{1+3r-r^2}{3},\\
- m_4^{\mathrm{IV}}(g)
- &=\frac{2+9r+15r^2-8r^3}{9}+gr^3(2-r),\\
- m_4^{\mathrm{III}}(g)
- &=\frac{2+9r+15r^2-8r^3}{9}-gr^3(2-r).
- \end{aligned}}
- \label{eq:qtm-original-moments}
+    \boxed{\begin{aligned}
+            m_2^{\mathrm{III}}(g)=m_2^{\mathrm{IV}}(g)
+             & =\frac{1+3r-r^2}{3}, \\
+            m_4^{\mathrm{IV}}(g)
+             & =\frac{2+9r+15r^2-8r^3}{9}+gr^3(2-r), \\
+            m_4^{\mathrm{III}}(g)
+             & =\frac{2+9r+15r^2-8r^3}{9}-gr^3(2-r).
+        \end{aligned}}
+    \label{eq:qtm-original-moments}
 \end{equation}
-These are closed functions of $g$: the solution of
-\eqref{eq:qtm-r-cubic} analytic at zero can be written explicitly as
+These are closed functions of $g$: the solution of \eqref{eq:qtm-r-cubic} analytic at zero can be
+written explicitly as
 \begin{equation}
- \boxed{r(g)=\frac{\sin\!\left(\frac13\arcsin(9g)\right)}{3g},
- \qquad r(0)=1,}
- \label{eq:qtm-r-closed}
+    \boxed{r(g)=\frac{\sin\!\left(\frac13\arcsin(9g)\right)}{3g},
+        \qquad r(0)=1,}
+    \label{eq:qtm-r-closed}
 \end{equation}
-where $\arcsin$ is chosen analytic at zero. The formula is real for
-$|g|\leq1/9$ and defines the same formal series locally for complex $g$.
-In particular, $r,m,q$ are even in $g$, whereas $h$ is odd.
+where $\arcsin$ is chosen analytic at zero. The formula is real for $|g|\leq1/9$ and defines the
+same formal series locally for complex $g$. In particular, $r,m,q$ are even in $g$, whereas $h$ is
+odd.
 
-A compact algebraic system for the original moments, without introducing
-$q$ or $h$, is
+A compact algebraic system for the original moments, without introducing $q$ or $h$, is
 \begin{equation}
- \begin{aligned}
- 12g^2r^3-r+1&=0,\\
- 3m_2+r^2-3r-1&=0,\\
- 9m_4^{(\sigma)}+8r^3-15r^2-9r-2
-             -9\sigma gr^3(2-r)&=0,
- \end{aligned}
- \qquad
- \begin{matrix}
- m_4^{(+1)}=m_4^{\mathrm{IV}},\\
- m_4^{(-1)}=m_4^{\mathrm{III}}.
- \end{matrix}
- \label{eq:qtm-original-system}
+    \begin{aligned}
+        12g^2r^3-r+1       & =0, \\
+        3m_2+r^2-3r-1      & =0, \\
+        9m_4^{(\sigma)}+8r^3-15r^2-9r-2
+        -9\sigma gr^3(2-r) & =0,
+    \end{aligned}
+    \qquad
+    \begin{matrix}
+        m_4^{(+1)}=m_4^{\mathrm{IV}}, \\
+        m_4^{(-1)}=m_4^{\mathrm{III}}.
+    \end{matrix}
+    \label{eq:qtm-original-system}
 \end{equation}
-Thus both $m_2$ and $m_4$ are algebraic of degree at most three over
-$\mathbb Q(g)$, with the solution fixed by $r(0)=1$, $m_2(0)=1$, and
-$m_4(0)=2$.
+Thus both $m_2$ and $m_4$ are algebraic of degree at most three over $\mathbb Q(g)$, with the
+solution fixed by $r(0)=1$, $m_2(0)=1$, and $m_4(0)=2$.
 
 \subsection{Perturbative expansions}
 
-The first pair follows immediately by expanding
-\eqref{eq:qtm-first-m2}--\eqref{eq:qtm-first-m4}:
+The first pair follows immediately by expanding \eqref{eq:qtm-first-m2}--\eqref{eq:qtm-first-m4}:
 \begin{align}
- m_2^{\mathrm I,\mathrm{II}}
- &=1-4g+36g^2-432g^3+6048g^4+O(g^5),\\
- m_4^{\mathrm I,\mathrm{II}}
- &=2-17g+196g^2-2664g^3+40176g^4+O(g^5).
- \label{eq:qtm-first-series}
+    m_2^{\mathrm I,\mathrm{II}}
+     & =1-4g+36g^2-432g^3+6048g^4+O(g^5), \\
+    m_4^{\mathrm I,\mathrm{II}}
+     & =2-17g+196g^2-2664g^3+40176g^4+O(g^5).
+    \label{eq:qtm-first-series}
 \end{align}
 For the second pair, Lagrange inversion of $r=1+12g^2r^3$ gives
 \begin{equation}
- r(g)=\sum_{n\geq0}\frac1{2n+1}\binom{3n}{n}(12g^2)^n
- =1+12g^2+432g^4+20736g^6+O(g^8).
- \label{eq:qtm-r-series}
+    r(g)=\sum_{n\geq0}\frac1{2n+1}\binom{3n}{n}(12g^2)^n
+    =1+12g^2+432g^4+20736g^6+O(g^8).
+    \label{eq:qtm-r-series}
 \end{equation}
 Substituting into \eqref{eq:qtm-original-moments} yields
 \begin{align}
- m_2^{\mathrm{III},\mathrm{IV}}
- &=1+4g^2+96g^4+3456g^6+O(g^8),\label{eq:qtm-second-series-m2}\\
- m_4^{\mathrm{IV}}
- &=2+g+20g^2+24g^3+576g^4+864g^5+22656g^6+O(g^7),\\
- m_4^{\mathrm{III}}
- &=2-g+20g^2-24g^3+576g^4-864g^5+22656g^6+O(g^7).
- \label{eq:qtm-second-series-m4}
+    m_2^{\mathrm{III},\mathrm{IV}}
+     & =1+4g^2+96g^4+3456g^6+O(g^8),\label{eq:qtm-second-series-m2} \\
+    m_4^{\mathrm{IV}}
+     & =2+g+20g^2+24g^3+576g^4+864g^5+22656g^6+O(g^7), \\
+    m_4^{\mathrm{III}}
+     & =2-g+20g^2-24g^3+576g^4-864g^5+22656g^6+O(g^7).
+    \label{eq:qtm-second-series-m4}
 \end{align}
-The coefficients through $g^4$ also follow directly from recursive planar
-Schwinger--Dyson equations in the original $A,B$ variables.
+The coefficients through $g^4$ also follow directly from recursive planar Schwinger--Dyson
+equations in the original $A,B$ variables.
 
 \subsection{Endpoint criticality and the obstruction to higher degeneracy}
 
-A generic finite endpoint $x_e=x(e)$ of the selected resolvent branch
-satisfies
+A generic finite endpoint $x_e=x(e)$ of the selected resolvent branch satisfies
 \begin{equation}
- x'(e)=0,\qquad x''(e)\neq0,\qquad y'(e)\neq0,
+    x'(e)=0,\qquad x''(e)\neq0,\qquad y'(e)\neq0,
 \end{equation}
-where primes denote derivatives with respect to $z$. Expanding
-$W_U(x(z))=V_1'(x(z))-y(z)$ gives, on either local sheet,
+where primes denote derivatives with respect to $z$. Expanding $W_U(x(z))=V_1'(x(z))-y(z)$ gives,
+on either local sheet,
 \begin{equation}
- W_U(x)=W_{\mathrm{reg}}(x)
- -y'(e)\sqrt{\frac{2(x-x_e)}{x''(e)}}
- +O\bigl((x-x_e)^{3/2}\bigr),
- \label{eq:qtm-generic-edge}
+    W_U(x)=W_{\mathrm{reg}}(x)
+    -y'(e)\sqrt{\frac{2(x-x_e)}{x''(e)}}
+    +O\bigl((x-x_e)^{3/2}\bigr),
+    \label{eq:qtm-generic-edge}
 \end{equation}
-where $W_{\mathrm{reg}}$ is analytic near $x_e$ and the sign of the square
-root specifies the sheet. Thus $x'(e)=0$ locates an ordinary endpoint;
-criticality additionally requires $y'(e)=0$, eliminating the leading
-square-root term \cite[Sec.~4.4.1]{Eynard:2002kg}. The existence of a branch
-point alone imposes no criticality condition.
+where $W_{\mathrm{reg}}$ is analytic near $x_e$ and the sign of the square root specifies the
+sheet. Thus $x'(e)=0$ locates an ordinary endpoint; criticality additionally requires $y'(e)=0$,
+eliminating the leading square-root term \cite[Sec.~4.4.1]{Eynard:2002kg}. The existence of a
+branch point alone imposes no criticality condition.
 
 For \eqref{eq:qtm-rational}, at any finite endpoint,
 \begin{equation}
- e^4=3b,\qquad
- x''(e)=\frac{4\gamma}{e},\qquad
- y'(e)=\frac{\gamma}{e^2}(9b^2-1).
- \label{eq:qtm-endpoint-derivatives}
+    e^4=3b,\qquad
+    x''(e)=\frac{4\gamma}{e},\qquad
+    y'(e)=\frac{\gamma}{e^2}(9b^2-1).
+    \label{eq:qtm-endpoint-derivatives}
 \end{equation}
 Consequently,
 \begin{equation}
- \boxed{b_c=\pm\frac13,\qquad r_c=\frac32,\qquad
- \gamma_c^2=-\frac32,\qquad g_c=\pm\frac19.}
- \label{eq:qtm-second-critical}
+    \boxed{b_c=\pm\frac13,\qquad r_c=\frac32,\qquad
+        \gamma_c^2=-\frac32,\qquad g_c=\pm\frac19.}
+    \label{eq:qtm-second-critical}
 \end{equation}
-These endpoints belong to the continuation of the infinity branch:
-for $b>0$, $x(z)/\gamma=z+b/z^3$ is strictly increasing for real
-$z>e=(3b)^{1/4}$, so this inverse branch can be followed from infinity
-down to $e$. The other endpoints and the negative coupling are obtained
-by the symmetries of the parametrization.
+These endpoints belong to the continuation of the infinity branch: for $b>0$, $x(z)/\gamma=z+b/z^3$
+is strictly increasing for real $z>e=(3b)^{1/4}$, so this inverse branch can be followed from
+infinity down to $e$. The other endpoints and the negative coupling are obtained by the symmetries
+of the parametrization.
 
 \paragraph{Simultaneous cancellation conditions.}
-To test for higher criticality, keep $b$ arbitrary rather than fixing it
-at \eqref{eq:qtm-second-critical}. Once $x'(e)=y'(e)=0$, define
+To test for higher criticality, keep $b$ arbitrary rather than fixing it at
+\eqref{eq:qtm-second-critical}. Once $x'(e)=y'(e)=0$, define
 \begin{equation}
- K(e)=y'''(e)-\frac{y''(e)x'''(e)}{x''(e)}.
- \label{eq:qtm-K}
+    K(e)=y'''(e)-\frac{y''(e)x'''(e)}{x''(e)}.
+    \label{eq:qtm-K}
 \end{equation}
 Indeed, writing $u=z-e$ and subtracting the analytic tangent gives
 \begin{align}
- \xi:=x-x_e&=\frac{x''(e)}2u^2+O(u^3),\\
- \eta:=y-y_e-\frac{y''(e)}{x''(e)}(x-x_e)
- &=\frac{K(e)}6u^3+O(u^4).
- \label{eq:qtm-tangent-subtraction}
+    \xi:=x-x_e & =\frac{x''(e)}2u^2+O(u^3), \\
+    \eta:=y-y_e-\frac{y''(e)}{x''(e)}(x-x_e)
+               & =\frac{K(e)}6u^3+O(u^4).
+    \label{eq:qtm-tangent-subtraction}
 \end{align}
-Thus the $3/2$ term can vanish only if $K(e)=0$ as well. At an arbitrary
-endpoint $e^4=3b$,
+Thus the $3/2$ term can vanish only if $K(e)=0$ as well. At an arbitrary endpoint $e^4=3b$,
 \begin{equation}
- \frac{x'''(e)}{x''(e)}=-\frac5e,\qquad
- y''(e)=\gamma\left(\frac2{e^3}+6be\right),\qquad
- y'''(e)=\gamma\left(-\frac6{e^4}+6b\right),
+    \frac{x'''(e)}{x''(e)}=-\frac5e,\qquad
+    y''(e)=\gamma\left(\frac2{e^3}+6be\right),\qquad
+    y'''(e)=\gamma\left(-\frac6{e^4}+6b\right),
 \end{equation}
 Substitution into \eqref{eq:qtm-K} gives
 \begin{equation}
- \boxed{K(e)=\frac{4\gamma}{e^4}(1+27b^2).}
- \label{eq:qtm-K-evaluated}
+    \boxed{K(e)=\frac{4\gamma}{e^4}(1+27b^2).}
+    \label{eq:qtm-K-evaluated}
 \end{equation}
-The necessary conditions for eliminating both nonanalytic terms are
-therefore
+The necessary conditions for eliminating both nonanalytic terms are therefore
 \begin{equation}
- \boxed{
- y'(e)=0\ \Longrightarrow\ b^2=\frac19,
- \qquad
- K(e)=0\ \Longrightarrow\ b^2=-\frac1{27}.}
- \label{eq:qtm-obstruction}
+    \boxed{
+        y'(e)=0\ \Longrightarrow\ b^2=\frac19,
+        \qquad
+        K(e)=0\ \Longrightarrow\ b^2=-\frac1{27}.}
+    \label{eq:qtm-obstruction}
 \end{equation}
-They are incompatible, even for complex $b$. Solving $K(e)=0$ alone does
-not give another multicritical point: there $y'(e)\neq0$, and the ordinary
-square-root term survives. Nor can one evade this obstruction by imposing
-$x''(e)=0$, since \eqref{eq:qtm-endpoint-derivatives} and the normalization
-force $x''(e)\neq0$. At $b=0$, $x(z)=\gamma z$ has no finite endpoint;
-$e=0$ is only a spurious solution obtained by clearing denominators.
+They are incompatible, even for complex $b$. Solving $K(e)=0$ alone does not give another
+multicritical point: there $y'(e)\neq0$, and the ordinary square-root term survives. Nor can one
+evade this obstruction by imposing $x''(e)=0$, since \eqref{eq:qtm-endpoint-derivatives} and the
+normalization force $x''(e)\neq0$. At $b=0$, $x(z)=\gamma z$ has no finite endpoint; $e=0$ is only
+a spurious solution obtained by clearing denominators.
 
 At either critical coupling the surviving local coefficients are
 \begin{equation}
- \xi=\frac{2\gamma_c}{e}u^2+O(u^3),\qquad
- \eta=\frac{8\gamma_c}{3e^4}u^3+O(u^4),
- \qquad e^4=\pm1.
- \label{eq:qtm-cusp}
+    \xi=\frac{2\gamma_c}{e}u^2+O(u^3),\qquad
+    \eta=\frac{8\gamma_c}{3e^4}u^3+O(u^4),
+    \qquad e^4=\pm1.
+    \label{eq:qtm-cusp}
 \end{equation}
-Both coefficients are nonzero. The local curve is therefore a $(2,3)$
-cusp, $\eta^2\propto\xi^3$, and the first nonanalytic resolvent term has
-power $3/2$. This is the highest finite-endpoint criticality available in
-this rational one-parameter family. The branching remains two-sheeted;
-it is the order of the resolvent discontinuity that increases.
+Both coefficients are nonzero. The local curve is therefore a $(2,3)$ cusp, $\eta^2\propto\xi^3$,
+and the first nonanalytic resolvent term has power $3/2$. This is the highest finite-endpoint
+criticality available in this rational one-parameter family. The branching remains two-sheeted; it
+is the order of the resolvent discontinuity that increases.
 
 \subsection{String susceptibility and transfer to the original basis}
 
-The $(2,3)$ cusp is the usual pure-gravity criticality, with
-$\gamma_s=-2/(2+3-1)=-1/2$
-\cite[Eq.~(4.17)]{DiFrancesco:1993cyw}. We can also verify the
-exponent directly in the coupling $g$, and simultaneously establish that
-it is a singularity of the original model rather than merely of a rotated
-spectral coordinate.
+The $(2,3)$ cusp is the usual pure-gravity criticality, with $\gamma_s=-2/(2+3-1)=-1/2$
+\cite[Eq.~(4.17)]{DiFrancesco:1993cyw}. We can also verify the exponent directly in the coupling
+$g$, and simultaneously establish that it is a singularity of the original model rather than merely
+of a rotated spectral coordinate.
 
 Define the normalized planar free energy by
 \begin{equation}
- F_0(g)=\lim_{N\to\infty}\frac1{N^2}
-             \log\frac{Z_N(g)}{Z_N(0)}.
- \label{eq:qtm-free-definition}
+    F_0(g)=\lim_{N\to\infty}\frac1{N^2}
+    \log\frac{Z_N(g)}{Z_N(0)}.
+    \label{eq:qtm-free-definition}
 \end{equation}
-Differentiating \eqref{eq:qtm-bilinear}, and using the scaling identity
-$1=m-2gh$, gives
+Differentiating \eqref{eq:qtm-bilinear}, and using the scaling identity $1=m-2gh$, gives
 \begin{equation}
- F_0'(g)=\frac1{2N}\bigl\langle
- \operatorname{Tr}(U^4+V^4)\bigr\rangle
- =h=\frac{m_2(g)-1}{2g}=2gr^3(2-r).
- \label{eq:qtm-free-derivative}
+    F_0'(g)=\frac1{2N}\bigl\langle
+    \operatorname{Tr}(U^4+V^4)\bigr\rangle
+    =h=\frac{m_2(g)-1}{2g}=2gr^3(2-r).
+    \label{eq:qtm-free-derivative}
 \end{equation}
 Writing $t=g^2=(r-1)/(12r^3)$, we obtain
 \begin{equation}
- \frac{dF_0}{dt}=r^3(2-r),\qquad
- \frac{dt}{dr}=\frac{3-2r}{12r^4},\qquad
- F_0(g)=\frac12\log r+\frac{r^2-7r+6}{12}.
- \label{eq:qtm-free-closed}
+    \frac{dF_0}{dt}=r^3(2-r),\qquad
+    \frac{dt}{dr}=\frac{3-2r}{12r^4},\qquad
+    F_0(g)=\frac12\log r+\frac{r^2-7r+6}{12}.
+    \label{eq:qtm-free-closed}
 \end{equation}
 The additive constant is fixed by $r(0)=1$ and $F_0(0)=0$.
 
-Set $\Delta=1-81g^2$. Near either critical coupling, on the continuation
-from $g=0$,
+Set $\Delta=1-81g^2$. Near either critical coupling, on the continuation from $g=0$,
 \begin{align}
- r&=\frac32-\frac{\sqrt3}{2}\Delta^{1/2}
-        +\frac23\Delta+O(\Delta^{3/2}),\\
- m_2&=\frac{13}{12}-\frac14\Delta
-             +\frac{2\sqrt3}{9}\Delta^{3/2}+O(\Delta^2),
- \label{eq:qtm-critical-m2}\\
- F_0&=F_{0,c}-\frac{\Delta}{48}+\frac{\Delta^2}{48}
-              -\frac{\sqrt3}{45}\Delta^{5/2}+O(\Delta^3),
- \qquad F_{0,c}=\frac12\log\frac32-\frac3{16}.
- \label{eq:qtm-critical-free}
+    r   & =\frac32-\frac{\sqrt3}{2}\Delta^{1/2}
+    +\frac23\Delta+O(\Delta^{3/2}), \\
+    m_2 & =\frac{13}{12}-\frac14\Delta
+    +\frac{2\sqrt3}{9}\Delta^{3/2}+O(\Delta^2),
+    \label{eq:qtm-critical-m2} \\
+    F_0 & =F_{0,c}-\frac{\Delta}{48}+\frac{\Delta^2}{48}
+    -\frac{\sqrt3}{45}\Delta^{5/2}+O(\Delta^3),
+    \qquad F_{0,c}=\frac12\log\frac32-\frac3{16}.
+    \label{eq:qtm-critical-free}
 \end{align}
-In particular, $m_2$ is nonanalytic in the original basis. Its leading
-square root cancels because
-$m_2=13/12-(r-3/2)^2/3$, but its $\Delta^{3/2}$ coefficient does not.
-Since $\Delta$ has a simple zero at $g_c=\pm1/9$, the nonzero
-$\Delta^{5/2}$ term in the free energy gives
+In particular, $m_2$ is nonanalytic in the original basis. Its leading square root cancels because
+$m_2=13/12-(r-3/2)^2/3$, but its $\Delta^{3/2}$ coefficient does not. Since $\Delta$ has a simple
+zero at $g_c=\pm1/9$, the nonzero $\Delta^{5/2}$ term in the free energy gives
 \begin{equation}
- \boxed{g_c^{\mathrm{III},\mathrm{IV}}=\pm\frac19,
- \qquad \gamma_s^{\mathrm{III},\mathrm{IV}}=-\frac12.}
- \label{eq:qtm-second-susceptibility}
+    \boxed{g_c^{\mathrm{III},\mathrm{IV}}=\pm\frac19,
+        \qquad \gamma_s^{\mathrm{III},\mathrm{IV}}=-\frac12.}
+    \label{eq:qtm-second-susceptibility}
 \end{equation}
 
-Finally, the basis change \eqref{eq:qtm-complex-basis} is invertible and
-independent of $g$. Its constant Jacobian cancels in the normalized
-partition function, so $F_0^{AB}(g)=F_0^{UV}(g)$ with the inherited
-integration prescription. Hence the free-energy singularity and its
-exponent transfer exactly to the original variables. Model III follows
-from \eqref{eq:qtm-pair-identities} and
-$F_0^{\mathrm{III}}(g)=F_0^{\mathrm{IV}}(-g)$; the expression
-\eqref{eq:qtm-free-closed} is even in $g$, so their normalized planar free
-energies coincide. This argument does not require the original
+Finally, the basis change \eqref{eq:qtm-complex-basis} is invertible and independent of $g$. Its
+constant Jacobian cancels in the normalized partition function, so $F_0^{AB}(g)=F_0^{UV}(g)$ with
+the inherited integration prescription. Hence the free-energy singularity and its exponent transfer
+exactly to the original variables. Model III follows from \eqref{eq:qtm-pair-identities} and
+$F_0^{\mathrm{III}}(g)=F_0^{\mathrm{IV}}(-g)$; the expression \eqref{eq:qtm-free-closed} is even in
+$g$, so their normalized planar free energies coincide. This argument does not require the original
 $A$-resolvent to have the same spectral-variable endpoints as $W_U$.

@@ -1,38 +1,50 @@
 \section{Generic Cubic Two-Matrix Model}
-To illustrate our formalism and demonstrate the strength of the loop equation approach, let us consider the simple example of a two-matrix model with a generic cubic potential:
+To illustrate our formalism and demonstrate the strength of the loop equation approach, let us
+consider the simple example of a two-matrix model with a generic cubic potential:
 %
 \begin{align}
     \label{2MMGeneric}
-    V(M_1,M_2) = & \frac{1}{2(\alpha \beta - \gamma^2)}(\alpha M_1^2 + \beta M_2^2 - 2 \gamma M_1 M_2) \\ & \qquad \quad \nonumber - \frac{1}{3} (a M_1^3 + 3b M_1^2 M_2 + 3d M_1 M_2^2 + e M_2^3).
+    V(M_1,M_2) = & \frac{1}{2(\alpha \beta - \gamma^2)}(\alpha M_1^2 + \beta M_2^2 - 2 \gamma M_1 M_2) \\
+                 & \qquad \quad \nonumber - \frac{1}{3} (a M_1^3 + 3b M_1^2 M_2 + 3d M_1 M_2^2 + e M_2^3).
 \end{align}
 %
-This furnishes an example of a multi-matrix model which is not solvable through any known saddle-point or orthogonal polynomial approach. In particular, the loop equation method of section 2 is not sufficient to compute the planar resolvent. However, as first demonstrated in \cite{Carroll:1995nj}, one may compute the resolvent of this model using our more granular loop equation strategy.
+This furnishes an example of a multi-matrix model which is not solvable through any known
+saddle-point or orthogonal polynomial approach. In particular, the loop equation method of section
+2 is not sufficient to compute the planar resolvent. However, as first demonstrated in
+\cite{Carroll:1995nj}, one may compute the resolvent of this model using our more granular loop
+equation strategy.
 
 For \eqref{2MMGeneric} the following are the minimal set of reparameterisations:
 %
 \begin{align}
     \label{2MMGenericReps}
     \delta M_{i} & = \frac{1}{z-M_1}, \\
-    \delta M_{i} & = M_2 \frac{1}{z-M_1} + \text{h.c.},\\
-    \delta M_{i} & = M_2^2 \frac{1}{z-M_1}+\text{h.c.},\\
+    \delta M_{i} & = M_2 \frac{1}{z-M_1} + \text{h.c.}, \\
+    \delta M_{i} & = M_2^2 \frac{1}{z-M_1}+\text{h.c.}, \\
     \delta M_{i} & = M_2 \frac{1}{z-M_1} M_2,
 \end{align}
 %
-for $i\in\{1,2\}$. Calculating the corresponding loop equations yields the following relations, where the action of the $\Delta$ operator is given by \eqref{delta} for $k=1$, i.e. $\Delta^1=\Delta$, and we suppress the $z$-dependence of the resolvent functions\footnote{Note that $W_2$ is distinct from the resolvent $W_{(2)}$ \eqref{discfct}, which denotes the resolvent of the sum of two matrices.}:
+for $i\in\{1,2\}$. Calculating the corresponding loop equations yields the following relations,
+where the action of the $\Delta$ operator is given by \eqref{delta} for $k=1$, i.e.
+$\Delta^1=\Delta$, and we suppress the $z$-dependence of the resolvent functions\footnote{Note that
+    $W_2$ is distinct from the resolvent $W_{(2)}$ \eqref{discfct}, which denotes the resolvent of the
+    sum of two matrices.}:
 %
 \begin{align}
-    W^2 =&  -d W_{(2,2)}+\frac{\gamma  W_{2}}{\gamma ^2-\alpha  \beta }-a\Delta^2 W -2b \Delta W_{2} +\frac{\alpha \Delta W}{\alpha  \beta -\gamma ^2}, \\
-    0 = & -e W _{(2,2)}+\frac{\beta  W_{2}}{\alpha  \beta -\gamma ^2} - b\Delta^2 W  - 2d\Delta W_{2}+\frac{\gamma \Delta W}{\gamma ^2-\alpha  \beta }, \\
-    W  W_{2} = & \frac{\gamma  W_{(2,2)}}{\gamma ^2-\alpha  \beta }-a\Delta^2 W_{2} -b \Delta W_{(2,2)} -b W_{(2,1,2)}-d W_{(2,2,2)}+\frac{\alpha  \Delta W_{2}}{\alpha  \beta -\gamma ^2}, \\
-    W = & \frac{\beta  W_{(2,2)}}{\alpha  \beta -\gamma ^2}-b \Delta^2 W_{2}-d\Delta W_{(2,2)}-d W_{(2,1,2)}-e W_{(2,2,2)}+\frac{\gamma \Delta W_{2}}{\gamma ^2-\alpha  \beta },\\
-    W  W_{(2,2)} = & \frac{\gamma  W_{(2,2,2)}}{\gamma ^2-\alpha  \beta }-a\Delta^2 W_{(2,2)}-b\Delta W_{(2,2,2)}-b W_{(2,1,2,2)}\\ & \qquad \qquad -d W_{(2,2,2,2)}+\frac{\alpha  \Delta W_{(2,2)}}{\alpha  \beta -\gamma ^2}, \nonumber \\
-    W  p_{2}+ W_{2} = & \frac{\beta  W_{(2,2,2)}}{\alpha  \beta -\gamma ^2}-b\Delta^2 W_{(2,2)}-d\Delta W_{(2,2,2)}-d W_{(2,1,2,2)} \\ & \qquad \qquad -e W_{(2,2,2,2)}+\frac{\gamma \Delta W_{(2,2)}}{\gamma ^2-\alpha  \beta }, \nonumber\\
-    W_{2}^2 = & \frac{\alpha  W_{(2,1,2)}}{\alpha  \beta -\gamma ^2}+\frac{\gamma  W_{(2,2,2)}}{\gamma ^2-\alpha  \beta }-a W_{(2,1,1,2)}-2 b W_{(2,1,2,2)}-d W _{(2,2,2,2)},\\
-    2 W_{2} = & \frac{\gamma  W_{(2,1,2)}}{\gamma ^2-\alpha  \beta }+\frac{\beta  W_{(2,2,2)}}{\alpha  \beta -\gamma ^2}-b W_{(2,1,1,2)}-2 d W_{(2,1,2,2)}-e W_{(2,2,2,2)}.
+    W^2 =             & -d W_{(2,2)}+\frac{\gamma  W_{2}}{\gamma ^2-\alpha  \beta }-a\Delta^2 W -2b \Delta W_{2} +\frac{\alpha \Delta W}{\alpha  \beta -\gamma ^2}, \\
+    0 =               & -e W _{(2,2)}+\frac{\beta  W_{2}}{\alpha  \beta -\gamma ^2} - b\Delta^2 W  - 2d\Delta W_{2}+\frac{\gamma \Delta W}{\gamma ^2-\alpha  \beta }, \\
+    W  W_{2} =        & \frac{\gamma  W_{(2,2)}}{\gamma ^2-\alpha  \beta }-a\Delta^2 W_{2} -b \Delta W_{(2,2)} -b W_{(2,1,2)}-d W_{(2,2,2)}+\frac{\alpha  \Delta W_{2}}{\alpha  \beta -\gamma ^2}, \\
+    W =               & \frac{\beta  W_{(2,2)}}{\alpha  \beta -\gamma ^2}-b \Delta^2 W_{2}-d\Delta W_{(2,2)}-d W_{(2,1,2)}-e W_{(2,2,2)}+\frac{\gamma \Delta W_{2}}{\gamma ^2-\alpha  \beta }, \\
+    W  W_{(2,2)} =    & \frac{\gamma  W_{(2,2,2)}}{\gamma ^2-\alpha  \beta }-a\Delta^2 W_{(2,2)}-b\Delta W_{(2,2,2)}-b W_{(2,1,2,2)} \\
+                      & \qquad \qquad -d W_{(2,2,2,2)}+\frac{\alpha  \Delta W_{(2,2)}}{\alpha  \beta -\gamma ^2}, \nonumber \\
+    W  p_{2}+ W_{2} = & \frac{\beta  W_{(2,2,2)}}{\alpha  \beta -\gamma ^2}-b\Delta^2 W_{(2,2)}-d\Delta W_{(2,2,2)}-d W_{(2,1,2,2)} \\
+                      & \qquad \qquad -e W_{(2,2,2,2)}+\frac{\gamma \Delta W_{(2,2)}}{\gamma ^2-\alpha  \beta }, \nonumber \\
+    W_{2}^2 =         & \frac{\alpha  W_{(2,1,2)}}{\alpha  \beta -\gamma ^2}+\frac{\gamma  W_{(2,2,2)}}{\gamma ^2-\alpha  \beta }-a W_{(2,1,1,2)}-2 b W_{(2,1,2,2)}-d W _{(2,2,2,2)}, \\
+    2 W_{2} =         & \frac{\gamma  W_{(2,1,2)}}{\gamma ^2-\alpha  \beta }+\frac{\beta  W_{(2,2,2)}}{\alpha  \beta -\gamma ^2}-b W_{(2,1,1,2)}-2 d W_{(2,1,2,2)}-e W_{(2,2,2,2)}.
 \end{align}
 %
-These are eight independent equations in eight unknowns which may be eliminated to give $F(z,W(z))=0$, with $(\deg_x F,\deg_y F)=(5,4)$ for generic couplings. 
-
+These are eight independent equations in eight unknowns which may be eliminated to give
+$F(z,W(z))=0$, with $(\deg_x F,\deg_y F)=(5,4)$ for generic couplings.
 
 \section{Quartic and cubic multi-matrix models}
 \label{sec:multimatrix}
@@ -40,20 +52,18 @@ These are eight independent equations in eight unknowns which may be eliminated 
 \subsection{Quartic two-matrix models}
 Consider the ordered trace potential
 \begin{equation}
- V(A,B)=\frac12(A^2+B^2)+\frac{\alpha}{4}(A^4+B^4)
-       +\frac{\beta}{2}ABAB+\gamma A^2B^2.
+    V(A,B)=\frac12(A^2+B^2)+\frac{\alpha}{4}(A^4+B^4)
+    +\frac{\beta}{2}ABAB+\gamma A^2B^2.
 \end{equation}
 For each of the following choices of couplings, the resolvent of $A$ obeys
 \begin{equation}
- F\!\left(z,W_A(z)\right)=0.
+    F\!\left(z,W_A(z)\right)=0.
 \end{equation}
 The coefficients $c_{i,j}$ refer to the curve in the corresponding case.
 
 \subsubsection{$(\alpha,\beta,\gamma)=(g,g,g)$ or $(g,-g,g)$}
-Both choices give the same form of the spectral curve,
-\input{text/curves/quartic_ggg}
-where $c_{0,2}=-1-4g p_{0,0}$. The curve has degrees
-$(\deg_xF,\deg_yF)=(3,4)$.
+Both choices give the same form of the spectral curve, \input{text/curves/quartic_ggg} where
+$c_{0,2}=-1-4g p_{0,0}$. The curve has degrees $(\deg_xF,\deg_yF)=(3,4)$.
 
 \subsubsection{$(\alpha,\beta,\gamma)=(g,g,-g)$}
 \input{text/curves/quartic_ggm}
@@ -66,23 +76,30 @@ The curve again has degrees $(\deg_xF,\deg_yF)=(7,6)$.
 \subsection{Cubic three-matrix model}
 For the potential
 \begin{equation}
- V(A_0,A_1,A_2)=\frac12\sum_{i=0}^2A_i^2
- +\frac g3\sum_{i=0}^2A_i^3+g(A_0A_1A_2+A_0A_2A_1),
+    V(A_0,A_1,A_2)=\frac12\sum_{i=0}^2A_i^2
+    +\frac g3\sum_{i=0}^2A_i^3+g(A_0A_1A_2+A_0A_2A_1),
 \end{equation}
 the planar resolvent satisfies
 \begin{equation}
- F\!\left(z,W_{A_0}(z)\right)=0,
- \qquad (\deg_xF,\deg_yF)=(6,7),
+    F\!\left(z,W_{A_0}(z)\right)=0,
+    \qquad (\deg_xF,\deg_yF)=(6,7),
 \end{equation}
-with
-\input{text/curves/cubic_three}
+with \input{text/curves/cubic_three}
 
 \section{Boundary conditions of the Potts model}
 
-The Potts matrix model was proposed in \cite{Kazakov1988} wherein the solution was discussed for the case of $q = 1$ and $q = 0$. For $q = 2$ we recover the
-Ising model on random surfaces, a two-matrix model, which has been solved \cite{Kazakov1986, Boulatov1987, Eynard:2004mh}. For the particular case of triangulations ($k=1$) and integer $0\leqslant q \leqslant 4$, the analytic properties of the single-matrix resolvent were first computed by Daul \cite{Daul:1994qy} using saddle-point methods. This was extended by Zinn-Justin \cite{ZinnJustin:1999jg}, who first defined the dilute $q$-state Potts matrix model and was able to derive an algebraic expression for the resolvent function. Using the method of loop equations Bonnet and Eynard \cite{Eynard:1999gp} were able to demonstrate that the resolvent satisfies an algebraic equation for rational $\arccos\!\left((q - 2)/2\right) / \pi $. Atkin, Niedner, and Wheater \cite{Atkin:2015ksy} demonstrated that the resolvents for sums of random matrices also satisfiy algebraic equations for integer $0\leqslant q \leqslant 4$ using saddle-point methods.
-
-
+The Potts matrix model was proposed in \cite{Kazakov1988} wherein the solution was discussed for
+the case of $q = 1$ and $q = 0$. For $q = 2$ we recover the Ising model on random surfaces, a
+two-matrix model, which has been solved \cite{Kazakov1986, Boulatov1987, Eynard:2004mh}. For the
+particular case of triangulations ($k=1$) and integer $0\leqslant q \leqslant 4$, the analytic
+properties of the single-matrix resolvent were first computed by Daul \cite{Daul:1994qy} using
+saddle-point methods. This was extended by Zinn-Justin \cite{ZinnJustin:1999jg}, who first defined
+the dilute $q$-state Potts matrix model and was able to derive an algebraic expression for the
+resolvent function. Using the method of loop equations Bonnet and Eynard \cite{Eynard:1999gp} were
+able to demonstrate that the resolvent satisfies an algebraic equation for rational
+$\arccos\!\left((q - 2)/2\right) / \pi $. Atkin, Niedner, and Wheater \cite{Atkin:2015ksy}
+demonstrated that the resolvents for sums of random matrices also satisfiy algebraic equations for
+integer $0\leqslant q \leqslant 4$ using saddle-point methods.
 
 %The 3-state Potts model on random triangulated surfaces is defined by a multi-matrix integral with potential
 %
@@ -92,94 +109,130 @@ Ising model on random surfaces, a two-matrix model, which has been solved \cite{
 %
 %where we have chosen the coefficients to align with the notation of \cite{Atkin:2015ksy}. This action is manifestly $S_3$-symmetric under exchange of the matrix degrees of freedom.
 
-
-It is common to regard resolvents as describing boundary conditions on random graphs. In the diagrammatic expansion of the matrix integral each monomial of order $k+2>2$ generates a $(k+2)$-sided polygon. To leading order in the large $N$ expansion, where planar graphs dominate, we may interpret each term as a tesselation of the sphere by polygons in $q$ weighted colours, corresponding to the $q$ different matrices. Given $\sigma\in S_q/(S_p\times S_{q-p})$, we define an associated resolvent function 
+It is common to regard resolvents as describing boundary conditions on random graphs. In the
+diagrammatic expansion of the matrix integral each monomial of order $k+2>2$ generates a
+$(k+2)$-sided polygon. To leading order in the large $N$ expansion, where planar graphs dominate,
+we may interpret each term as a tesselation of the sphere by polygons in $q$ weighted colours,
+corresponding to the $q$ different matrices. Given $\sigma\in S_q/(S_p\times S_{q-p})$, we define
+an associated resolvent function
 %
 \begin{eqnarray}
-\label{discfct}
-	W_{(p|\sigma)}(z)=\frac{1}{N}\left\langle\Tr\frac{1}{z-X_{(p|\sigma)}}\right\rangle\ ,\quad X_{(p|\sigma)}=\sum_{i=1}^pX_{\sigma(i)}\ ,
+    \label{discfct}
+    W_{(p|\sigma)}(z)=\frac{1}{N}\left\langle\Tr\frac{1}{z-X_{(p|\sigma)}}\right\rangle\ ,\quad X_{(p|\sigma)}=\sum_{i=1}^pX_{\sigma(i)}\ ,
 \end{eqnarray}
 %
-In the $S_q$-invariant case, for given $p$, all $|S_q/(S_p\times S_{q-p})|={q \choose p}$ partition functions $W_{(p|\sigma)}(z)$ are described by the same function, so that we henceforth abbreviate $W_{(p)}(z):=W_{(p|\sigma_0)}(z)$ for a representative $\sigma_0$. For $p=1$, our definition of $W_{(p)}(z)$ reduces to the one studied in \cite{Kazakov1988,Daul:1994qy,ZinnJustin:1999jg,Bonnet:1999nf,Eynard:1999gp}. These functions generate graphs with a single connected boundary containing $p$ equally weighted colours. The matrix, and hence spin, used to define the resolvent defines the set of spins allowed on the boundary. Therefore we term the resolvent of a single matrix the \textit{fixed} boundary condition. Similarly we call the resolvent for the sum of all matrices the \textit{free} boundary condition, and we call the resolvent for the sum of $p$ random matrices the \textit{partially magnetised} or \textit{mixed} boundary condition.
+In the $S_q$-invariant case, for given $p$, all $|S_q/(S_p\times S_{q-p})|={q \choose p}$ partition
+functions $W_{(p|\sigma)}(z)$ are described by the same function, so that we henceforth abbreviate
+$W_{(p)}(z):=W_{(p|\sigma_0)}(z)$ for a representative $\sigma_0$. For $p=1$, our definition of
+$W_{(p)}(z)$ reduces to the one studied in
+\cite{Kazakov1988,Daul:1994qy,ZinnJustin:1999jg,Bonnet:1999nf,Eynard:1999gp}. These functions
+generate graphs with a single connected boundary containing $p$ equally weighted colours. The
+matrix, and hence spin, used to define the resolvent defines the set of spins allowed on the
+boundary. Therefore we term the resolvent of a single matrix the \textit{fixed} boundary condition.
+Similarly we call the resolvent for the sum of all matrices the \textit{free} boundary condition,
+and we call the resolvent for the sum of $p$ random matrices the \textit{partially magnetised} or
+\textit{mixed} boundary condition.
 
-Our goal in the following is to describe the planar resolvents for these
-boundary conditions. We present the curves as $F_{(p)}(x,y)=0$, with the
-coefficient convention introduced above. The asymptotic expansions are given
-in appendix~\ref{app:asympt}.
+Our goal in the following is to describe the planar resolvents for these boundary conditions. We
+present the curves as $F_{(p)}(x,y)=0$, with the coefficient convention introduced above. The
+asymptotic expansions are given in appendix~\ref{app:asympt}.
 
 \subsection{3-state Potts model}
 \subsubsection{$p=1$}
 
-The potential function is given by
-\beq
-\label{3Potts_p=1}
-V(\mathbf{X}) = \sum_{i=0}^2 \left(\frac{t_2-1}{2}X_i^2 + \frac{t_3}{3}X_i^3\right) - X_0 X_1 -X_1 X_2 - X_2 X_0.
+The potential function is given by \beq \label{3Potts_p=1} V(\mathbf{X}) = \sum_{i=0}^2
+    \left(\frac{t_2-1}{2}X_i^2 + \frac{t_3}{3}X_i^3\right) - X_0 X_1 -X_1 X_2 - X_2 X_0.
 \eeq
-The symmetry group for this model is $S_3\times\mathbb{Z}_2$, corresponding to permutation symmetry of the matrices, and the discrete symmetry $X_i \rightarrow X_i^T \; \forall i$.
-With $n_{\mathrm{max}} = 5$ the total number of inequivalent loop equations is 64. We have $\sum_{i=0}^5 |\mathcal{W}_i| = 54$ resolvent functions. This is a closed and consistent system of polynomial equations and so many equations are not independent. Therefore only a subset of these are required to determine the resolvent.
-
-
+The symmetry group for this model is $S_3\times\mathbb{Z}_2$, corresponding to permutation symmetry
+of the matrices, and the discrete symmetry $X_i \rightarrow X_i^T \; \forall i$. With
+$n_{\mathrm{max}} = 5$ the total number of inequivalent loop equations is 64. We have $\sum_{i=0}^5
+    |\mathcal{W}_i| = 54$ resolvent functions. This is a closed and consistent system of polynomial
+equations and so many equations are not independent. Therefore only a subset of these are required
+to determine the resolvent.
 
 \begin{equation}
-F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0.
+    F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0.
 \end{equation}
 
 \input{text/curves/potts_fixed}
 
-
 \subsubsection{$p=2$}
-In order to compute the planar resolvent for the mixed boundary condition we change the basis of the matrix integral \eref{3Potts_p=1} to $M_0 = X_1 + X_2, M_1 = X_2 + X_0, M_2 = X_0 + X_1$. Under this change of basis the potential becomes
+In order to compute the planar resolvent for the mixed boundary condition we change the basis of
+the matrix integral \eref{3Potts_p=1} to $M_0 = X_1 + X_2, M_1 = X_2 + X_0, M_2 = X_0 + X_1$. Under
+this change of basis the potential becomes
 %
 \begin{eqnarray}
-\label{mixedAction}
-    V(\mathbf{M}) & = &  \sum_{i=0}^2 \frac{3t_2 - 1}{8}  M_i^2  - \frac{t_2 + 1}{4} \left( M_0 M_1 + M_1 M_2 + M_2 M_0 \right) \\
-    && \quad + \, \frac{t_3}{8} \big( M_0^2 M_1 + M_0^2 M_2 + M_1^2 M_0 + M_1^2 M_2 \nonumber \\
-    && \quad\quad + \, M_2^2 M_0 + M_2^2 M_1 - 3 M_0 M_1 M_2 - 3 M_2 M_1 M_0 \big)
+    \label{mixedAction}
+    V(\mathbf{M}) & = & \sum_{i=0}^2 \frac{3t_2 - 1}{8}  M_i^2  - \frac{t_2 + 1}{4} \left( M_0 M_1 + M_1 M_2 + M_2 M_0 \right) \\
+                  &   & \quad + \, \frac{t_3}{8} \big( M_0^2 M_1 + M_0^2 M_2 + M_1^2 M_0 + M_1^2 M_2 \nonumber \\
+                  &   & \quad\quad + \, M_2^2 M_0 + M_2^2 M_1 - 3 M_0 M_1 M_2 - 3 M_2 M_1 M_0 \big)
     +\frac{t_3}{24}\sum_{i=0}^2 M_i^3.  \nonumber
 \end{eqnarray}
 
 %
-The resulting potential retains the $S_3\times\mathbb{Z}_2$ symmetry of \eref{3Potts_p=1}, but possesses many more interaction terms. The choice of basis is arbitrary, one should be able to reproduce the planar resolvent regardless of how we parameterised the potential. In this case our goal is to compute
+The resulting potential retains the $S_3\times\mathbb{Z}_2$ symmetry of \eref{3Potts_p=1}, but
+possesses many more interaction terms. The choice of basis is arbitrary, one should be able to
+reproduce the planar resolvent regardless of how we parameterised the potential. In this case our
+goal is to compute
 %
 \begin{equation}
     W_{(2)}(z) = \frac{1}{N} \left\langle \Tr\, \frac{1}{z-M_0} \right\rangle.
 \end{equation}
 %
 
-In contrast to the fixed-spin boundary condition, we are able to determine a closed set of algebraic constraints on the planar resolvent only if we extend to level $n_{\mathrm{max}} = 6$ loop equations. The increased number of terms in the potential relative to \eref{3Potts_p=1} results in a greater number of resolvent functions present in the loop equations. At this level we have $\sum_{i=0}^6|\mathcal{W}_i|=144$ resolvent functions and $\sum_{i=0}^6|\mathcal{V}_i|=245$ equations. Once redundancies have been removed, these loop equations possess a closed system of equations. We have not determined a minimal set of equations that form closed algebraic system of equations.
+In contrast to the fixed-spin boundary condition, we are able to determine a closed set of
+algebraic constraints on the planar resolvent only if we extend to level $n_{\mathrm{max}} = 6$
+loop equations. The increased number of terms in the potential relative to \eref{3Potts_p=1}
+results in a greater number of resolvent functions present in the loop equations. At this level we
+have $\sum_{i=0}^6|\mathcal{W}_i|=144$ resolvent functions and $\sum_{i=0}^6|\mathcal{V}_i|=245$
+equations. Once redundancies have been removed, these loop equations possess a closed system of
+equations. We have not determined a minimal set of equations that form closed algebraic system of
+equations.
 
-The final expression for the spectral curve is degree $10$ in the resolvent $W_{(2)}(z)$ and degree $13$ in the boundary cosmological constant $z$. At first glance, this is rather surprising, as it was shown in \cite{Niedner:2016skw} that the function $G_{(2)}^Y(z)$, which contains the information of the eigenvalue density distribution, satisfies a spectral curve that is degree 5 in $G_{(2)}^Y(z)$ and degree 6 in $z$. However, through detailed analysis of the analytic structure of the two functions one is able to reconcile these observations.
+The final expression for the spectral curve is degree $10$ in the resolvent $W_{(2)}(z)$ and degree
+$13$ in the boundary cosmological constant $z$. At first glance, this is rather surprising, as it
+was shown in \cite{Niedner:2016skw} that the function $G_{(2)}^Y(z)$, which contains the
+information of the eigenvalue density distribution, satisfies a spectral curve that is degree 5 in
+$G_{(2)}^Y(z)$ and degree 6 in $z$. However, through detailed analysis of the analytic structure of
+the two functions one is able to reconcile these observations.
 
 \begin{equation}
-F_{(2)}\!\left(z,W_{(2)}(z)\right)=0.
+    F_{(2)}\!\left(z,W_{(2)}(z)\right)=0.
 \end{equation}
 
 \input{text/curves/potts_mixed}
 
-
-
-
 \subsubsection{$p=3$}
 
-Let us choose a basis for the potential \eref{3Potts_p=1} given by $M_0 = X_0 + X_1 + X_2, M_1 = X_0 - X_1 + X_2, M_2 = X_0 + X_1- X_2$. Then computing the resolvent corresponding to the free boundary condition, $W_{(3)}(z)$, is equivalent to computing the planar resolvent of the matrix $M_0$ with the following potential,
+Let us choose a basis for the potential \eref{3Potts_p=1} given by $M_0 = X_0 + X_1 + X_2, M_1 =
+    X_0 - X_1 + X_2, M_2 = X_0 + X_1- X_2$. Then computing the resolvent corresponding to the free
+boundary condition, $W_{(3)}(z)$, is equivalent to computing the planar resolvent of the matrix
+$M_0$ with the following potential,
 %
 \begin{eqnarray}
-\label{freeAction}
-V(\mathbf{M}) & = & \frac{(t_2-2)}{4}M_0^2 + \frac{t_2}{4}(M_1^2 + M_2^2) + \frac{t_2}{4}(- M_0 M_1 + M_1 M_2 - M_2 M_0) \nonumber \\
-&& + \, \frac{t_3}{8}(M_1^2 M_0 + M_2^2 M_0 + M_1^2 M_2 + M_2^2 M_1)  \\
-&& + \, \frac{t_3}{8}(- M_0^2 M_1 - M_0^2 M_2) + \frac{t_3}{12} M_0^3. \nonumber
+    \label{freeAction}
+    V(\mathbf{M}) & = & \frac{(t_2-2)}{4}M_0^2 + \frac{t_2}{4}(M_1^2 + M_2^2) + \frac{t_2}{4}(- M_0 M_1 + M_1 M_2 - M_2 M_0) \nonumber \\
+                  &   & + \, \frac{t_3}{8}(M_1^2 M_0 + M_2^2 M_0 + M_1^2 M_2 + M_2^2 M_1) \\
+                  &   & + \, \frac{t_3}{8}(- M_0^2 M_1 - M_0^2 M_2) + \frac{t_3}{12} M_0^3. \nonumber
 \end{eqnarray}
 %
-The symmetry group of \eref{freeAction} possesses a $\mathbb{Z}_2\times\mathbb{Z}_2$ symmetry, with one $\mathbb{Z}_2$ symmetry relating $M_1$ and $M_2$. However, the correlators also possesses a further set of constraints, owing to their origin in the 3-state Potts model, that are not manifest in \eref{freeAction}. These are given by
+The symmetry group of \eref{freeAction} possesses a $\mathbb{Z}_2\times\mathbb{Z}_2$ symmetry, with
+one $\mathbb{Z}_2$ symmetry relating $M_1$ and $M_2$. However, the correlators also possesses a
+further set of constraints, owing to their origin in the 3-state Potts model, that are not manifest
+in \eref{freeAction}. These are given by
 %
 \begin{equation}
     \label{extraCon}
     W_{1}(z) = \frac{1}{3} \Delta W_{(3)} (z),
 \end{equation}
 %
-which is easily deduced by rewriting the terms in the original basis and imposing the full $S_3$ symmetry in the expectation value. 
+which is easily deduced by rewriting the terms in the original basis and imposing the full $S_3$
+symmetry in the expectation value.
 
-As in the case of the mixed boundary condition, one must extend to level 6 to find a complete set of constraints. Applying the elimination procedure and \eref{extraCon}, one can determine the spectral curve for the free spin resolvent, given by an algebraic equation that is degree 5 in $z$ and degree 5 in the resolvent $W_{(3)}(z)$. Furthermore, with the relation
+As in the case of the mixed boundary condition, one must extend to level 6 to find a complete set
+of constraints. Applying the elimination procedure and \eref{extraCon}, one can determine the
+spectral curve for the free spin resolvent, given by an algebraic equation that is degree 5 in $z$
+and degree 5 in the resolvent $W_{(3)}(z)$. Furthermore, with the relation
 %
 \begin{equation}
     \label{strange}
@@ -189,32 +242,29 @@ As in the case of the mixed boundary condition, one must extend to level 6 to fi
 one recovers the spectral curve for $G_{(3)}^Y(z)$ of \cite{Atkin:2015ksy}
 
 \begin{equation}
-F_{(3)}\!\left(z,z+W_{(3)}(z)\right)=0.
+    F_{(3)}\!\left(z,z+W_{(3)}(z)\right)=0.
 \end{equation}
 
 \input{text/curves/potts_free}
 
 \subsection{General 3-state Potts}
 \beq
-\label{3PottsGeneral_p=1}
-V(\mathbf{X}) = \sum_{i=0}^2 \left(\frac{t_{2,i}-1}{2}X_i^2 + \frac{t_{3,i}}{3}X_i^3\right) - X_0 X_1 -X_1 X_2 - X_2 X_0
+    \label{3PottsGeneral_p=1}
+    V(\mathbf{X}) = \sum_{i=0}^2 \left(\frac{t_{2,i}-1}{2}X_i^2 + \frac{t_{3,i}}{3}X_i^3\right) - X_0 X_1 -X_1 X_2 - X_2 X_0
 \eeq
 In this case we have broken the $S_3$ symmetry.
 
 \begin{gather}
- (t_{2,0},t_{3,0})=(t_2,t_3),\qquad
- (t_{2,1},t_{3,1})=(s_2,s_3),\qquad
- (t_{2,2},t_{3,2})=(r_2,r_3),\\
- F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0.
+    (t_{2,0},t_{3,0})=(t_2,t_3),\qquad
+    (t_{2,1},t_{3,1})=(s_2,s_3),\qquad
+    (t_{2,2},t_{3,2})=(r_2,r_3),\\
+    F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0.
 \end{gather}
-Following the abbreviated presentation of \cite{ZinnJustin:1999jg}, we display
-the complete coefficient of $y^6$ and the leading powers of $x$ in the remaining
-coefficients:
-\input{text/curves/potts_general}
-In the coefficient of $y^j$, $1\leq j\leq5$, the ellipsis denotes powers of
-$x$ of degree at most $7-j$; the final ellipsis denotes a polynomial of degree
-at most six in $x$. These omitted terms include both explicit coupling-dependent
-coefficients and the correlator-dependent coefficients $c_{i,j}$. The complete
-expression is given in the accompanying notebook \cite{github:ak}.
-The displayed terms make the degrees $(\deg_xF_{(1)},\deg_yF_{(1)})=(8,7)$
-manifest.
+Following the abbreviated presentation of \cite{ZinnJustin:1999jg}, we display the complete
+coefficient of $y^6$ and the leading powers of $x$ in the remaining coefficients:
+\input{text/curves/potts_general} In the coefficient of $y^j$, $1\leq j\leq5$, the ellipsis denotes
+powers of $x$ of degree at most $7-j$; the final ellipsis denotes a polynomial of degree at most
+six in $x$. These omitted terms include both explicit coupling-dependent coefficients and the
+correlator-dependent coefficients $c_{i,j}$. The complete expression is given in the accompanying
+notebook \cite{github:ak}. The displayed terms make the degrees
+$(\deg_xF_{(1)},\deg_yF_{(1)})=(8,7)$ manifest.

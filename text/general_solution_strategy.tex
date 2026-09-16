@@ -1,6 +1,11 @@
 \section{General solution strategy}
 
-In practice, for complicated multi-matrix models, one needs to consider a large number of loop equations - on the order of hundreds for many of the highly symmetric three-matrix models we will consider. Each of these encode a combinatorial relation relating a random graph with prescribed boundary conditions to  a different set of random graphs with various boundary conditions when a marked edge has been removed. Many of these are not independent, and so we need a systematic approach for eliminating the higher-order resolvent functions.
+In practice, for complicated multi-matrix models, one needs to consider a large number of loop
+equations - on the order of hundreds for many of the highly symmetric three-matrix models we will
+consider. Each of these encode a combinatorial relation relating a random graph with prescribed
+boundary conditions to a different set of random graphs with various boundary conditions when a
+marked edge has been removed. Many of these are not independent, and so we need a systematic
+approach for eliminating the higher-order resolvent functions.
 
 For all $v\in \mathcal{V}_n$ we obtain a corresponding loop equation, which we denote
 %
@@ -9,19 +14,37 @@ For all $v\in \mathcal{V}_n$ we obtain a corresponding loop equation, which we d
     \sum_{w\in\mathcal{W}_n} M_{v,w}^{(n)}\left(\{t_i\},\{p_i\}\right) \, W_{w}(z) + \mathcal{R}_v \big[ \bigcup_{n'<n} \mathcal{W}_{n'} \big] = 0,
 \end{equation}
 %
-where $\mathcal{R}_v$ denotes the remaining terms in the loop equation containing resolvent functions with level $m < n$. The coefficient matrix $M^{(n)}_{v,w}$ will generically depend on resolvent functions of level $m \leqslant \lfloor n/2 \rfloor$, which has been suppressed in \eref{loopEq}. Starting with \eref{loopEq} for level $n=n_{\mathrm{max}}$, one may identify a linearly independent set of constraints with respect to the level-$n$ resolvent functions by using the Gaussian elimination algorithm on $(M^{(n)})^T$. Gaussian elimination reduces $(M^{(n)})^T$ to a matrix, $T^{(n)}$, in row echelon form. The rows of $(M^{(n)})_{ji}$ which form a linearly independent basis are then the rows for which $j\in\mathcal{I}_n$ where 
+where $\mathcal{R}_v$ denotes the remaining terms in the loop equation containing resolvent
+functions with level $m < n$. The coefficient matrix $M^{(n)}_{v,w}$ will generically depend on
+resolvent functions of level $m \leqslant \lfloor n/2 \rfloor$, which has been suppressed in
+\eref{loopEq}. Starting with \eref{loopEq} for level $n=n_{\mathrm{max}}$, one may identify a
+linearly independent set of constraints with respect to the level-$n$ resolvent functions by using
+the Gaussian elimination algorithm on $(M^{(n)})^T$. Gaussian elimination reduces $(M^{(n)})^T$ to
+a matrix, $T^{(n)}$, in row echelon form. The rows of $(M^{(n)})_{ji}$ which form a linearly
+independent basis are then the rows for which $j\in\mathcal{I}_n$ where
 %
 \begin{equation}
     \label{linInd}
     \mathcal{I}_n = \bigcup_i \left\{ \min\left\{ j : T_{ij}^{(n)} \neq 0 \right\} \right\},
 \end{equation}
 %
-where the union is over the nonzero rows of $T^{(n)}$.
-One may then solve the linearly independent set of equations to express the level-$n$ resolvent functions in terms of lower order resolvent functions. Using these expressions to remove the level-$n$ resolvent functions from the remaining constraints, one obtains a set of constraints linear in resolvent functions of top-level $n_{\mathrm{max}}-1$, which may include distinct loop equations from those computed using variations $v\in\mathcal{V}_{n-1}$. Together with \eref{loopEq} for $v\in\mathcal{V}_{n_{\mathrm{max}}-1}$ we obtain an augmented set of relations at level $n_{\mathrm{max}}-1$. 
+where the union is over the nonzero rows of $T^{(n)}$. One may then solve the linearly independent
+set of equations to express the level-$n$ resolvent functions in terms of lower order resolvent
+functions. Using these expressions to remove the level-$n$ resolvent functions from the remaining
+constraints, one obtains a set of constraints linear in resolvent functions of top-level
+$n_{\mathrm{max}}-1$, which may include distinct loop equations from those computed using
+variations $v\in\mathcal{V}_{n-1}$. Together with \eref{loopEq} for
+$v\in\mathcal{V}_{n_{\mathrm{max}}-1}$ we obtain an augmented set of relations at level
+$n_{\mathrm{max}}-1$.
 
-We iterate downwards while the highest-level resolvent functions enter linearly. Let $L_{\max}$ be the maximum of $L(w_1)+L(w_2)$ over the retained variations of $X$. The quadratic Jacobian terms $W_uW_v$ satisfy $L(u)+L(v)\leq L_{\max}$, so at least one factor has level at most
+We iterate downwards while the highest-level resolvent functions enter linearly. Let $L_{\max}$ be
+the maximum of $L(w_1)+L(w_2)$ over the retained variations of $X$. The quadratic Jacobian terms
+$W_uW_v$ satisfy $L(u)+L(v)\leq L_{\max}$, so at least one factor has level at most
 \begin{equation}
- r=\left\lfloor\frac{L_{\max}}2\right\rfloor.
+    r=\left\lfloor\frac{L_{\max}}2\right\rfloor.
 \end{equation}
-The system is therefore jointly linear in all resolvents above level $r$, treating the lower-level resolvents as coefficients. Subject to full column rank and nonvanishing pivots, this upper sector can be eliminated linearly. For a uniform hierarchy with potential-derivative degree $d$ and $n_{\max}=L_{\max}+d$, the bound is $r=\lfloor(n_{\max}-d)/2\rfloor$.
-At level $r$ and below, the remaining equations may be nonlinear and can be solved using a variety of techniques.
+The system is therefore jointly linear in all resolvents above level $r$, treating the lower-level
+resolvents as coefficients. Subject to full column rank and nonvanishing pivots, this upper sector
+can be eliminated linearly. For a uniform hierarchy with potential-derivative degree $d$ and
+$n_{\max}=L_{\max}+d$, the bound is $r=\lfloor(n_{\max}-d)/2\rfloor$. At level $r$ and below, the
+remaining equations may be nonlinear and can be solved using a variety of techniques.

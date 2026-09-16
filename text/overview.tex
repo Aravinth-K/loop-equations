@@ -1,19 +1,49 @@
 \section{Overview}
 
-Random matrix models are valuable tools for graph enumeration. Canonically, these formal matrix integrals are identified with a sum over graphs weighted by the matrix size, $N$, with the Euler characteristic exponent. This topological expansion is particularly relevant in the large-N limit, in which planar graphs dominate. They have long been of interest in theoretical physics, where the sum over graphs can be interpreted as a discretised path integral for two-dimensional Euclidean quantum gravity. With multi-matrix models one is able to endow the graphs with statistical lattice models, and hence study quantum gravity coupled to matter, or equivalently, bosonic string theory in a non-critical target space \cite{DiFrancesco:1993cyw, ginsparg1993lectures, Ambjorn:1997di}.
+Random matrix models are valuable tools for graph enumeration. Canonically, these formal matrix
+integrals are identified with a sum over graphs weighted by the matrix size, $N$, with the Euler
+characteristic exponent. This topological expansion is particularly relevant in the large-N limit,
+in which planar graphs dominate. They have long been of interest in theoretical physics, where the
+sum over graphs can be interpreted as a discretised path integral for two-dimensional Euclidean
+quantum gravity. With multi-matrix models one is able to endow the graphs with statistical lattice
+models, and hence study quantum gravity coupled to matter, or equivalently, bosonic string theory
+in a non-critical target space \cite{DiFrancesco:1993cyw, ginsparg1993lectures, Ambjorn:1997di}.
 
-In this article, we consider the class of matrix integrals of the form
-\beq
-Z = \int \rmd X_0 \rmd X_1 \ldots e^{-N \Tr V(X_0,X_1,\ldots)}
+In this article, we consider the class of matrix integrals of the form \beq Z = \int \rmd X_0 \rmd
+    X_1 \ldots e^{-N \Tr V(X_0,X_1,\ldots)}
 \eeq
-where the $X_i$ are Hermitian $N\times N$ matrices with the $U(N)$ invariant Haar measure, and the potential is a polynomial function. One is typically interested in evaluating the moments of the model, which can be captured by a generating function known as the resolvent. We are particularly interested in when the resolvent satisfies an algebraic equation in the planar limit, which we will regard as ‘solvable’. The usual methods of solution can be broadly grouped into saddle-point methods, orthogonal polynomials, and the method of loop equations. There is, however, no straightforward mechanism for knowing if or when a multi-matrix model will be susceptible to such techniques, and methods of solution are often very specific to the model under study.
+where the $X_i$ are Hermitian $N\times N$ matrices with the $U(N)$ invariant Haar measure, and the
+potential is a polynomial function. One is typically interested in evaluating the moments of the
+model, which can be captured by a generating function known as the resolvent. We are particularly
+interested in when the resolvent satisfies an algebraic equation in the planar limit, which we will
+regard as ‘solvable’. The usual methods of solution can be broadly grouped into saddle-point
+methods, orthogonal polynomials, and the method of loop equations. There is, however, no
+straightforward mechanism for knowing if or when a multi-matrix model will be susceptible to such
+techniques, and methods of solution are often very specific to the model under study.
 
-Here we revisit the elementary method of loop equations, also known as Schwinger-Dyson equations, for multi-matrix models. We present a simple method for generating and solving the equations and demonstrate its utility by applying the technique to several cases in the literature. We show that several of the ‘unsolvable’ models studied using the bootstrap method \cite{khalkhali2025bootstrappingcriticalbehaviormultimatrix} are indeed solvable. Moreover, we demonstrate that the boundary conditions corresponding to sums of random matrices in the 3-state Potts model, studied by Atkin, Niedner, and Wheater \cite{Atkin:2015ksy}, can also be derived via this method, and we extend it to the dilute Ising and Potts cases, along with the 3-state Potts model with asymmetric cubic potentials. 
+Here we revisit the elementary method of loop equations, also known as Schwinger-Dyson equations,
+for multi-matrix models. We present a simple method for generating and solving the equations and
+demonstrate its utility by applying the technique to several cases in the literature. We show that
+several of the ‘unsolvable’ models studied using the bootstrap method
+\cite{khalkhali2025bootstrappingcriticalbehaviormultimatrix} are indeed solvable. Moreover, we
+demonstrate that the boundary conditions corresponding to sums of random matrices in the 3-state
+Potts model, studied by Atkin, Niedner, and Wheater \cite{Atkin:2015ksy}, can also be derived via
+this method, and we extend it to the dilute Ising and Potts cases, along with the 3-state Potts
+model with asymmetric cubic potentials.
 
-This article is organised as follows: in Section 2 we establish the formalism we use to manipulate loop equations for general multi-matrix models. In Section 3 we describe an algorithmic approach for computing and systematically solving loop equations. We immediately apply this in Section 4 for the simple example of the two-matrix model with a general cubic potential that includes cross-terms. Following this we turn to a set of two-matrix models studied in \cite{khalkhali2025bootstrappingcriticalbehaviormultimatrix} by the bootstrap method \cite{Lin_2020}. We then turn to the Potts model family and discuss the case of the fixed, mixed, and free boundary conditions of the 3-state Potts model. We similarly treat the dilute Ising model and dilute Potts models. Finally we provide a solution for the 3-state Potts model where the $S_3$ symmetry amongst spins is lifted.
+This article is organised as follows: in Section 2 we establish the formalism we use to manipulate
+loop equations for general multi-matrix models. In Section 3 we describe an algorithmic approach
+for computing and systematically solving loop equations. We immediately apply this in Section 4 for
+the simple example of the two-matrix model with a general cubic potential that includes
+cross-terms. Following this we turn to a set of two-matrix models studied in
+\cite{khalkhali2025bootstrappingcriticalbehaviormultimatrix} by the bootstrap method
+\cite{Lin_2020}. We then turn to the Potts model family and discuss the case of the fixed, mixed,
+and free boundary conditions of the 3-state Potts model. We similarly treat the dilute Ising model
+and dilute Potts models. Finally we provide a solution for the 3-state Potts model where the $S_3$
+symmetry amongst spins is lifted.
 
-
-We write each spectral curve as $F(x,y)=0$, with $F_{(p)}(x,y)=0$
-for the boundary condition associated with a sum of $p$ matrices. Coefficients
-containing undetermined correlation functions are denoted by $c_{i,j}$,
-where $i$ and $j$ are the exponents of $x$ and $y$. These coefficients depend on the couplings and the correlators; they are not independent parameters, and exist purely to simplify the presentation.
+We write each spectral curve as $F(x,y)=0$, with $F_{(p)}(x,y)=0$ for the boundary condition
+associated with a sum of $p$ matrices. Coefficients containing undetermined correlation functions
+are denoted by $c_{i,j}$, where $i$ and $j$ are the exponents of $x$ and $y$. These coefficients
+depend on the couplings and the correlators; they are not independent parameters, and exist purely
+to simplify the presentation.

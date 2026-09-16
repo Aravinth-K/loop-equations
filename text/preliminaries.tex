@@ -33,7 +33,8 @@ Furthermore, we define the following trace correlation functions analogously,
 %
 Define the level of a resolvent function of the form \eref{loopRes} as the length of the associated word, $L(w(\mathbf{X}))$, such that, for example, \eref{resExample} with $L(X_1 X_0 X_2)=3$ denotes a level-3 resolvent function. Similarly, we index trace correlation functions of a given level by the set of words of appropriate length. 
 
-The number of inequivalent trace correlation functions of a given level is generally much smaller than the size of the corresponding set of words. Due to cyclicity of the trace there is a $D_k$ symmetry for the level-$k$ correlators, where $D_k$ is the dihedral group of order $k$. There may also be a global symmetry, $G$, of the matrix model potential, given by
+The number of inequivalent trace correlation functions of a given level is generally much smaller than the size of the corresponding set of words. Cyclicity of the trace gives a $C_k$ symmetry. All potentials considered here are also invariant under simultaneous transposition $X_i\mapsto X_i^T$, which identifies a word with its reversal in expectation. Together these give the dihedral symmetry $D_k$, of order $2k$.
+There may also be a global symmetry, $G$, of the matrix model potential, given by
 %
 \beq
     \label{symmetry}
@@ -57,11 +58,11 @@ Similarly we define the set of irreducible resolvent functions of level $k$ as $
     & = & z^k W_{w(\mathbf{X})}(z) - \sum_{i=1}^k z^{k-i} p_{X^{i-1}w(\mathbf{X})}.
 \end{eqnarray}
 %
-We may omit words for which any sub-word consisting only of the matrix $X$ adjoins the loop operator $(z-X)^{-1}$, since these may be expressed in terms of the $\Delta$ operator to a power given by the length of the adjoining sub-word in $X$, acting on a lower-level resolvent function. Moreover, the presence of the loop operator means that the dihedral symmetry is removed. Finally, having fixed $X$ as the representative matrix of the loop operator, the defining word only respects the subgroup $G'\subseteq G$, consisting of elements $g\in\mathrm{Aut}(\tilde{\mathbf{X}})$, where $\tilde{\mathbf{X}}=\mathbf{X} \setminus X$. Therefore we may write
+We may omit words for which any sub-word consisting only of the matrix $X$ adjoins the loop operator $(z-X)^{-1}$, since these may be expressed in terms of the $\Delta$ operator to a power given by the length of the adjoining sub-word in $X$, acting on a lower-level resolvent function. Moreover, the presence of the loop operator means that the dihedral symmetry is removed, but reversal still gives $W_w(z)=W_{\operatorname{rev}(w)}(z)$. Finally, having fixed $X$ as the representative matrix of the loop operator, the defining word only respects the subgroup $G'\subseteq G$, consisting of elements $g\in\mathrm{Aut}(\tilde{\mathbf{X}})$, where $\tilde{\mathbf{X}}=\mathbf{X} \setminus X$. Therefore we may write
 %
 \begin{equation}
     \label{irreducibleResolvent}
-    \mathcal{W}_k \cong (\tilde{\mathbf{X}} \times \mathbf{X}^{k-2} \times \tilde{\mathbf{X}})/G'.
+    \mathcal{W}_k \cong (\tilde{\mathbf{X}} \times \mathbf{X}^{k-2} \times \tilde{\mathbf{X}})/(\mathbb{Z}_2^{\mathrm{rev}}\times G'),\qquad k\geq2.
 \end{equation}
 
 For example, consider a three-matrix model with matrix degrees of freedom $X_0,X_1,X_2$, with a $\mathbb{Z}_2$ symmetry under exchange of $X_0$ and $X_1$. Then for the resolvent functions with respect to $X_1$, one would find $ W_{(2,1,0,1,2)} \neq W_{(2,0,1,0,2)}$, and therefore the representative words comprise two distinct elements of $\mathcal{W}_5$,

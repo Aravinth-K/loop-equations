@@ -20,60 +20,69 @@ The four sheets of the generic cubic two-matrix curve have the expansions
 \subsubsection{Quartic two-matrix models}
 For $(\alpha,\beta,\gamma)=(g,g,g)$ and $(g,-g,g)$, the four sheets are
 \input{text/asymptotics/quartic_ggg}
+\Needspace{7\baselineskip}
 For $(\alpha,\beta,\gamma)=(g,g,-g)$, the six sheets are
 \input{text/asymptotics/quartic_ggm}
+\Needspace{7\baselineskip}
 For $(\alpha,\beta,\gamma)=(-g,g,g)$, the six sheets are
 \input{text/asymptotics/quartic_mgg}
 
 \subsubsection{Cubic three-matrix model}
 \input{text/asymptotics/cubic_three}
 
+\Needspace{10\baselineskip}
 \subsection{3-state Potts Model}
 
 \subsubsection{Fixed boundary conditions}
 
 The asymptotic behaviour of the planar resolvent $W_{(1)}(z)$ is given by:
 %
+\begin{sheetasymptotics}
 \begin{align*}
-    W_{(1)}(z)_0 & =   \frac{1}{z} + \mathcal{O}(z^{-2}) \\
-    W_{(1)}(z)_1 & =  t_3 z^2 + (t_2 -1)z - 2t_3^{-1/2} z^{1/2} + \frac{t_2 -2}{t_3} - \frac{(t_2-2)^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \\
-    W_{(1)}(z)_2 & =  t_3 z^2 + (t_2 -1)z + 2t_3^{-1/2}z^{1/2} + \frac{t_2 -2}{t_3} + \frac{(t_2-2)^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \\
-    W_{(1)}(z)_3 & =  t_3 z^2 + \left(t_2-\frac12\right) z - \frac{t_3^{-1/2}}{2\sqrt{2}} z^{1/2} + \frac{(10t_2-1)}{8t_3}  \\* & - \frac{(4t_2^2 - 20t_2 +1)} {32\sqrt{2}t_3^{3/2}}z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2}) \\
-    W_{(1)}(z)_4 & =  t_3 z^2 + \left(t_2-\frac12\right) z + \frac{t_3^{-1/2}}{2\sqrt{2}} z^{1/2} + \frac{(10t_2-1)}{8t_3} \\* & + \frac{(4t_2^2 - 20t_2 +1)}{32\sqrt{2}t_3^{3/2}}z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2})
+    \sheetlabel{W_{(1)}(z)_0} &={}   \frac{1}{z} + \mathcal{O}(z^{-2}) \\[4pt]
+    \sheetlabel{W_{(1)}(z)_1} &={}  t_3 z^2 + (t_2 -1)z - 2t_3^{-1/2} z^{1/2} + \frac{t_2 -2}{t_3} - \frac{(t_2-2)^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
+    \sheetlabel{W_{(1)}(z)_2} &={}  t_3 z^2 + (t_2 -1)z + 2t_3^{-1/2}z^{1/2} + \frac{t_2 -2}{t_3} + \frac{(t_2-2)^2}{4t_3^{3/2}} z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
+    \sheetlabel{W_{(1)}(z)_3} &={}  t_3 z^2 + \left(t_2-\frac12\right) z - \frac{t_3^{-1/2}}{2\sqrt{2}} z^{1/2} + \frac{(10t_2-1)}{8t_3}  \\* &\quad{}- \frac{(4t_2^2 - 20t_2 +1)} {32\sqrt{2}t_3^{3/2}}z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2}) \\[4pt]
+    \sheetlabel{W_{(1)}(z)_4} &={}  t_3 z^2 + \left(t_2-\frac12\right) z + \frac{t_3^{-1/2}}{2\sqrt{2}} z^{1/2} + \frac{(10t_2-1)}{8t_3} \\* &\quad{}+ \frac{(4t_2^2 - 20t_2 +1)}{32\sqrt{2}t_3^{3/2}}z^{-1/2} - \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2})
 \end{align*}
+\end{sheetasymptotics}
 
 \subsubsection{Mixed boundary conditions}
 
 The asymptotic behaviour of the planar resolvent $W_{(2)}(z)$ is given by:
 %
+\begin{sheetasymptotics}
 \begin{align*}
-    W_{(2)}(z)_0 & =   z^{-1} + \mathcal{O}(z^{-2}) \\
-    W_{(2)}(z)_1 & = \frac{t_3 z^2}{4}+\frac{\left(t_2 - 2\right)}{2}z -t_3^{-1/2}z^{1/2} +\frac{t_2-1}{2 t_3}-\frac{(t_2-1)^2}{8 t_3^{3/2}}z^{-1/2}+\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2})  \\
-    W_{(2)}(z)_2 & = \frac{t_3 z^2}{4}+\frac{\left(t_2 - 2\right)}{2}z+t_3^{-1/2}z^{1/2}+\frac{t_2-1}{2 t_3}+\frac{(t_2-1)^2}{8 t_3^{3/2}}z^{-1/2}+\frac{1}{2}z^{-1}+ \mathcal{O}(z^{-3/2}) \\
-    W_{(2)}(z)_3 & = -2 z + (1+i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  +\frac{\left(1-i\right) \left(t_2^2-(6-4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2})  \\
-    W_{(2)}(z)_4 & = -2 z -(1-i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  - \frac{\left(1+i\right) \left(t_2^2-(6+4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2})  \\
-    W_{(2)}(z)_5 & = -2 z -(1+i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  -\frac{\left(1-i\right) \left(t_2^2-(6-4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2}+ \mathcal{O}(z^{-3/2})  \\
-    W_{(2)}(z)_6 & = -2 z + (1-i) t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  +\frac{\left(1+i\right) \left(t_2^2-(6+4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2}) \\
-    W_{(2)}(z)_7 & = \frac{t_3 z^2}{4}+\frac{1}{2} \left(t_2-6\right) z+it_3^{-1/2}z^{1/2}-\frac{3 t_2+1}{2 t_3}-\frac{i \left(t_2^2-10 t_2+1\right)}{8 t_3^{3/2}}z^{-1/2} \\*
-    & -\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \\
-    W_{(2)}(z)_8 & = \frac{t_3 z^2}{4}+\frac{1}{2} \left(t_2-6\right) z-it_3^{-1/2}z^{1/2}-\frac{3 t_2+1}{2 t_3} +\frac{i \left(t_2^2-10 t_2+1\right)}{8 t_3^{3/2}}z^{-1/2} \\*
-    & -\frac{1}{2}z^{-1}  +\mathcal{O}(z^{-3/2}) \\
-    W_{(2)}(z)_9 & = -4z - \frac{4t_{2}}{t_3} - z^{-1} + \mathcal{O}(z^{-2})
+    \sheetlabel{W_{(2)}(z)_0} &={}   z^{-1} + \mathcal{O}(z^{-2}) \\[4pt]
+    \sheetlabel{W_{(2)}(z)_1} &={} \frac{t_3 z^2}{4}+\frac{\left(t_2 - 2\right)}{2}z -t_3^{-1/2}z^{1/2} +\frac{t_2-1}{2 t_3}-\frac{(t_2-1)^2}{8 t_3^{3/2}}z^{-1/2}+\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2})  \\[4pt]
+    \sheetlabel{W_{(2)}(z)_2} &={} \frac{t_3 z^2}{4}+\frac{\left(t_2 - 2\right)}{2}z+t_3^{-1/2}z^{1/2}+\frac{t_2-1}{2 t_3}+\frac{(t_2-1)^2}{8 t_3^{3/2}}z^{-1/2}+\frac{1}{2}z^{-1}+ \mathcal{O}(z^{-3/2}) \\[4pt]
+    \sheetlabel{W_{(2)}(z)_3} &={} -2 z + (1+i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  +\frac{\left(1-i\right) \left(t_2^2-(6-4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2})  \\[4pt]
+    \sheetlabel{W_{(2)}(z)_4} &={} -2 z -(1-i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  - \frac{\left(1+i\right) \left(t_2^2-(6+4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2})  \\[4pt]
+    \sheetlabel{W_{(2)}(z)_5} &={} -2 z -(1+i)t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  -\frac{\left(1-i\right) \left(t_2^2-(6-4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2}+ \mathcal{O}(z^{-3/2})  \\[4pt]
+    \sheetlabel{W_{(2)}(z)_6} &={} -2 z + (1-i) t_3^{-1/2}z^{1/2} -\frac{2 t_2}{t_3}  +\frac{\left(1+i\right) \left(t_2^2-(6+4 i) t_2+1\right)}{8t_3^{3/2}}z^{-1/2} + \mathcal{O}(z^{-3/2}) \\[4pt]
+    \sheetlabel{W_{(2)}(z)_7} &={} \frac{t_3 z^2}{4}+\frac{1}{2} \left(t_2-6\right) z+it_3^{-1/2}z^{1/2}-\frac{3 t_2+1}{2 t_3}-\frac{i \left(t_2^2-10 t_2+1\right)}{8 t_3^{3/2}}z^{-1/2} \\*
+    &\quad{}-\frac{1}{2}z^{-1} + \mathcal{O}(z^{-3/2}) \\[4pt]
+    \sheetlabel{W_{(2)}(z)_8} &={} \frac{t_3 z^2}{4}+\frac{1}{2} \left(t_2-6\right) z-it_3^{-1/2}z^{1/2}-\frac{3 t_2+1}{2 t_3} +\frac{i \left(t_2^2-10 t_2+1\right)}{8 t_3^{3/2}}z^{-1/2} \\*
+    &\quad{}-\frac{1}{2}z^{-1}  +\mathcal{O}(z^{-3/2}) \\[4pt]
+    \sheetlabel{W_{(2)}(z)_9} &={} -4z - \frac{4t_{2}}{t_3} - z^{-1} + \mathcal{O}(z^{-2})
 \end{align*}
+\end{sheetasymptotics}
 
 \subsubsection{Free boundary conditions}
 
 The asymptotic behaviour of the planar resolvent $W_{(3)}(z)$ is given by:
 %
+\begin{sheetasymptotics}
 \begin{align*}
-    W_{(3)}(z)_0 & = z^{-1} + \mathcal{O}(z^{-2}) \\
-    W_{(3)}(z)_1 & = \frac{t_3}{9} z^2 + \frac{(t_2-3)}{3} z + \frac{1}{z} + \mathcal{O}(z^{-2}) \\
-    W_{(3)}(z)_2 & = -\frac{3}{2} z + \frac{3i}{2\sqrt{2}t_3^{1/2}}z^{1/2} - \frac{(18t_2 -9)}{8t_3} - \frac{3i(4t_2^2 - 36t_2 + 9)}{32\sqrt{2} t_3^{3/2}} z^{-1/2} \\*
-    &\qquad{}- \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2})  \\
-    W_{(3)}(z)_3 & = -\frac{3}{2} z - \frac{3i}{2\sqrt{2}t_3^{1/2}}z^{1/2} - \frac{(18t_2 -9)}{8t_3} + \frac{3i(4t_2^2 - 36t_2 + 9)}{32\sqrt{2} t_3^{3/2}} z^{-1/2} \\*
-    &\qquad{}- \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2})  \\
-    W_{(3)}(z)_4 & = - \frac{4}{3} z - \frac{2t_2}{t_3} - z^{-1} + \mathcal{O}(z^{-2})
+    \sheetlabel{W_{(3)}(z)_0} &={} z^{-1} + \mathcal{O}(z^{-2}) \\[4pt]
+    \sheetlabel{W_{(3)}(z)_1} &={} \frac{t_3}{9} z^2 + \frac{(t_2-3)}{3} z + \frac{1}{z} + \mathcal{O}(z^{-2}) \\[4pt]
+    \sheetlabel{W_{(3)}(z)_2} &={} -\frac{3}{2} z + \frac{3i}{2\sqrt{2}t_3^{1/2}}z^{1/2} - \frac{(18t_2 -9)}{8t_3} - \frac{3i(4t_2^2 - 36t_2 + 9)}{32\sqrt{2} t_3^{3/2}} z^{-1/2} \\*
+    &\quad{}- \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2})  \\[4pt]
+    \sheetlabel{W_{(3)}(z)_3} &={} -\frac{3}{2} z - \frac{3i}{2\sqrt{2}t_3^{1/2}}z^{1/2} - \frac{(18t_2 -9)}{8t_3} + \frac{3i(4t_2^2 - 36t_2 + 9)}{32\sqrt{2} t_3^{3/2}} z^{-1/2} \\*
+    &\quad{}- \frac{1}{2} z^{-1} + \mathcal{O}(z^{-3/2})  \\[4pt]
+    \sheetlabel{W_{(3)}(z)_4} &={} - \frac{4}{3} z - \frac{2t_2}{t_3} - z^{-1} + \mathcal{O}(z^{-2})
 \end{align*}
+\end{sheetasymptotics}
 
 \subsection{General 3-state Potts}
 \input{text/asymptotics/potts_general}
@@ -92,7 +101,7 @@ problem, while the other admits a simple rational parametrization in the
 standard two-matrix framework. Routine methods then determine the remaining
 moments, the critical couplings, and the string susceptibility.
 
-We use the normalization of \cite[Eq.~(4.1)]{KhalkhaliEtAl2025},
+We use the normalization of \cite[Eq.~(4.1)]{khalkhali2025bootstrappingcriticalbehaviormultimatrix},
 \begin{equation}
  \mathcal V_{g_0,\alpha,\beta}(A,B)
  =\frac12(A^2+B^2)+\frac{g_0}{4}(A^4+B^4)
@@ -174,7 +183,7 @@ The Jacobian is constant, and the two matrices are independent:
 \end{equation}
 This is the standard quartic one-matrix model, whose solution and
 pure-gravity critical behaviour are reviewed in
-\cite[Sec.~2]{DiFrancescoGinspargZinnJustin1995}. In the conventional potential
+\cite[Sec.~2]{DiFrancesco:1993cyw}. In the conventional potential
 $x^2/2+\lambda x^4/4$, the critical coupling is $\lambda_c=-1/12$.
 Since here $\lambda=2g$, we immediately obtain
 \begin{equation}
@@ -241,7 +250,7 @@ gives
 \end{equation}
 Unlike \eqref{eq:qtm-factorization}, this does not decouple the matrices.
 It does, however, put the model in the standard bilinear class studied by
-Eynard \cite{Eynard2003}. The transformed Hermitian cycle satisfies
+Eynard \cite{Eynard:2002kg}. The transformed Hermitian cycle satisfies
 $V=-U^\dagger$; replacing it by two independent Hermitian integrations would
 be a different prescription. The formal expansion is unambiguously
 inherited from the original Gaussian integral.
@@ -264,7 +273,7 @@ $W_U(x(z))=V_1'(x(z))-y(z)$, where
 $W_U(x)=\frac1N\langle\operatorname{Tr}(x-U)^{-1}\rangle$.
 
 For cubic $V_1'$ and $V_2'$, the genus-zero parametrization is
-\cite[Eqs.~(4.1), (4.4)--(4.5)]{Eynard2003}
+\cite[Eqs.~(4.1), (4.4)--(4.5)]{Eynard:2002kg}
 \begin{equation}
  x(z)=\gamma z+\sum_{k=0}^3\alpha_kz^{-k},\qquad
  y(z)=\frac\gamma z+\sum_{k=0}^3\beta_kz^k.
@@ -448,7 +457,7 @@ $W_U(x(z))=V_1'(x(z))-y(z)$ gives, on either local sheet,
 where $W_{\mathrm{reg}}$ is analytic near $x_e$ and the sign of the square
 root specifies the sheet. Thus $x'(e)=0$ locates an ordinary endpoint;
 criticality additionally requires $y'(e)=0$, eliminating the leading
-square-root term \cite[Sec.~4.4.1]{Eynard2003}. The existence of a branch
+square-root term \cite[Sec.~4.4.1]{Eynard:2002kg}. The existence of a branch
 point alone imposes no criticality condition.
 
 For \eqref{eq:qtm-rational}, at any finite endpoint,
@@ -529,7 +538,7 @@ it is the order of the resolvent discontinuity that increases.
 
 The $(2,3)$ cusp is the usual pure-gravity criticality, with
 $\gamma_s=-2/(2+3-1)=-1/2$
-\cite[Eq.~(4.17)]{DiFrancescoGinspargZinnJustin1995}. We can also verify the
+\cite[Eq.~(4.17)]{DiFrancesco:1993cyw}. We can also verify the
 exponent directly in the coupling $g$, and simultaneously establish that
 it is a singularity of the original model rather than merely of a rotated
 spectral coordinate.

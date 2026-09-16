@@ -80,7 +80,7 @@ with
 \section{Boundary conditions of the Potts model}
 
 The Potts matrix model was proposed in \cite{Kazakov1988} wherein the solution was discussed for the case of $q = 1$ and $q = 0$. For $q = 2$ we recover the
-Ising model on random surfaces, a two-matrix model, which has been solved \cite{Kazakov1986, Boulatov1987, Eynard:2004mh}. For the particular case of triangulations ($k=1$) and integer $0\leqslant q \leqslant 4$, the analytic properties of the single-matrix resolvent were first computed by Daul \cite{Daul:1994qy} using saddle-point methods. This was extended by Zinn-Justin \cite{ZinnJustin:1999jg}, who first defined the dilute $q$-state Potts matrix model and was able to derive an algebraic expression for the resolvent function. Using the method of loop equations Bonnet and Eynard \cite{Eynard:1999gp} were able to demonstrate that the resolvent satisfies an algebraic equation for rational $\arccos(q - 2) / \pi $. Atkin, Niedner, and Wheater \cite{Atkin:2015ksy} demonstrated that the resolvents for sums of random matrices also satisfiy algebraic equations for integer $0\leqslant q \leqslant 4$ using saddle-point methods.
+Ising model on random surfaces, a two-matrix model, which has been solved \cite{Kazakov1986, Boulatov1987, Eynard:2004mh}. For the particular case of triangulations ($k=1$) and integer $0\leqslant q \leqslant 4$, the analytic properties of the single-matrix resolvent were first computed by Daul \cite{Daul:1994qy} using saddle-point methods. This was extended by Zinn-Justin \cite{ZinnJustin:1999jg}, who first defined the dilute $q$-state Potts matrix model and was able to derive an algebraic expression for the resolvent function. Using the method of loop equations Bonnet and Eynard \cite{Eynard:1999gp} were able to demonstrate that the resolvent satisfies an algebraic equation for rational $\arccos\!\left((q - 2)/2\right) / \pi $. Atkin, Niedner, and Wheater \cite{Atkin:2015ksy} demonstrated that the resolvents for sums of random matrices also satisfiy algebraic equations for integer $0\leqslant q \leqslant 4$ using saddle-point methods.
 
 
 
@@ -128,7 +128,7 @@ F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0.
 
 
 \subsubsection{$p=2$}
-In order to compute the planar resolvent for the mixed boundary condition we change the basis of the matrix integral \eref{pottsModel} to $M_0 = X_1 + X_2, M_1 = X_2 + X_0, M_2 = X_0 + X_1$. Under this change of basis the potential becomes 
+In order to compute the planar resolvent for the mixed boundary condition we change the basis of the matrix integral \eref{3Potts_p=1} to $M_0 = X_1 + X_2, M_1 = X_2 + X_0, M_2 = X_0 + X_1$. Under this change of basis the potential becomes
 %
 \begin{eqnarray}
 \label{mixedAction}
@@ -207,5 +207,14 @@ In this case we have broken the $S_3$ symmetry.
  (t_{2,2},t_{3,2})=(r_2,r_3),\\
  F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0.
 \end{gather}
-The curve takes the form
+Following the abbreviated presentation of \cite{ZinnJustin:1999jg}, we display
+the complete coefficient of $y^6$ and the leading powers of $x$ in the remaining
+coefficients:
 \input{text/curves/potts_general}
+In the coefficient of $y^j$, $1\leq j\leq5$, the ellipsis denotes powers of
+$x$ of degree at most $7-j$; the final ellipsis denotes a polynomial of degree
+at most six in $x$. These omitted terms include both explicit coupling-dependent
+coefficients and the correlator-dependent coefficients $c_{i,j}$. The complete
+expression is given in the accompanying notebook \cite{github:ak}.
+The displayed terms make the degrees $(\deg_xF_{(1)},\deg_yF_{(1)})=(8,7)$
+manifest.

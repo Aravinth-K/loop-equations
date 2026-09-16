@@ -5,13 +5,27 @@
 \usepackage{amsthm}
 \usepackage{comment}
 \usepackage{bm}
+\usepackage{booktabs}
+\usepackage{needspace}
 \allowdisplaybreaks[2]
+
+% Use uniform 8 pt math, matching the reference paper's compact coefficients,
+% for both sides of every sheet expansion, with normal mathematical spacing.
+% Fix both the left margin and the label column across all sheet catalogues.
+\makeatletter
+\newenvironment{sheetasymptotics}{%
+  \par\begingroup\fontsize{8}{10}\selectfont
+  \@fleqntrue\@mathmargin=0pt\relax
+  \setlength{\jot}{3pt}%
+}{\par\endgroup}
+\makeatother
+\newcommand{\sheetlabel}[1]{\makebox[4em][l]{$#1$}}
 
 \title{Loop Equations for Multi-Matrix Models}
 
 \author[a]{Aravinth Kulanthaivelu}
 
-\affiliation[a]{Fractile Ltd, 57 Charterhouse St, London, EC1M 6HA, UK}
+\affiliation[a]{Independent Researcher}
 
 \emailAdd{aravinth.kulanthaivelu@outlook.com}
 
@@ -54,10 +68,12 @@
 \input{text/preliminaries}
 
 \input{text/general_solution_strategy}
+\input{text/curve_counts}
 
 \input{text/applications}
 
 \input{text/discussion}
+\input{text/acknowledgements}
 \nocite{*}
 
 \clearpage

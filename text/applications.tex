@@ -79,22 +79,8 @@ with
 
 \section{Boundary conditions of the Potts model}
 
-The $q$-state Potts model on random surfaces is defined by the multi-matrix integral 
-\beq
-\label{pottsModel}
-Z_{q}\left(\{t_m\}_{m=2}^{k+2}\right) = \int \prod_{\langle i, j \rangle} e^{N\Tr X_i X_j}\prod_{i=1}^q e^{-N\Tr V_i(X_i)} \rmd X_i
-\eeq
-where $\langle i,j\rangle$ denotes the product over distinct $i, j$ and we take $V_i(z)  = U_i(z) - z^2/2 \, \forall i$. This is a particular case of the \textit{dilute} $q$-state Potts model which we define to be
-\beq
-\label{dilutePottsModel}
-Z_q\left(t_0, \{t_m\}_{m=2}^{k+2}\right) = \int \rmd Y e^{-N \Tr (t_0 Y^3/3 + Y^2/2)}\prod_{i=1}^q e^{-N\Tr (U_i(X_i)-X_iY)} \rmd X_i.
-\eeq
-It is straightforward to see that in the case $t_0 = 0$ one can recover \eref{pottsModel} by integrating out $Y$. Taking $U_i(z)=U(z) = \sum_{m=2}^{k+2}t_m z^m/m$, we obtain the $S_q$-symmetric Potts model.
-
-These models are interesting because the cyclical coupling in \eref{pottsModel} prevents one from integrating out the relative angles between the matrices for $q\geqslant 3$. Therefore one is unable to deal with the eigenvalues only and the problem is not amenable to orthogonal polynomial or saddle-point solutions, the usual method of attack for one-matrix models. However, the introduction of the fiducial matrix $Y$, as in \eref{dilutePottsModel}, allows us to disentangle the cyclical coupling and cast the model in the form of an external field problem \cite{gross1, gross2}. The relative angle between the $X_i$ and $Y$ can be integrated out and we may describe the eigenvalues of each $X_i$ in terms of the eigenvalues of $Y$, rendering the problem approachable through saddle-point methods. 
-
-The matrix model studied in the literature thus far typically belong to the class of $S_q$-symmetric Potts models. The Potts matrix model was proposed in \cite{Kazakov1988} wherein the solution was discussed for the case of $q = 1$ and $q = 0$. For $q = 2$ we recover the
-Ising model on random surfaces, a two-matrix model, which has been solved \cite{Kazakov1986, Boulatov1987, Eynard:2004mh}. For the particular case of triangulations ($k=1$) and integer $0\leqslant q \leqslant 4$, the analytic properties of the single-matrix resolvent were first computed by Daul \cite{Daul:1994qy} using saddle-point methods. This was extended by Zinn-Justin \cite{ZinnJustin:1999jg}, who first defined the dilute $q$-state Potts matrix model \eref{dilutePottsModel} and was able to derive an algebraic expression for the resolvent function. Using the method of loop equations Bonnet and Eynard \cite{Eynard:1999gp} were able to demonstrate that the resolvent satisfies an algebraic equation for rational $\arccos(q - 2) / \pi $. Atkin, Niedner, and Wheater \cite{Atkin:2015ksy} demonstrated that the resolvents for sums of random matrices also satisfiy algebraic equations for integer $0\leqslant q \leqslant 4$ using saddle-point methods.
+The Potts matrix model was proposed in \cite{Kazakov1988} wherein the solution was discussed for the case of $q = 1$ and $q = 0$. For $q = 2$ we recover the
+Ising model on random surfaces, a two-matrix model, which has been solved \cite{Kazakov1986, Boulatov1987, Eynard:2004mh}. For the particular case of triangulations ($k=1$) and integer $0\leqslant q \leqslant 4$, the analytic properties of the single-matrix resolvent were first computed by Daul \cite{Daul:1994qy} using saddle-point methods. This was extended by Zinn-Justin \cite{ZinnJustin:1999jg}, who first defined the dilute $q$-state Potts matrix model and was able to derive an algebraic expression for the resolvent function. Using the method of loop equations Bonnet and Eynard \cite{Eynard:1999gp} were able to demonstrate that the resolvent satisfies an algebraic equation for rational $\arccos(q - 2) / \pi $. Atkin, Niedner, and Wheater \cite{Atkin:2015ksy} demonstrated that the resolvents for sums of random matrices also satisfiy algebraic equations for integer $0\leqslant q \leqslant 4$ using saddle-point methods.
 
 
 
@@ -106,26 +92,20 @@ Ising model on random surfaces, a two-matrix model, which has been solved \cite{
 %
 %where we have chosen the coefficients to align with the notation of \cite{Atkin:2015ksy}. This action is manifestly $S_3$-symmetric under exchange of the matrix degrees of freedom.
 
-\subsection{Resolvents as boundary conditions}
 
-It is common to regard resolvents as describing boundary conditions on random graphs. In the diagrammatic expansion of the matrix integral each monomial of order $k+2>2$ generates a $(k+2)$-sided polygon. To leading order in the large $N$ expansion, where planar graphs dominate, we may interpret each term as a tesselation of the sphere by polygons in $q$ equally weighted colours, corresponding to the $q$ different matrices. Given $\sigma\in S_q/(S_p\times S_{q-p})$, we define an associated resolvent function 
+It is common to regard resolvents as describing boundary conditions on random graphs. In the diagrammatic expansion of the matrix integral each monomial of order $k+2>2$ generates a $(k+2)$-sided polygon. To leading order in the large $N$ expansion, where planar graphs dominate, we may interpret each term as a tesselation of the sphere by polygons in $q$ weighted colours, corresponding to the $q$ different matrices. Given $\sigma\in S_q/(S_p\times S_{q-p})$, we define an associated resolvent function 
 %
 \begin{eqnarray}
 \label{discfct}
 	W_{(p|\sigma)}(z)=\frac{1}{N}\left\langle\Tr\frac{1}{z-X_{(p|\sigma)}}\right\rangle\ ,\quad X_{(p|\sigma)}=\sum_{i=1}^pX_{\sigma(i)}\ ,
 \end{eqnarray}
 %
-In the $S_q$-invariant case, for given $p$, all $|S_q/(S_p\times S_{q-p})|={q \choose p}$ partition functions $W_{(p|\sigma)}(z)$ are described by the same function, so that we henceforth abbreviate $W_{(p)}(z):=W_{(p|\sigma_0)}(z)$ for a representative $\sigma_0$. For $p=1$, our definition of $W_{(p)}(z)$ reduces to the one studied in \cite{Kazakov1988,Daul:1994qy,ZinnJustin:1999jg,Bonnet:1999nf,Eynard:1999gp}. These functions generate graphs with a single connected boundary containing $p$ equally weighted colours.
-
-In the statistical lattice model interpretation we regard \eref{pottsModel} as a partition function. Each matrix degree of freedom represents the state of a spin with nearest-neighbour interactions between unequal spins. $S_q$-symmetry under permutations of the matrices renders the $q$ states of the statistical system indistinguishable. We may interpret the resolvent \eref{res} as the disk partition function, generating surfaces with a connected boundary. The matrix, and hence spin, used to define the resolvent defines the set of spins allowed on the boundary. Therefore we term the resolvent of a single matrix the \textit{fixed} boundary condition. Similarly we call the resolvent for the sum of all matrices the \textit{free} boundary condition, and we call the resolvent for the sum of $p$ random matrices the \textit{partially magnetised} or \textit{mixed} boundary condition.
+In the $S_q$-invariant case, for given $p$, all $|S_q/(S_p\times S_{q-p})|={q \choose p}$ partition functions $W_{(p|\sigma)}(z)$ are described by the same function, so that we henceforth abbreviate $W_{(p)}(z):=W_{(p|\sigma_0)}(z)$ for a representative $\sigma_0$. For $p=1$, our definition of $W_{(p)}(z)$ reduces to the one studied in \cite{Kazakov1988,Daul:1994qy,ZinnJustin:1999jg,Bonnet:1999nf,Eynard:1999gp}. These functions generate graphs with a single connected boundary containing $p$ equally weighted colours. The matrix, and hence spin, used to define the resolvent defines the set of spins allowed on the boundary. Therefore we term the resolvent of a single matrix the \textit{fixed} boundary condition. Similarly we call the resolvent for the sum of all matrices the \textit{free} boundary condition, and we call the resolvent for the sum of $p$ random matrices the \textit{partially magnetised} or \textit{mixed} boundary condition.
 
 Our goal in the following is to describe the planar resolvents for these
 boundary conditions. We present the curves as $F_{(p)}(x,y)=0$, with the
 coefficient convention introduced above. The asymptotic expansions are given
-in appendix~\ref{app:asympt}. In practice, one is typically interested in the
-\textit{critical behaviour} as the parameters approach a scaling limit. The
-explicit coupling-dependent terms display the structure of the curve, while
-the coefficients $c_{i,j}$ retain its dependence on the trace correlators.
+in appendix~\ref{app:asympt}.
 
 \subsection{3-state Potts model}
 \subsubsection{$p=1$}
@@ -213,48 +193,6 @@ F_{(3)}\!\left(z,z+W_{(3)}(z)\right)=0.
 \end{equation}
 
 \input{text/curves/potts_free}
-
-\subsection{Dilute Ising model}
-Taking $q=2$ in \eref{dilutePottsModel} gives the dilute Ising model.
-There are three boundary conditions: a vacancy, a fixed spin, and a free spin.
-
-\subsubsection{Vacant boundary}
-The resolvent of the vacancy matrix $Y$ satisfies
-\begin{equation}
- F\!\left(z,W_Y(z)\right)=0.
-\end{equation}
-\input{text/curves/ising_vacant}
-
-\subsubsection{$p=1$}
-For a fixed-spin boundary,
-\begin{equation}
- F_{(1)}\!\left(z,W_{(1)}(z)\right)=0.
-\end{equation}
-\input{text/curves/ising_fixed}
-
-\subsubsection{$p=2$}
-For a free-spin boundary,
-\begin{equation}
- F_{(2)}\!\left(z,W_{(2)}(z)\right)=0.
-\end{equation}
-\input{text/curves/ising_free}
-
-\subsection{Dilute 3-state Potts model}
-For $q=3$ in \eref{dilutePottsModel}, we consider vacant and fixed-spin boundaries.
-
-\subsubsection{Vacant boundary}
-The vacancy resolvent satisfies
-\begin{equation}
- F\!\left(z,W_Y(z)\right)=0.
-\end{equation}
-\input{text/curves/dilute_vacant}
-
-\subsubsection{$p=1$}
-For a fixed-spin boundary,
-\begin{equation}
- F_{(1)}\!\left(z,W_{(1)}(z)\right)=0.
-\end{equation}
-\input{text/curves/dilute_fixed}
 
 \subsection{General 3-state Potts}
 \beq

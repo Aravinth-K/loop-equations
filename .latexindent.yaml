@@ -25,8 +25,20 @@ modifyLineBreaks:
     comments:
       wrap: 0
     blocksFollow:
-      other: '\\\]|\\item(?:\h|\[)|\\end\{[^}]+\}|\\eeq\b'
+      other: '\\\]|\\item(?:\h|\[)|\\end\{[^}]+\}|\\eeq\b|\\(?:input|Needspace)\{[^}]+\}'
+    blocksEndBefore:
+      other: '\\begin\{|\\\[|\\end\{|\\(?:input|Needspace)\{'
   environments:
     BodyStartsOnOwnLine: 1
     EndStartsOnOwnLine: 1
     DBSFinishesWithLineBreak: 1
+  commands:
+    input:
+      CommandStartsOnOwnLine: 1
+    Needspace:
+      CommandStartsOnOwnLine: 1
+  mandatoryArguments:
+    input:
+      RCuBFinishesWithLineBreak: 0
+    Needspace:
+      RCuBFinishesWithLineBreak: 1

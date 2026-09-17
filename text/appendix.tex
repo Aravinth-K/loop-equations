@@ -56,8 +56,8 @@ The asymptotic behaviour of the planar resolvent $W_{(3)}(z)$ is given by:
 \section{Mixed boundary saddle-point solution}
 \label{app:mixed-saddle}
 
-Here we show the degree-ten curve for $W_{(2)}$ is compatible with the degree-five curve for the auxiliary
-function $G_{(2)}^Y$ obtained in \cite{Niedner:2016skw}. We make this comparison by
+Here we show the degree-ten curve for $W_{(2)}$ is compatible with the degree-five curve for the
+auxiliary function $G_{(2)}^Y$ obtained in \cite{Niedner:2016skw}. We make this comparison by
 reducing the matrix integral to an eigenvalue problem and following the analytic continuation of
 the mixed resolvent.
 
@@ -85,8 +85,8 @@ Following \cite{Atkin:2015ksy}, write
     G_A^B(z)=\lim_{N\to\infty}\frac1N\frac{\partial}{\partial z}
     \log\left\langle\det_{i,j}e^{N\xi_i\eta_j}\right\rangle_{\xi_N=z},
 \end{equation}
-where $\xi_i$ and $\eta_j$ are the eigenvalues of $A$ and $B$, respectively. Define
-the reflection $s(z)=-z-2t_2/t_3$. Stationarity of \eqref{MixedSaddle} in the planar limit gives
+where $\xi_i$ and $\eta_j$ are the eigenvalues of $A$ and $B$, respectively. Define the reflection
+$s(z)=-z-2t_2/t_3$. Stationarity of \eqref{MixedSaddle} in the planar limit gives
 \begin{align}
     \label{2MMsaddle2}
     V_+'(z) & =\overline W_{(2)}(z)+\overline G_{X_+}^{X_0}(z)+W_{(2)}(s(z)), \\
@@ -102,8 +102,8 @@ Let $G(z)=G_{(2)}^Y(z)$, where $Y$ is the auxiliary Gaussian matrix coupled to $
     \mathcal F_{(2)}(z,G(z))=F_{(1)}(G(z)-z,G(z))=0.
 \end{equation}
 We use $\mathcal F_{(2)}$ for this auxiliary curve to distinguish it from the degree-ten resolvent
-curve $F_{(2)}$. Denote branch adjacent to the physical branch of $G$ by $G_0$. Combining the saddle-point equations
-with the HCIZ branch relations gives
+curve $F_{(2)}$. Denote branch adjacent to the physical branch of $G$ by $G_0$. Combining the
+saddle-point equations with the HCIZ branch relations gives
 \begin{equation}
     \label{mixed:physical-relation}
     W_0(z)+W_0(s(z))+G_0(z)=U(z),
@@ -139,10 +139,9 @@ while $W_0(s(z))$ remains analytic. Repeating this continuation gives
         \beta_j  & 0 & 0  & 0  & 1  & 1  & 2  & 2  & 4  & 3  & 7
     \end{array}
 \end{equation}
-The sheet labels agree with the asymptotic catalogue in section~\ref{app:mixed-asymptotics}
-and expanding \eqref{mixed:sheet-relations} at infinity
-reproduces the ten series. The
-complete continuation is shown in figure~\ref{fig:mixed-W-continuation}.
+The sheet labels agree with the asymptotic catalogue in section~\ref{app:mixed-asymptotics} and
+expanding \eqref{mixed:sheet-relations} at infinity reproduces the ten series. The complete
+continuation is shown in figure~\ref{fig:mixed-W-continuation}.
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.85]{figures/MixedW.pdf}
@@ -163,9 +162,8 @@ ordinary quartic one-matrix problem, while the other admits a simple rational pa
 the standard two-matrix framework. Routine methods then determine the remaining moments, the
 critical couplings, and the string susceptibility.
 
-We use the normalisation of
-\cite{khalkhali2025bootstrappingcriticalbehaviormultimatrix} and 
-label the four sets of couplings by
+We use the normalisation of \cite{khalkhali2025bootstrappingcriticalbehaviormultimatrix} and label
+the four sets of couplings by
 \begin{equation}
     \mathrm I:(g,g,g),\qquad
     \mathrm{II}:(g,-g,g),\qquad
@@ -183,13 +181,12 @@ Write
     \qquad \mathrm M\in\{\mathrm I,\mathrm{II},\mathrm{III},\mathrm{IV}\}.
     \label{eq:qtm-moment-definition}
 \end{equation}
-\noindent From the spectral curves we have 
+\noindent From the spectral curves we have
 \begin{equation}
-        m_k^{\mathrm{II}}(g)=m_k^{\mathrm I}(g),\qquad
-        m_k^{\mathrm{III}}(g)=m_k^{\mathrm{IV}}(-g).
+    m_k^{\mathrm{II}}(g)=m_k^{\mathrm I}(g),\qquad
+    m_k^{\mathrm{III}}(g)=m_k^{\mathrm{IV}}(-g).
     \label{eq:qtm-pair-identities}
 \end{equation}
-
 
 \subsection{The first pair: two independent one-matrix models}
 
@@ -205,12 +202,16 @@ Expanding and using cyclicity of the trace gives
     \label{eq:qtm-factorization}
 \end{equation}
 This is the standard quartic one-matrix model, whose solution and pure-gravity critical behaviour
-are reviewed in \cite{DiFrancesco:1993cyw}. In the conventional potential $x^2/2+\lambda
-    x^4/4$, the critical coupling is $\lambda_c=-1/12$. Since here $\lambda=2g$, we immediately obtain $g_c=-\frac1{24}$, and $\gamma_s=-\frac12$.
-\noindent For completeness, the one-cut resolvent of $X$ and its endpoint parameter are
-\input{text/curves/quartic_one_matrix}%
-At
-criticality $s=2$, and the density's quadratic prefactor vanishes at each cut endpoint.
+are reviewed in \cite{DiFrancesco:1993cyw}. In the conventional potential $x^2/2+\lambda x^4/4$,
+the critical coupling is $\lambda_c=-1/12$. Since here $\lambda=2g$, we immediately obtain
+$g_c=-\frac1{24}$, and $\gamma_s=-\frac12$. \noindent For completeness, the one-cut resolvent of
+$X$ and its endpoint parameter are
+\begin{equation}
+    W_X(x)  =\frac12\left[x+2gx^3
+        -(2gx^2+1+4gs)\sqrt{x^2-4s}\right], \quad s+6gs^2 =1.
+    \label{eq:qtm-one-resolvent}
+\end{equation}%
+At criticality $s=2$, and the density's quadratic prefactor vanishes at each cut endpoint.
 
 The original second moment equals that of $X$, whereas the fourth moment also involves the two
 independent factors. Expanding $A=(X+Y)/\sqrt2$ gives
@@ -232,7 +233,6 @@ Expanding perturbatively we find
     \label{eq:qtm-first-series}
 \end{align}
 
-
 \subsection{The second pair: a standard bilinear two-matrix model}
 
 It suffices to solve model IV. The complex linear transformation
@@ -249,27 +249,41 @@ gives
     \label{eq:qtm-bilinear}
 \end{equation}
 Unlike \eqref{eq:qtm-factorization}, this does not decouple the matrices. It does, however, put the
-model in the standard bilinear class studied by Eynard \cite{Eynard:2002kg}. 
+model in the standard bilinear class studied by Eynard \cite{Eynard:2002kg}.
 
 The spectral curve derived above takes Eynard's form
-\input{text/curves/quartic_bilinear}%
-where $a=-2g$, $m=-\frac1N\bigl\langle\operatorname{Tr}UV\bigr\rangle$, $q=\frac1N\bigl\langle\operatorname{Tr}U^2V^2\bigr\rangle$, and $W_U(x(z))=V_1'(x(z))-y(z)$. For cubic $V_1'$ and $V_2'$, the genus-zero parameterisation is
-\input{text/curves/quartic_bilinear_ansatz}%
+\begin{equation}
+    E(x,y)=(ax^3-y)(ay^3-x)
+    -a^2(x^2y^2-mxy+q)+1=0.
+    \label{eq:qtm-second-curve}
+\end{equation}%
+where $a=-2g$, $m=-\frac1N\bigl\langle\operatorname{Tr}UV\bigr\rangle$,
+$q=\frac1N\bigl\langle\operatorname{Tr}U^2V^2\bigr\rangle$, and $W_U(x(z))=V_1'(x(z))-y(z)$. For
+cubic $V_1'$ and $V_2'$, the genus-zero parameterisation is
+\begin{equation}
+    x(z)=\gamma z+\sum_{k=0}^3\alpha_kz^{-k},\qquad
+    y(z)=\frac\gamma z+\sum_{k=0}^3\beta_kz^k.
+    \label{eq:qtm-general-rational}
+\end{equation}%
 The symmetry $(U,V)\mapsto(iU,-iV)$ leaves only the coefficients with $k=3$, and exchange symmetry
 equates them. Hence
-\input{text/curves/quartic_bilinear_parametrization}%
+\begin{equation}
+    x(z)=\gamma(z+bz^{-3}),\qquad
+    y(z)=\gamma(z^{-1}+bz^3).
+    \label{eq:qtm-rational}
+\end{equation}%
 
 To fix the coefficients, impose $W_U(x)\sim1/x$ at infinity. Cancellation of the $z^3$ term gives
-$b=a\gamma^2=-2g\gamma^2$. The remaining leading term is one, giving the normalisation condition $\gamma^2(3b^2-1)=1$. 
-Setting $r=-\gamma^2$, we obtain
+$b=a\gamma^2=-2g\gamma^2$. The remaining leading term is one, giving the normalisation condition
+$\gamma^2(3b^2-1)=1$. Setting $r=-\gamma^2$, we obtain
 \begin{equation}
-        12g^2r^3-r+1=0.
+    12g^2r^3-r+1=0.
     \label{eq:qtm-r-cubic}
 \end{equation}
 \noindent It is then straightforward to express the moments in this parameter
 \begin{equation}
     m=\frac{1+3r-r^2}{3},\qquad
-        q=\frac{1+9r+33r^2-16r^3}{27}.
+    q=\frac{1+9r+33r^2-16r^3}{27}.
     \label{eq:qtm-mq-solution}
 \end{equation}
 \noindent To compute the original moments in terms of $A$ and $B$ we need $h=\frac1N\bigl\langle\operatorname{Tr}U^4\bigr\rangle
@@ -281,13 +295,13 @@ Setting $r=-\gamma^2$, we obtain
 Using \eqref{eq:qtm-pair-identities}, both models are therefore solved by
 \begin{equation}
     \begin{aligned}
-            m_2^{\mathrm{III}}(g)=m_2^{\mathrm{IV}}(g)
-             & =\frac{1+3r-r^2}{3}, \\
-            m_4^{\mathrm{IV}}(g)
-             & =\frac{2+9r+15r^2-8r^3}{9}+gr^3(2-r), \\
-            m_4^{\mathrm{III}}(g)
-             & =\frac{2+9r+15r^2-8r^3}{9}-gr^3(2-r).
-        \end{aligned}
+        m_2^{\mathrm{III}}(g)=m_2^{\mathrm{IV}}(g)
+         & =\frac{1+3r-r^2}{3}, \\
+        m_4^{\mathrm{IV}}(g)
+         & =\frac{2+9r+15r^2-8r^3}{9}+gr^3(2-r), \\
+        m_4^{\mathrm{III}}(g)
+         & =\frac{2+9r+15r^2-8r^3}{9}-gr^3(2-r).
+    \end{aligned}
     \label{eq:qtm-original-moments}
 \end{equation}
 
@@ -302,7 +316,8 @@ Expanding these expressions perturbatively in $g$ yields
     \label{eq:qtm-second-series-m4}
 \end{align}
 
-For criticality, recall that generic finite endpoint $x_e=x(e)$ of the selected resolvent branch satisfies
+For criticality, recall that generic finite endpoint $x_e=x(e)$ of the selected resolvent branch
+satisfies
 \begin{equation}
     x'(e)=0,\qquad x''(e)\neq0,\qquad y'(e)\neq0.
 \end{equation}
@@ -315,4 +330,6 @@ Expanding $W_U(x(z))=V_1'(x(z))-y(z)$ gives,
 \end{equation}
 where $W_{\mathrm{reg}}$ is analytic near $x_e$ and the sign of the square root specifies the
 sheet. Thus $x'(e)=0$ locates an ordinary endpoint; criticality additionally requires $y'(e)=0$,
-eliminating the leading square-root term. Imposing this condition gives the critical point $g_c=\pm\frac19$. We are unable to tune the parameter to achieve a higher critical point, and thus we conclude that the string susceptibility is again $\gamma_s = -\frac{1}{2}$
+eliminating the leading square-root term. Imposing this condition gives the critical point
+$g_c=\pm\frac19$. We are unable to tune the parameter to achieve a higher critical point, and thus
+we conclude that the string susceptibility is again $\gamma_s = -\frac{1}{2}$

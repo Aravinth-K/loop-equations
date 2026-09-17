@@ -1,0 +1,2041 @@
+{
+  "schema_version": 3,
+  "audit_date": "2026-09-06",
+  "scope": "Graphical notebook opening, repaired serialization, complete fresh-kernel execution, and the retained results of the earlier mathematical audit.",
+  "inventory": {
+    "notebooks": 17,
+    "imported": 15,
+    "created": 2,
+    "spectral_curve_notebooks": 17,
+    "scaling_limit_notebooks": 0,
+    "frontend_notebooks_opened": 17,
+    "input_cells_parsed": 845,
+    "input_parse_failures": 0,
+    "fresh_kernel_notebooks_completed": 17,
+    "fresh_kernel_input_cells": 845,
+    "fresh_kernel_logical_expressions": 1375,
+    "historical_sheet_expansions_checked_for_retained_notebooks": 105,
+    "additional_weighted_physical_moments_checked": 4
+  },
+  "conventions": {
+    "curve_degrees": "Degrees of P(z,W), with W the resolvent, unless a scaling coordinate is explicitly specified; shifted auxiliary curves can have different z-degrees.",
+    "sheet_count": "Generic algebraic sheet count of the recorded curve. Null denotes a scaling calculation without a complete sheet-expansion audit.",
+    "physical_normalization": "W(z)=1/z+O(z^-2).",
+    "moduli": "Correlator coefficients remain symbolic boundary data unless an exact trace identity determines them."
+  },
+  "generic_assumptions": [
+    "Planar formal Schwinger-Dyson equations and normalized traces.",
+    "Nonzero denominators and generic couplings away from discriminant and degree-dropping loci.",
+    "Simple leading roots where a Taylor recurrence uses an implicit-function expansion; ramified families use their stated fractional-power branches.",
+    "Consistent choices of fractional powers, including the positive-coupling branch conventions used in the displayed expansions.",
+    "Cyclic trace identities always apply; reversal and spin-permutation reductions apply only when the action and measure possess those symmetries."
+  ],
+  "verification_methods": {
+    "symbolic_curve_comparison": "Exact equality of complete polynomials after trace identities and a nonzero normalization factor.",
+    "newton_remainder": "Exact symbolic substitution and Newton-polygon remainder bounds for the displayed expansion.",
+    "taylor_recurrence": "Exact coefficient recurrence at a generic simple leading root; this is not a blanket full-curve Newton check.",
+    "historical_replay": "Fresh evaluation of the specified original calculation through its terminal curve.",
+    "full_notebook_execution": "Every Input and Code cell evaluated in order in a fresh licensed Wolfram kernel, preserving output history. Actual outputs and messages are recorded and hashed; saved notebook outputs are never used as inputs.",
+    "frontend_opening": "NotebookOpen called in the actual graphical Mathematica frontend on a byte-identical copy of every active notebook; each opens successfully and contains the expected input cells.",
+    "notebook_serialization": "Materialize deferred MakeBoxes calls and save valid literal notebook data. Preserve input boxes, text, and styles; separately repair the single corrupted fixed-Potts input."
+  },
+  "cases": [
+    {
+      "notebook": "3-Potts Fixed.nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 5,
+        "z": 8
+      },
+      "shifted_curve_degrees": {
+        "y": 5,
+        "x": 6
+      },
+      "coordinate_relation": "y=t3*z^2+t2*z-W(z)",
+      "sheet_count": 5,
+      "sheet_expansions_checked": 5,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Complete symbolic curve comparison",
+        "All five generic sheet expansions",
+        "Fresh native generation matches an independently differentiated set of all 64 resolvent equations and all 7 correlator equations",
+        "All six native trace-orbit catalogues agree with independent S3 and dihedral enumeration"
+      ],
+      "corrections": [
+        "Corrected a reciprocal square-root coupling factor in the displayed asymptotics",
+        "Distinguished the shifted auxiliary curve from the resolvent curve",
+        "Corrected the pair slope to t2-1/2 and the associated polynomial to 4*t2^2-20*t2+1",
+        "Corrected the three-matrix covarlist alphabet and cyclic-rotation loop bounds",
+        "Applied the single CoEqSol rule list instead of nesting substituted constraints in singleton lists",
+        "Replaced the opaque terminal elimination with exact constant-pivot auxiliary substitution and the derived nonconstant trace relation, preserving the displayed four-modulus basis"
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "7a11d722ff6a0fb0a8054491a505251a5689a057e52186221a129f9f25f5fa3c",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 49,
+          "logical_expressions": 103,
+          "elapsed_seconds": 131.067,
+          "messages": [
+            {
+              "input_cell": 49,
+              "message": "HoldForm[AsymptoticSolve::avars]"
+            }
+          ],
+          "mathematical_assertions": {
+            "CorrelatorCanonicalizationApplied": true,
+            "DerivedCurveDivisibility": true,
+            "DerivedCurveEqualityUpToScalar": true,
+            "fresh_sheet_count_matches_degree": true,
+            "fresh_newton_certificates": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "6889b392886ab60d7f7f23e32c67115d53230a7c5b9aadcc367f218aceb460e0",
+            "before_output_refresh_sha256": "6889b392886ab60d7f7f23e32c67115d53230a7c5b9aadcc367f218aceb460e0",
+            "after_output_refresh_sha256": "7a11d722ff6a0fb0a8054491a505251a5689a057e52186221a129f9f25f5fa3c",
+            "recorded_output_sha256_values_verified": 0
+          },
+          "mathematical_evidence": {
+            "method": "independent exact Newton certificates for the replayed curve and sheets",
+            "artifact_sha256": {
+              "fresh-sheet-certificates.json": "471bb64d81d9ea0b89bf1177539bf12089bbe9cb1ded1d993708696e01c8acd1",
+              "replayed-curve.wl": "3e7d519e4f1edc56c8a2a4ff5b2127e66e29085c8ae0aaac792ade4c2f810efb",
+              "replayed-sheets.wl": "db526977bcd67948c88f7d92c94738bcda055b7bed5eb914c82bd0d1faeff9b7"
+            },
+            "sheet_count": 5
+          },
+          "message_scope": "AsymptoticSolve::avars states that inequalities on the asymptotic variable are ignored; coupling assumptions and independent exact sheet certificates are retained."
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "57616264bdb2c41a872d63823499b4e32c4b6770b9f6fc5ce71b918d840c3e88",
+      "native_syntax": {
+        "input_cells": 49,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "3-Potts Fixed.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 49,
+        "sha256": "57616264bdb2c41a872d63823499b4e32c4b6770b9f6fc5ce71b918d840c3e88",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "360e510bd4393831810af05ca4ce3343c110771be72cbc0d7ad1b9b6c9a0e709",
+        "after_sha256": "57616264bdb2c41a872d63823499b4e32c4b6770b9f6fc5ce71b918d840c3e88",
+        "deferred_box_calls_replaced": 0,
+        "changed_input_cells": [
+          42
+        ],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true,
+        "additional_input_correction": {
+          "cell": 42,
+          "description": "Repaired corrupted bracket and equality characters in the terminal elimination input. The other 48 input cells are unchanged; the restored calculation reproduces the previously audited curve and asymptotics."
+        }
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "3-Potts Fixed.nb",
+        "executed_source_sha256": "57616264bdb2c41a872d63823499b4e32c4b6770b9f6fc5ce71b918d840c3e88",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 49,
+        "logical_expressions": 103,
+        "elapsed_seconds": 45.091,
+        "messages": [
+          {
+            "input_cell": 49,
+            "logical_expression": 103,
+            "messages": [
+              "HoldForm[AsymptoticSolve::avars]"
+            ]
+          }
+        ],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "c6676a07c8ee77cfef22ded5a5f5eabaa065f9014ca187022044975aa2b0c96e",
+        "recorded_output_hashes_verified": 103,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 49,
+          "identical_cell_outputs": 41,
+          "only_runtime_timing_changed": [
+            37,
+            39,
+            40,
+            42
+          ],
+          "only_null_output_grouping_changed": [
+            5,
+            8,
+            33,
+            35
+          ],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "3-Potts Free.nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 5,
+        "z": 5
+      },
+      "shifted_curve_degrees": {
+        "y": 5,
+        "x": 6
+      },
+      "coordinate_relation": "y=z+W(z)",
+      "sheet_count": 5,
+      "sheet_expansions_checked": 5,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Complete symbolic curve comparison",
+        "Symbolic historical generation and terminal elimination replay",
+        "All five generic sheet expansions"
+      ],
+      "corrections": [
+        "Restored a consistent symbolic terminal calculation with four correlator coefficients",
+        "Corrected reciprocal square-root coupling factors in the displayed asymptotics"
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "e8c3773d41232d75222d34707135c99ea4004459d8b0982db52b885b00b367a0",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 55,
+          "logical_expressions": 93,
+          "elapsed_seconds": 205.869,
+          "messages": [
+            {
+              "input_cell": 54,
+              "message": "HoldForm[AsymptoticSolve::avars]"
+            },
+            {
+              "input_cell": 55,
+              "message": "HoldForm[AsymptoticSolve::avars]"
+            }
+          ],
+          "mathematical_assertions": {
+            "DerivedCurveEqualityUpToScalar": true,
+            "fresh_sheet_count_matches_degree": true,
+            "fresh_newton_certificates": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "ca8bd4111bd05e8fd8ed123e884fa7e0c6a611d80f1aa5028d97853ec6cd931f",
+            "before_output_refresh_sha256": "ca8bd4111bd05e8fd8ed123e884fa7e0c6a611d80f1aa5028d97853ec6cd931f",
+            "after_output_refresh_sha256": "e8c3773d41232d75222d34707135c99ea4004459d8b0982db52b885b00b367a0",
+            "recorded_output_sha256_values_verified": 0
+          },
+          "mathematical_evidence": {
+            "method": "independent exact Newton certificates for the replayed curve and sheets",
+            "artifact_sha256": {
+              "fresh-sheet-certificates.json": "e2712384b970c19e716fe7c0ca493858036563219047d13fe83a6376a78bc2af",
+              "replayed-curve.wl": "d8b37023f17d8554ddc006b9040a20ef4638d46bffd51b0748aa13db3da900a6",
+              "replayed-sheets.wl": "f1e48480862a77760649eada3fca8c55aac8dce08a6f0090ee41935dbc334214"
+            },
+            "sheet_count": 5
+          },
+          "message_scope": "AsymptoticSolve::avars states that inequalities on the asymptotic variable are ignored; coupling assumptions and independent exact sheet certificates are retained."
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "3b22cfc2ace14e41de1c65c099083d08b2d50f8af6a9e71584ab9757956e2cfd",
+      "native_syntax": {
+        "input_cells": 55,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "3-Potts Free.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 55,
+        "sha256": "3b22cfc2ace14e41de1c65c099083d08b2d50f8af6a9e71584ab9757956e2cfd",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "e8c3773d41232d75222d34707135c99ea4004459d8b0982db52b885b00b367a0",
+        "after_sha256": "3b22cfc2ace14e41de1c65c099083d08b2d50f8af6a9e71584ab9757956e2cfd",
+        "deferred_box_calls_replaced": 0,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true,
+        "window_visibility_corrected": "Visible->False changed to Visible->True; every other byte was preserved."
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "3-Potts Free.nb",
+        "executed_source_sha256": "e8c3773d41232d75222d34707135c99ea4004459d8b0982db52b885b00b367a0",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": true,
+        "input_cells": 55,
+        "logical_expressions": 93,
+        "elapsed_seconds": 122.245,
+        "messages": [
+          {
+            "input_cell": 54,
+            "logical_expression": 92,
+            "messages": [
+              "HoldForm[AsymptoticSolve::avars]"
+            ]
+          },
+          {
+            "input_cell": 55,
+            "logical_expression": 93,
+            "messages": [
+              "HoldForm[AsymptoticSolve::avars]"
+            ]
+          }
+        ],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "efce652ffb1f13bcadc92ea1c98a3caee08e96c53f547798e694ee3763adcb54",
+        "recorded_output_hashes_verified": 93,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 55,
+          "identical_cell_outputs": 47,
+          "only_runtime_timing_changed": [
+            35,
+            37,
+            38,
+            39,
+            41
+          ],
+          "only_null_output_grouping_changed": [
+            6,
+            9,
+            52
+          ],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "3-Potts Mixed.nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 10,
+        "z": 13
+      },
+      "sheet_count": 10,
+      "sheet_expansions_checked": 10,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Complete symbolic curve comparison",
+        "All ten generic sheet expansions",
+        "Independent physical-moment identities",
+        "Fresh native generation matches all 245 resolvent equations and all 17 correlator equations independently derived from the original action and displayed matrix transformation",
+        "All five terminal reconstruction and coprimality checks pass in the final native replay.",
+        "The full derived polynomial equals the displayed curve times -1, and all ten freshly emitted sheet expansions have exact Newton certificates."
+      ],
+      "corrections": [
+        "Restored the pure cubic terms in the transformed action",
+        "Corrected the malformed polynomial-term separator",
+        "Corrected square-root signs and inverse-power exponents in the displayed asymptotics",
+        "Corrected the three-matrix covarlist alphabet and cyclic-rotation bounds.",
+        "Replaced the terminal elimination by a derived linear auxiliary relation, primitive polynomial GCD and exact reconstruction checks, preserving the displayed correlator basis."
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "9f11372edf61e7d92715d8516fb475a5f3c5aaa0214d06ee5668272cc94492c7",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 51,
+          "logical_expressions": 105,
+          "elapsed_seconds": 1429.386,
+          "messages": [],
+          "mathematical_assertions": {
+            "CorrelatorCanonicalizationApplied": true,
+            "DisplayedDerivedCurveContainsExpectedFactor": true,
+            "DerivedCurveDivisibility": true,
+            "DerivedCurveEqualityUpToScalar": true,
+            "fresh_sheet_count_matches_degree": true,
+            "fresh_newton_certificates": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "d928bd7b6af9a1e7d49dde26d7bdc86a7ced2b59d03d5190ec06de7f7d3483a4",
+            "before_output_refresh_sha256": "d928bd7b6af9a1e7d49dde26d7bdc86a7ced2b59d03d5190ec06de7f7d3483a4",
+            "after_output_refresh_sha256": "9f11372edf61e7d92715d8516fb475a5f3c5aaa0214d06ee5668272cc94492c7",
+            "recorded_output_sha256_values_verified": 0
+          },
+          "mathematical_evidence": {
+            "method": "independent exact Newton certificates for the replayed curve and sheets",
+            "artifact_sha256": {
+              "fresh-sheet-certificates.json": "67e2d10c0cf094e16d51f766e18a5cc25f8c96cd204f9125bbcccd5ecac8f60c",
+              "native-curve-checkpoint.wl": "c93c856877ad079ab85703fab23e56b712d5707df11072b13d5c4fc551239d5e",
+              "replayed-sheets.wl": "9780d4c2da4e0db0b9121785831c59aab3ccc2f7fd8721ce46935b4a21984b8b"
+            },
+            "sheet_count": 10
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "71b4f4cd2ee499113b55722771f42acc83cdeae05d6f9733127f79b6a9730b31",
+      "native_syntax": {
+        "input_cells": 51,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "3-Potts Mixed.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 51,
+        "sha256": "71b4f4cd2ee499113b55722771f42acc83cdeae05d6f9733127f79b6a9730b31",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "9f11372edf61e7d92715d8516fb475a5f3c5aaa0214d06ee5668272cc94492c7",
+        "after_sha256": "71b4f4cd2ee499113b55722771f42acc83cdeae05d6f9733127f79b6a9730b31",
+        "deferred_box_calls_replaced": 0,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true,
+        "window_visibility_corrected": "Visible->False changed to Visible->True; every other byte was preserved."
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "3-Potts Mixed.nb",
+        "executed_source_sha256": "9f11372edf61e7d92715d8516fb475a5f3c5aaa0214d06ee5668272cc94492c7",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": true,
+        "input_cells": 51,
+        "logical_expressions": 105,
+        "elapsed_seconds": 544.036,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "6a4498ef8646bb134fe4e7f826dfd461d6c68ebc688ec30131d3351f15fd0a12",
+        "recorded_output_hashes_verified": 105,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 51,
+          "identical_cell_outputs": 42,
+          "only_runtime_timing_changed": [
+            38,
+            40,
+            41,
+            42,
+            44
+          ],
+          "only_null_output_grouping_changed": [
+            6,
+            9,
+            34,
+            36
+          ],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "3-Potts Odd.nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 13,
+        "z": 14
+      },
+      "sheet_count": 13,
+      "sheet_expansions_checked": 13,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Complete symbolic curve comparison",
+        "All thirteen generic sheet expansions",
+        "All 486 resolvent equations and all 45 correlator equations match an independently differentiated ordered-word system under the displayed matrix transformation and symmetry identities.",
+        "An independent reconstruction verifies all 231 dependent equations of the last linear reduction.",
+        "The quadratic-cubic resultant equals the full displayed curve up to the exact coupling factor 432*t3^14; its reduction denominators and leading coefficients contain no spectral-curve factor.",
+        "All 45 inputs and 81 logical expressions completed without messages; the 13 freshly emitted asymptotic sheets each pass an exact Newton remainder certificate."
+      ],
+      "corrections": [
+        "Added the complete thirteen-sheet asymptotics",
+        "Replaced the final opaque elimination by an exact quadratic-cubic resultant, with reconstruction checks for every terminal constraint.",
+        "Replaced fragile positional extraction from fin by the explicitly computed resultant polynomial."
+      ],
+      "construction": "Direct loop-equation reduction to a quadratic and cubic auxiliary carrier, followed by their exact resultant.",
+      "derived_to_displayed_ratio": "432*t3^14",
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "22f05a886a53a1ea040bbad8a255684907604b7279aa0bd337e8219b5bc3833c",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 45,
+          "logical_expressions": 81,
+          "elapsed_seconds": 2698.254,
+          "messages": [],
+          "mathematical_assertions": {
+            "degrees_correct": true,
+            "derived_curve_equals_displayed": true,
+            "normalization_is_nonzero_coupling_scalar": true,
+            "all_terminal_equivalence_checks": true,
+            "no_auxiliary_in_resultant": true,
+            "all_original_correlator_equations": true,
+            "sheet_count_matches_degree": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "d8d03c6dcc9d85c834b9120f40c6f5b34614559c7743efe2477a91d87b43be86",
+            "before_output_refresh_sha256": "d8d03c6dcc9d85c834b9120f40c6f5b34614559c7743efe2477a91d87b43be86",
+            "after_output_refresh_sha256": "22f05a886a53a1ea040bbad8a255684907604b7279aa0bd337e8219b5bc3833c",
+            "recorded_output_sha256_values_verified": 81
+          },
+          "mathematical_evidence": {
+            "method": "independent exact Newton certificates for the replayed curve and sheets",
+            "artifact_sha256": {
+              "fresh-sheet-certificates.json": "78432d4f9c30fc475ecc52e340b7e6ae89c874c82a4aac2c4174049e0493101e",
+              "replayed-curve.wl": "9ea170de959e8fdf03bf3f744f9161bfc95dfd44290fda511c09c33100d215b0",
+              "replayed-sheets.wl": "55a3011614b7882c40ae6962a2eb65cc8eb006e5e829818d1bc6181f5be24a69"
+            },
+            "sheet_count": 13
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "64207fde2b04be1e689e99a04a87929fa8eca2ddbbfc80c8dfd24d1592f4104d",
+      "native_syntax": {
+        "input_cells": 45,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "3-Potts Odd.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 45,
+        "sha256": "64207fde2b04be1e689e99a04a87929fa8eca2ddbbfc80c8dfd24d1592f4104d",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "22f05a886a53a1ea040bbad8a255684907604b7279aa0bd337e8219b5bc3833c",
+        "after_sha256": "64207fde2b04be1e689e99a04a87929fa8eca2ddbbfc80c8dfd24d1592f4104d",
+        "deferred_box_calls_replaced": 12,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "3-Potts Odd.nb",
+        "executed_source_sha256": "64207fde2b04be1e689e99a04a87929fa8eca2ddbbfc80c8dfd24d1592f4104d",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 45,
+        "logical_expressions": 81,
+        "elapsed_seconds": 1226.682,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "0eea283d40b804cb66cbe6b5191e2d861c88f0357049d6cf5fa84d1ca04a4699",
+        "recorded_output_hashes_verified": 81,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 45,
+          "identical_cell_outputs": 39,
+          "only_runtime_timing_changed": [
+            33,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "3-Potts Weighted 2.nb",
+      "origin": "created",
+      "status": "fresh_derivation_and_physical_moments_checked",
+      "curve_degrees": {
+        "W": 12,
+        "z": 13
+      },
+      "parameters": {
+        "weights": [
+          1,
+          2,
+          2
+        ],
+        "t2": "1/4",
+        "t3": "1/5"
+      },
+      "sheet_count": 12,
+      "sheet_expansions_checked": 1,
+      "sheet_method": "physical_sheet_moment_recurrence",
+      "checks": [
+        "All 34 input cells execute in a fresh kernel.",
+        "Freshly derived curve equals the complete stored polynomial exactly.",
+        "The degree pair is (deg_z, deg_W)=(13,12).",
+        "The physical branch starts at 1/z; its next four coefficients equal the trace moments.",
+        "All four final consistency checks evaluate to True."
+      ],
+      "limitations": [
+        "The other eleven algebraic sheets are not computed in this notebook."
+      ],
+      "sha256": "bda1909090ce766e8fea39842486aa55369acb42aaa79814c28c32a8d21e51e9",
+      "native_syntax": {
+        "input_cells": 34,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "3-Potts Weighted 2.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 34,
+        "sha256": "bda1909090ce766e8fea39842486aa55369acb42aaa79814c28c32a8d21e51e9",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "bda1909090ce766e8fea39842486aa55369acb42aaa79814c28c32a8d21e51e9",
+        "after_sha256": "bda1909090ce766e8fea39842486aa55369acb42aaa79814c28c32a8d21e51e9",
+        "deferred_box_calls_replaced": 0,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "3-Potts Weighted 2.nb",
+        "executed_source_sha256": "bda1909090ce766e8fea39842486aa55369acb42aaa79814c28c32a8d21e51e9",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 34,
+        "logical_expressions": 34,
+        "elapsed_seconds": 18.825,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "e041d94881ebc9a6e98fc6fdbb3dafd859e67d647dd59fcbdde77b3a8de5b76c",
+        "recorded_output_hashes_verified": 34,
+        "saved_outputs_used_as_inputs": false
+      }
+    },
+    {
+      "notebook": "Cubic Potential 2-Matrix Model.nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 4,
+        "z": 5
+      },
+      "sheet_count": 4,
+      "sheet_expansions_checked": 4,
+      "sheet_method": "taylor_recurrence",
+      "checks": [
+        "Exact quartic elimination and trace reduction",
+        "First three Taylor recurrence residuals vanish at generic simple leading roots",
+        "Complete fresh derivation agrees exactly with the displayed curve for all symbolic couplings (ratio 1)"
+      ],
+      "corrections": [
+        "Added the complete quartic curve and four-sheet recurrence",
+        "Retained the original notebook curve definition",
+        "Aligned the mathematical action sign and derivative-word subscripts with the negative-cubic convention",
+        "Restored enclosing list braces in two malformed coefficient/word scratch displays"
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "9a02a9e12c5a69601dc73304ca65fb8d0664c4599b31c85a971861ea4fa155c5",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 55,
+          "logical_expressions": 113,
+          "elapsed_seconds": 63.417,
+          "messages": [],
+          "mathematical_assertions": {
+            "symbolic_fresh_derivation_matches_curve": true,
+            "all_native_certificates_true": true,
+            "derived_curve_nonzero": true,
+            "derived_curve_auxiliary_free": true,
+            "stored_curve_degrees": true,
+            "fresh_derivation_matches_curve": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "1c8116bfcb554bb350e6a55dc4019fc871e6f5d603e180987027dc28c23be6de",
+            "before_output_refresh_sha256": "1c8116bfcb554bb350e6a55dc4019fc871e6f5d603e180987027dc28c23be6de",
+            "after_output_refresh_sha256": "9a02a9e12c5a69601dc73304ca65fb8d0664c4599b31c85a971861ea4fa155c5",
+            "recorded_output_sha256_values_verified": 113
+          },
+          "mathematical_evidence": {
+            "method": "native exact Taylor recurrences and fresh symbolic curve equality",
+            "artifact_sha256": {},
+            "sheet_count": 4
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "8f6f709a52f942562351d4cbd1c1396a9463bcd6d5010951f15bff1978e113bb",
+      "native_syntax": {
+        "input_cells": 55,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Cubic Potential 2-Matrix Model.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 55,
+        "sha256": "8f6f709a52f942562351d4cbd1c1396a9463bcd6d5010951f15bff1978e113bb",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "9a02a9e12c5a69601dc73304ca65fb8d0664c4599b31c85a971861ea4fa155c5",
+        "after_sha256": "8f6f709a52f942562351d4cbd1c1396a9463bcd6d5010951f15bff1978e113bb",
+        "deferred_box_calls_replaced": 12,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Cubic Potential 2-Matrix Model.nb",
+        "executed_source_sha256": "8f6f709a52f942562351d4cbd1c1396a9463bcd6d5010951f15bff1978e113bb",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 55,
+        "logical_expressions": 113,
+        "elapsed_seconds": 28.627,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "bc1dccdd229e3fc58f896f28c02f42bdc55634af359a63050ca80391e85e855e",
+        "recorded_output_hashes_verified": 113,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 55,
+          "identical_cell_outputs": 53,
+          "only_runtime_timing_changed": [
+            41,
+            43
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "Dilute Ising Absent.nb",
+      "origin": "imported",
+      "status": "corrected_and_verified_generic",
+      "curve_degrees": {
+        "W": 4,
+        "z": 6
+      },
+      "sheet_count": 4,
+      "sheet_expansions_checked": 4,
+      "sheet_method": "newton_remainder",
+      "physical_moments_checked": 5,
+      "checks": [
+        "Fresh execution of all 52 current input cells and 110 logical expressions",
+        "Terminal calculated curve equals the corrected explicit polynomial exactly",
+        "Complete symbolic curve agreement at two calculation depths",
+        "Five physical moments agree with independent trace identities"
+      ],
+      "corrections": [
+        "Removed the erroneous pX->0 substitution from correlator equations while retaining pX in the resolvent equations",
+        "Restored the physical second moment (2*pX-pY)/t0, replacing the incorrect -pY/t0",
+        "Updated the terminal polynomial display and session-dependent degree checks",
+        "Restored enclosing list braces in 1 malformed coefficient/word scratch displays",
+        "Replaced two ragged Dot scratch displays with valid coefficient/word representations"
+      ],
+      "polynomial_correction": "P_corrected=P_old-pX*(t0*z+1)*(-t3*W+t0*t3*z^2+2*t2+t3*z)/(t0*t3)",
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "6498963b5854fdedf94d365992bdf8649c628fd546068f2dca2dd9195add0bd5",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 52,
+          "logical_expressions": 110,
+          "elapsed_seconds": 11.985,
+          "messages": [],
+          "mathematical_assertions": {
+            "degrees_correct": true,
+            "sheet_count_correct": true,
+            "all_native_certificates_true": true,
+            "derived_curve_matches_displayed": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "0b4948b4021d4a3802c2f6aa509c4b5fec9ba9bef5a51cc421ab1de72c4b1276",
+            "before_output_refresh_sha256": "0b4948b4021d4a3802c2f6aa509c4b5fec9ba9bef5a51cc421ab1de72c4b1276",
+            "after_output_refresh_sha256": "6498963b5854fdedf94d365992bdf8649c628fd546068f2dca2dd9195add0bd5",
+            "recorded_output_sha256_values_verified": 110
+          },
+          "mathematical_evidence": {
+            "method": "native assertions from the fresh execution",
+            "artifact_sha256": {
+              "final_math.wl": "a3ecd40cfca5e64b6ad7d676209649fe954fff4fc7ac703289cf7d35661f8bb9"
+            },
+            "sheet_count": 4
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "3a0516d150b34b92668a62436868cae21e39f879a0e4aa21f1004ef0a65a8e14",
+      "native_syntax": {
+        "input_cells": 52,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Dilute Ising Absent.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 52,
+        "sha256": "3a0516d150b34b92668a62436868cae21e39f879a0e4aa21f1004ef0a65a8e14",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "6498963b5854fdedf94d365992bdf8649c628fd546068f2dca2dd9195add0bd5",
+        "after_sha256": "3a0516d150b34b92668a62436868cae21e39f879a0e4aa21f1004ef0a65a8e14",
+        "deferred_box_calls_replaced": 13,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Dilute Ising Absent.nb",
+        "executed_source_sha256": "3a0516d150b34b92668a62436868cae21e39f879a0e4aa21f1004ef0a65a8e14",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 52,
+        "logical_expressions": 110,
+        "elapsed_seconds": 8.199,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "7e2126eaed103e6c1a086cbf0cd5a4d638f9f8c68d9a41653d2d464df6f878fd",
+        "recorded_output_hashes_verified": 110,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 52,
+          "identical_cell_outputs": 49,
+          "only_runtime_timing_changed": [
+            39,
+            40,
+            41
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "Dilute Ising Fixed.nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 5,
+        "z": 8
+      },
+      "sheet_count": 5,
+      "sheet_expansions_checked": 5,
+      "sheet_method": "newton_remainder",
+      "physical_moments_checked": 5,
+      "checks": [
+        "Complete symbolic curve comparison",
+        "Five independent physical-moment identities",
+        "All five generic sheet expansions"
+      ],
+      "corrections": [
+        "Replaced shifted-variable output with resolvent asymptotics",
+        "Changed the physical remainder to O(z^-2)",
+        "Corrected the leading ramified terms to +/-z^(1/2)/sqrt(t0)",
+        "Restored enclosing list braces in 3 malformed coefficient/word scratch displays"
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "b3d3dafca5f20ce5f4944ba900640600eb8852d6823f67207919433d121c500a",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 56,
+          "logical_expressions": 118,
+          "elapsed_seconds": 20.215,
+          "messages": [],
+          "mathematical_assertions": {
+            "degrees_correct": true,
+            "sheet_count_correct": true,
+            "all_native_certificates_true": true,
+            "derived_curve_matches_displayed": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "0ab7a92a5efce1f7721f31afb7c95763b554591ee9e7df42228de0915b3e2de2",
+            "before_output_refresh_sha256": "0ab7a92a5efce1f7721f31afb7c95763b554591ee9e7df42228de0915b3e2de2",
+            "after_output_refresh_sha256": "b3d3dafca5f20ce5f4944ba900640600eb8852d6823f67207919433d121c500a",
+            "recorded_output_sha256_values_verified": 118
+          },
+          "mathematical_evidence": {
+            "method": "native assertions from the fresh execution",
+            "artifact_sha256": {
+              "final_math.wl": "cf82bb8bb805672fd1c1e4350eeae6974002a64530d6a8af64916e4bd30ce3e6"
+            },
+            "sheet_count": 5
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "5900045d1ee0a4f4e938e3015dab655324b49a6fb924fa2bef0c3f5a3e2d6a2b",
+      "native_syntax": {
+        "input_cells": 56,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Dilute Ising Fixed.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 56,
+        "sha256": "5900045d1ee0a4f4e938e3015dab655324b49a6fb924fa2bef0c3f5a3e2d6a2b",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "b3d3dafca5f20ce5f4944ba900640600eb8852d6823f67207919433d121c500a",
+        "after_sha256": "5900045d1ee0a4f4e938e3015dab655324b49a6fb924fa2bef0c3f5a3e2d6a2b",
+        "deferred_box_calls_replaced": 16,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Dilute Ising Fixed.nb",
+        "executed_source_sha256": "5900045d1ee0a4f4e938e3015dab655324b49a6fb924fa2bef0c3f5a3e2d6a2b",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 56,
+        "logical_expressions": 118,
+        "elapsed_seconds": 15.73,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "50289df0937f084ee8c6e631450ee38f666bd81baf51c1c84c0a3c87d403103e",
+        "recorded_output_hashes_verified": 118,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 56,
+          "identical_cell_outputs": 53,
+          "only_runtime_timing_changed": [
+            44,
+            45,
+            46
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "Dilute Ising Free.nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 10,
+        "z": 10
+      },
+      "sheet_count": 10,
+      "sheet_expansions_checked": 10,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Complete all-symbolic inverse-pair identity with the corrected vacant curve",
+        "Independent physical-moment identities",
+        "All ten generic sheet expansions",
+        "All 28 terminal constraints are equivalent to the reduced correlator relations and two quadratics on the generic domain t0*t3*W != 0, which contains the physical large-z germ.",
+        "The quadratic leading coefficient is 4*t0*t3, and the exact resultant is t0^4*t3^6 times the displayed degree-(10,10) curve; no W- or z-dependent factor is discarded.",
+        "Complete fresh execution verifies all original correlator equations and all ten computed sheet expansions."
+      ],
+      "corrections": [
+        "Corrected reciprocal square-root coupling factors and inverse-square-root coefficients",
+        "Restored t3*z^2/4+t2*z/2 on two quadratic sheets",
+        "Corrected their constant term to +1/(2*t0)",
+        "Replaced stale rule-valued asymptotic output",
+        "Restored enclosing list braces in 3 malformed coefficient/word scratch displays",
+        "Replaced the terminal elimination by four derived nonconstant correlator rules and the exact resultant of two remaining quadratic auxiliary equations.",
+        "Replaced positional extraction of Fin[[5]] by the directly computed resultant."
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "e71c2dbbdb6734c20dcc3d6b75494dc1cc9f85a4ea76034c34707c21e3bfab8f",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 56,
+          "logical_expressions": 114,
+          "elapsed_seconds": 261.392,
+          "messages": [],
+          "mathematical_assertions": {
+            "degrees_correct": true,
+            "sheet_count_correct": true,
+            "all_native_certificates_true": true,
+            "derived_curve_matches_displayed": true,
+            "terminal_constraint_equivalence": true,
+            "quadratic_leading_coefficient": true,
+            "exact_resultant_to_displayed_curve": true,
+            "all_original_correlator_equations": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "662ef0cf7091ffd8f7d2118f8fc4344e300c6dcdab0f624f46e60c9fa7d0e13b",
+            "before_output_refresh_sha256": "662ef0cf7091ffd8f7d2118f8fc4344e300c6dcdab0f624f46e60c9fa7d0e13b",
+            "after_output_refresh_sha256": "e71c2dbbdb6734c20dcc3d6b75494dc1cc9f85a4ea76034c34707c21e3bfab8f",
+            "recorded_output_sha256_values_verified": 114
+          },
+          "mathematical_evidence": {
+            "method": "native assertions from the fresh execution",
+            "artifact_sha256": {
+              "final_math.wl": "120f2bfaa1e40ffe6073434249a7f1d3acb6aca91669ecd606a87312a0fabc18"
+            },
+            "sheet_count": 10
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "fc8847dddeaa7762493eead026a0b6e1eabd75136af111b7ad43df35a6093571",
+      "native_syntax": {
+        "input_cells": 56,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Dilute Ising Free.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 56,
+        "sha256": "fc8847dddeaa7762493eead026a0b6e1eabd75136af111b7ad43df35a6093571",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "e71c2dbbdb6734c20dcc3d6b75494dc1cc9f85a4ea76034c34707c21e3bfab8f",
+        "after_sha256": "fc8847dddeaa7762493eead026a0b6e1eabd75136af111b7ad43df35a6093571",
+        "deferred_box_calls_replaced": 17,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Dilute Ising Free.nb",
+        "executed_source_sha256": "fc8847dddeaa7762493eead026a0b6e1eabd75136af111b7ad43df35a6093571",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 56,
+        "logical_expressions": 114,
+        "elapsed_seconds": 105.543,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "54ae063fca4c512476156af5523486b375c52de54e9cf83bbffbd630a6d7e749",
+        "recorded_output_hashes_verified": 114,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 56,
+          "identical_cell_outputs": 52,
+          "only_runtime_timing_changed": [
+            43,
+            44,
+            45,
+            46
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "Dilute Potts Absent.nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 6,
+        "z": 10
+      },
+      "sheet_count": 6,
+      "sheet_expansions_checked": 6,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Exact centered-polynomial invariant identities",
+        "Independent physical-moment identities",
+        "All six generic sheet expansions",
+        "Complete fresh evaluation of all 55 inputs and 109 logical expressions produces exactly the displayed degree-(6,10) curve, with nine undetermined moduli and six certified sheets.",
+        "All five row reconstructions and eight terminal equivalence checks pass; on t0*t3*W != 0 the spectral carrier is -t0*t3^4 times the displayed polynomial.",
+        "A separately recorded supplemental check verifies all original correlator equations and all five equation-prefix word bounds using an identical held generation prefix and identical final correlator rules."
+      ],
+      "corrections": [
+        "Corrected the growing sheet to 4*t0*z^2+4*z+6*t2/t3-1/z+O(z^-2)",
+        "Refreshed stale degree outputs",
+        "Corrected ten covarlist cyclic-rotation bounds from j<=x to j<=n",
+        "Canonicalized the duplicate trace representative p01232 to p01213",
+        "Cached the unchanged correlator row reduction once before selecting its pivots",
+        "Batched exact RREF row reconstruction at all five levels, with full reconstruction checks.",
+        "Replaced the terminal elimination by a constant auxiliary pivot, twenty derived nonconstant trace rules, and one spectral carrier; the next cell uses this derived curve."
+      ],
+      "construction": "Direct terminal loop-equation reduction with an exact auxiliary pivot and derived trace rules.",
+      "terminal_generic_domain": "t0*t3*W != 0; includes the physical W ~ 1/z formal germ.",
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "8f3ac58858a3c3557b9a549f23400f977b73dc42700418847bbdf068a9ff2c24",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 55,
+          "logical_expressions": 109,
+          "elapsed_seconds": 1393.08,
+          "messages": [],
+          "mathematical_assertions": {
+            "degrees_correct": true,
+            "sheet_count_correct": true,
+            "all_native_certificates_true": true,
+            "derived_curve_matches_displayed": true,
+            "all_five_row_reconstructions": true,
+            "terminal_constraint_equivalence": true,
+            "constant_auxiliary_pivot": true,
+            "displayed_nine_moduli_preserved": true,
+            "exact_carrier_to_displayed_curve": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "2ba677b9eac053f8cca4b099e5b2504cc7953218b222ce2d462557a132b981ae",
+            "before_output_refresh_sha256": "2ba677b9eac053f8cca4b099e5b2504cc7953218b222ce2d462557a132b981ae",
+            "after_output_refresh_sha256": "8f3ac58858a3c3557b9a549f23400f977b73dc42700418847bbdf068a9ff2c24",
+            "recorded_output_sha256_values_verified": 109
+          },
+          "mathematical_evidence": {
+            "method": "native assertions from the fresh execution",
+            "artifact_sha256": {
+              "final_math.wl": "7a703b048226c312cf88184f1e2add313e69dceec140eb3ccf3b13a9457bfb15",
+              "supplementary_checks.json": "8d7c41eba34c6f9e9fcc938e8779dc737d250aa044e6bbb979ec8c4e9d3ca340"
+            },
+            "sheet_count": 6
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "4a9e9f6f953a427cea4876e37f36e2cc0a43f6548a79dffbbce382f2c1872a21",
+      "native_syntax": {
+        "input_cells": 55,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Dilute Potts Absent.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 55,
+        "sha256": "4a9e9f6f953a427cea4876e37f36e2cc0a43f6548a79dffbbce382f2c1872a21",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "8f3ac58858a3c3557b9a549f23400f977b73dc42700418847bbdf068a9ff2c24",
+        "after_sha256": "4a9e9f6f953a427cea4876e37f36e2cc0a43f6548a79dffbbce382f2c1872a21",
+        "deferred_box_calls_replaced": 11,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Dilute Potts Absent.nb",
+        "executed_source_sha256": "4a9e9f6f953a427cea4876e37f36e2cc0a43f6548a79dffbbce382f2c1872a21",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 55,
+        "logical_expressions": 109,
+        "elapsed_seconds": 588.02,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "ea6d9f1e73dee7ab416a525e674e02a4f65bc57c02616ab6ee40e2b88a64b8cc",
+        "recorded_output_hashes_verified": 109,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 55,
+          "identical_cell_outputs": 50,
+          "only_runtime_timing_changed": [
+            40,
+            42,
+            43,
+            45,
+            46
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "Dilute Potts Fixed.nb",
+      "origin": "imported",
+      "status": "recovered_and_verified_analytically",
+      "curve_degrees": {
+        "W": 9,
+        "z": 16
+      },
+      "sheet_count": 9,
+      "sheet_expansions_checked": 9,
+      "sheet_method": "newton_remainder",
+      "physical_moments_checked": 5,
+      "checks": [
+        "Exact invariant reconstruction from the vacant curve",
+        "Boundary inversion P(z,W)=G(t3*z^2+t2*z-W,z)",
+        "Five independent symbolic physical-moment identities",
+        "All nine generic sheet expansions"
+      ],
+      "corrections": [
+        "Recovered the missing polynomial definition",
+        "Replaced incorrect cached degrees 10 and 19 with 9 and 16",
+        "Canonicalized transported trace-correlator labels"
+      ],
+      "independent_direct_elimination": "unresolved: a separate finite-hierarchy calculation produced degree 17 and is not counted as confirmation",
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "9b58cf23f3d720d90de0b48d354c7b747b91798c2227975c26bc7b11af720d53",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 69,
+          "logical_expressions": 127,
+          "elapsed_seconds": 6751.693,
+          "messages": [],
+          "mathematical_assertions": {
+            "degrees_correct": true,
+            "sheet_count_correct": true,
+            "all_native_certificates_true": true,
+            "all_native_row_reconstructions": true,
+            "equation_prefix_bounds_correct": true,
+            "all_correlator_equations_satisfied": true,
+            "physical_five_moments": true,
+            "centered_invariant_identity": true,
+            "leaf_transform_identity": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "0cf38b8b0f1533e685cca6de0b6cdae5ed690ef33d97fcc56bb6d32a7e2e1ac2",
+            "before_output_refresh_sha256": "0cf38b8b0f1533e685cca6de0b6cdae5ed690ef33d97fcc56bb6d32a7e2e1ac2",
+            "after_output_refresh_sha256": "9b58cf23f3d720d90de0b48d354c7b747b91798c2227975c26bc7b11af720d53",
+            "recorded_output_sha256_values_verified": 127
+          },
+          "mathematical_evidence": {
+            "method": "native inverse-curve invariant construction and nine native Newton certificates",
+            "artifact_sha256": {
+              "final_math.wl": "85d3c959490505e6f4f8e33b4f6a82055612a60253ad06647d1e9a3a2dc5c974",
+              "vacant_source_final_math.wl": "7a703b048226c312cf88184f1e2add313e69dceec140eb3ccf3b13a9457bfb15"
+            },
+            "sheet_count": 9
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "a9b2b78bdbc7a2a714cb404fdf2a4f5833dcccb1e82f846199a60fd60f1301a3",
+      "native_syntax": {
+        "input_cells": 69,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Dilute Potts Fixed.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 69,
+        "sha256": "a9b2b78bdbc7a2a714cb404fdf2a4f5833dcccb1e82f846199a60fd60f1301a3",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "9b58cf23f3d720d90de0b48d354c7b747b91798c2227975c26bc7b11af720d53",
+        "after_sha256": "a9b2b78bdbc7a2a714cb404fdf2a4f5833dcccb1e82f846199a60fd60f1301a3",
+        "deferred_box_calls_replaced": 20,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Dilute Potts Fixed.nb",
+        "executed_source_sha256": "a9b2b78bdbc7a2a714cb404fdf2a4f5833dcccb1e82f846199a60fd60f1301a3",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 69,
+        "logical_expressions": 127,
+        "elapsed_seconds": 4019.58,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "dbc470b834fd44d6cc23aa736e9a4d95a9b178593aba9364be6c8c6d16a89330",
+        "recorded_output_hashes_verified": 127,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 69,
+          "identical_cell_outputs": 64,
+          "only_runtime_timing_changed": [
+            44,
+            46,
+            47,
+            48,
+            49
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "General 3-Potts Fixed.nb",
+      "origin": "created",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 7,
+        "z": 12
+      },
+      "polynomial_terms": 6558,
+      "independent_correlator_coefficients": 8,
+      "sheet_count": 7,
+      "sheet_expansions_checked": 7,
+      "sheet_method": "taylor_recurrence_and_physical_residual",
+      "checks": [
+        "All six potential couplings retained symbolically",
+        "All 120 generated correlator equations vanish under 68 trace rules",
+        "Exact quartet and pair recurrences with independently checked signs",
+        "Physical expansion checked through z^-3"
+      ],
+      "corrections": [
+        "Completed the unequal-potential curve and all seven sheets",
+        "Reduced a redundant ninth correlator using an exact trace identity",
+        "Corrected the grouping of the leading polynomial terms"
+      ],
+      "construction": "Complete stored polynomial with all six potential couplings symbolic.",
+      "fresh_execution_scope": "The current notebook evaluates the stored polynomial, regenerates the loop hierarchy, checks all 120 correlator equations, and verifies seven sheet expansions. This replay does not repeat the six-coupling terminal elimination.",
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "1efab69bee2ecec1bf9dda2d125de2de75111b7f7991a0dde078ae5f40f20373",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 11,
+          "logical_expressions": 11,
+          "elapsed_seconds": 8.336,
+          "messages": [],
+          "mathematical_assertions": {
+            "fresh_generated_hierarchy": true,
+            "resolvent_degree": true,
+            "shifted_curve_degree": true,
+            "all_correlator_equations": true,
+            "all_seven_sheets": true,
+            "six_growing_sheet_recurrences": true,
+            "physical_sheet_residual": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "0efa31a5b028af5edde3a1b13a10c41b7f491244e91e91458b1371b4b2c67ee1",
+            "before_output_refresh_sha256": "0efa31a5b028af5edde3a1b13a10c41b7f491244e91e91458b1371b4b2c67ee1",
+            "after_output_refresh_sha256": "1efab69bee2ecec1bf9dda2d125de2de75111b7f7991a0dde078ae5f40f20373",
+            "recorded_output_sha256_values_verified": 11
+          },
+          "mathematical_evidence": {
+            "method": "native sheet recurrences and physical residual for the stored six-coupling polynomial; terminal elimination was not replayed",
+            "artifact_sha256": {},
+            "sheet_count": 7
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "ae56edf1dae26fe216e9163f577a4f99c2a65ede57f6d11e33bc3d3b563d801a",
+      "native_syntax": {
+        "input_cells": 11,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "General 3-Potts Fixed.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 11,
+        "sha256": "ae56edf1dae26fe216e9163f577a4f99c2a65ede57f6d11e33bc3d3b563d801a",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "1efab69bee2ecec1bf9dda2d125de2de75111b7f7991a0dde078ae5f40f20373",
+        "after_sha256": "ae56edf1dae26fe216e9163f577a4f99c2a65ede57f6d11e33bc3d3b563d801a",
+        "deferred_box_calls_replaced": 6,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "General 3-Potts Fixed.nb",
+        "executed_source_sha256": "ae56edf1dae26fe216e9163f577a4f99c2a65ede57f6d11e33bc3d3b563d801a",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 11,
+        "logical_expressions": 11,
+        "elapsed_seconds": 5.464,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "147fe7086a06aa77d1e347a7a4f5cbcffa7176e0f4d50ae013cd13657b679e0c",
+        "recorded_output_hashes_verified": 11,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 11,
+          "identical_cell_outputs": 11,
+          "only_runtime_timing_changed": [],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "KPPS Cubic 3-Matrix Model.nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 7,
+        "z": 6
+      },
+      "sheet_count": 7,
+      "sheet_expansions_checked": 7,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Complete symbolic curve comparison",
+        "All seven generic sheets",
+        "Ordered noncommutative cubic action retained"
+      ],
+      "corrections": [
+        "Retained and verified the original complete curve and sheet expansions",
+        "Repaired malformed sequential input structure; historical filename retained"
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "88ba82a22fcb25dce9b9d6fd1077d1c20ecf66ca1fe314b2f9794f63e448d756",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 53,
+          "logical_expressions": 53,
+          "elapsed_seconds": 25.774,
+          "messages": [],
+          "mathematical_assertions": {
+            "expected_degrees": true,
+            "full_curve_comparison": true,
+            "expected_sheet_count": true,
+            "critical_residual_check": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "4c1f6edaf2df697f1f6bc225fdd4a0d34d20c995d476a5f725e4b36955b32959",
+            "before_output_refresh_sha256": "4c1f6edaf2df697f1f6bc225fdd4a0d34d20c995d476a5f725e4b36955b32959",
+            "after_output_refresh_sha256": "88ba82a22fcb25dce9b9d6fd1077d1c20ecf66ca1fe314b2f9794f63e448d756",
+            "recorded_output_sha256_values_verified": 53
+          },
+          "mathematical_evidence": {
+            "method": "independent exact Newton certificates for all freshly computed sheets",
+            "artifact_sha256": {
+              "all_fresh_sheet_certificates.json": "f3904083087cdeef2b275c9573d1a7746d2a663cde623ffacef448e54ea158fd"
+            },
+            "sheet_count": 7
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "7593401cc1d025919c3443d9b0560ee4fde75053a747cd24365926c489c18aac",
+      "filename_change": {
+        "previous_name": "Unsolved Cubic 3-Matrix Model.nb",
+        "current_name": "KPPS Cubic 3-Matrix Model.nb",
+        "contents_unchanged": true
+      },
+      "native_syntax": {
+        "input_cells": 53,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Unsolved Cubic 3-Matrix Model.nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 53,
+        "sha256": "7593401cc1d025919c3443d9b0560ee4fde75053a747cd24365926c489c18aac",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "88ba82a22fcb25dce9b9d6fd1077d1c20ecf66ca1fe314b2f9794f63e448d756",
+        "after_sha256": "7593401cc1d025919c3443d9b0560ee4fde75053a747cd24365926c489c18aac",
+        "deferred_box_calls_replaced": 15,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Unsolved Cubic 3-Matrix Model.nb",
+        "executed_source_sha256": "7593401cc1d025919c3443d9b0560ee4fde75053a747cd24365926c489c18aac",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 53,
+        "logical_expressions": 53,
+        "elapsed_seconds": 17.672,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "bc5ca9a252ffc95a350593d48825596c1fd7478750ab5b305c9cbc46c4934d6e",
+        "recorded_output_hashes_verified": 53,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 53,
+          "identical_cell_outputs": 49,
+          "only_runtime_timing_changed": [
+            39,
+            41,
+            42,
+            44
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "KPPS Quartic 2-Matrix Model (-g,g,g).nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 6,
+        "z": 7
+      },
+      "sheet_count": 6,
+      "sheet_expansions_checked": 6,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Complete symbolic curve comparison",
+        "All six generic sheets including the ramified triplet",
+        "Exact signed-sector trace symmetries"
+      ],
+      "corrections": [
+        "Retained and verified the original complete curve and sheet expansions",
+        "Repaired malformed sequential input structure; historical filename retained"
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "57ff41ae6f47ec263ce416dba4392c61f514073b88d9382095262786d48edb37",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 51,
+          "logical_expressions": 51,
+          "elapsed_seconds": 2.8,
+          "messages": [],
+          "mathematical_assertions": {
+            "expected_degrees": true,
+            "full_curve_comparison": true,
+            "expected_sheet_count": true,
+            "critical_residual_check": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "6ba798e6700ab8d3a96b4f3ba52af81e155b1c58e481601cae86d5da48c12509",
+            "before_output_refresh_sha256": "6ba798e6700ab8d3a96b4f3ba52af81e155b1c58e481601cae86d5da48c12509",
+            "after_output_refresh_sha256": "57ff41ae6f47ec263ce416dba4392c61f514073b88d9382095262786d48edb37",
+            "recorded_output_sha256_values_verified": 51
+          },
+          "mathematical_evidence": {
+            "method": "independent exact Newton certificates for all freshly computed sheets",
+            "artifact_sha256": {
+              "all_fresh_sheet_certificates.json": "f3904083087cdeef2b275c9573d1a7746d2a663cde623ffacef448e54ea158fd"
+            },
+            "sheet_count": 6
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "063450b07ea42ea81a11cb15f35bb825819258078e77759a24ae398a5932cc41",
+      "filename_change": {
+        "previous_name": "Unsolved Quartic 2-Matrix Model (-g,g,g).nb",
+        "current_name": "KPPS Quartic 2-Matrix Model (-g,g,g).nb",
+        "contents_unchanged": true
+      },
+      "native_syntax": {
+        "input_cells": 51,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Unsolved Quartic 2-Matrix Model (-g,g,g).nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 51,
+        "sha256": "063450b07ea42ea81a11cb15f35bb825819258078e77759a24ae398a5932cc41",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "57ff41ae6f47ec263ce416dba4392c61f514073b88d9382095262786d48edb37",
+        "after_sha256": "063450b07ea42ea81a11cb15f35bb825819258078e77759a24ae398a5932cc41",
+        "deferred_box_calls_replaced": 16,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "frontend_evaluation": {
+        "date": "2026-09-06",
+        "all_input_cells_evaluated": 51,
+        "final_exact_growth_check": true,
+        "saved_from_mathematica": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Unsolved Quartic 2-Matrix Model (-g,g,g).nb",
+        "executed_source_sha256": "063450b07ea42ea81a11cb15f35bb825819258078e77759a24ae398a5932cc41",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 51,
+        "logical_expressions": 51,
+        "elapsed_seconds": 2.162,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "d51a57a24beda7f0856a155d77209f71718f10fea55212ef06773cf8cbf287bd",
+        "recorded_output_hashes_verified": 51,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 51,
+          "identical_cell_outputs": 45,
+          "only_runtime_timing_changed": [
+            35,
+            37,
+            38,
+            39,
+            40,
+            42
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "KPPS Quartic 2-Matrix Model (g,-g,g).nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 4,
+        "z": 3
+      },
+      "sheet_count": 4,
+      "sheet_expansions_checked": 4,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Complete symbolic curve comparison",
+        "All four generic sheets",
+        "Exact signed-sector trace symmetries"
+      ],
+      "corrections": [
+        "Retained and verified the original complete curve and sheet expansions",
+        "Repaired malformed sequential input structure; historical filename retained"
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "54f4aa9b7fb78b870277c29adf38ffc6d08f66f7fd3e45dea2b170cb17e0c2f9",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 51,
+          "logical_expressions": 51,
+          "elapsed_seconds": 1.075,
+          "messages": [],
+          "mathematical_assertions": {
+            "expected_degrees": true,
+            "full_curve_comparison": true,
+            "expected_sheet_count": true,
+            "critical_residual_check": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "8a88cace49bc99b8f01043c2533b7ea21c19166c5d4907fa91089c7e97b66edc",
+            "before_output_refresh_sha256": "8a88cace49bc99b8f01043c2533b7ea21c19166c5d4907fa91089c7e97b66edc",
+            "after_output_refresh_sha256": "54f4aa9b7fb78b870277c29adf38ffc6d08f66f7fd3e45dea2b170cb17e0c2f9",
+            "recorded_output_sha256_values_verified": 51
+          },
+          "mathematical_evidence": {
+            "method": "independent exact Newton certificates for all freshly computed sheets",
+            "artifact_sha256": {
+              "all_fresh_sheet_certificates.json": "f3904083087cdeef2b275c9573d1a7746d2a663cde623ffacef448e54ea158fd"
+            },
+            "sheet_count": 4
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "686d198724dc84d0291a1ed804e3492a338cb969871cc45137bc3549357e8d4b",
+      "filename_change": {
+        "previous_name": "Unsolved Quartic 2-Matrix Model (g,-g,g).nb",
+        "current_name": "KPPS Quartic 2-Matrix Model (g,-g,g).nb",
+        "contents_unchanged": true
+      },
+      "native_syntax": {
+        "input_cells": 51,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Unsolved Quartic 2-Matrix Model (g,-g,g).nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 51,
+        "sha256": "686d198724dc84d0291a1ed804e3492a338cb969871cc45137bc3549357e8d4b",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "54f4aa9b7fb78b870277c29adf38ffc6d08f66f7fd3e45dea2b170cb17e0c2f9",
+        "after_sha256": "686d198724dc84d0291a1ed804e3492a338cb969871cc45137bc3549357e8d4b",
+        "deferred_box_calls_replaced": 15,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Unsolved Quartic 2-Matrix Model (g,-g,g).nb",
+        "executed_source_sha256": "686d198724dc84d0291a1ed804e3492a338cb969871cc45137bc3549357e8d4b",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 51,
+        "logical_expressions": 51,
+        "elapsed_seconds": 0.807,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "44dbdefbf448682ec5eeb643ee6125e132a940e6c30dc57d873b3e2ecf50abcf",
+        "recorded_output_hashes_verified": 51,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 51,
+          "identical_cell_outputs": 46,
+          "only_runtime_timing_changed": [
+            35,
+            37,
+            38,
+            39,
+            41
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "KPPS Quartic 2-Matrix Model (g,g,-g).nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 6,
+        "z": 7
+      },
+      "sheet_count": 6,
+      "sheet_expansions_checked": 6,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Complete symbolic curve comparison",
+        "All six generic sheets including the ramified triplet",
+        "Exact signed-sector trace symmetries"
+      ],
+      "corrections": [
+        "Retained and verified the original complete curve and sheet expansions",
+        "Repaired malformed sequential input structure; historical filename retained"
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "7344ac5133bccc1e3cd5b39c3476a0f6b382850b61a8262c7f6bc0b6edd4e71f",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 51,
+          "logical_expressions": 51,
+          "elapsed_seconds": 2.058,
+          "messages": [],
+          "mathematical_assertions": {
+            "expected_degrees": true,
+            "full_curve_comparison": true,
+            "expected_sheet_count": true,
+            "critical_residual_check": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "b294896afbd57b105690170e7fc9fff71d7aced5f43a447fb3852635c6945a25",
+            "before_output_refresh_sha256": "b294896afbd57b105690170e7fc9fff71d7aced5f43a447fb3852635c6945a25",
+            "after_output_refresh_sha256": "7344ac5133bccc1e3cd5b39c3476a0f6b382850b61a8262c7f6bc0b6edd4e71f",
+            "recorded_output_sha256_values_verified": 51
+          },
+          "mathematical_evidence": {
+            "method": "independent exact Newton certificates for all freshly computed sheets",
+            "artifact_sha256": {
+              "all_fresh_sheet_certificates.json": "f3904083087cdeef2b275c9573d1a7746d2a663cde623ffacef448e54ea158fd"
+            },
+            "sheet_count": 6
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "e32577009dfea6b390900b1a6bd7295f932d1f38212d22cd9684f2dccd9ee3c0",
+      "filename_change": {
+        "previous_name": "Unsolved Quartic 2-Matrix Model (g,g,-g).nb",
+        "current_name": "KPPS Quartic 2-Matrix Model (g,g,-g).nb",
+        "contents_unchanged": true
+      },
+      "native_syntax": {
+        "input_cells": 51,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Unsolved Quartic 2-Matrix Model (g,g,-g).nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 51,
+        "sha256": "e32577009dfea6b390900b1a6bd7295f932d1f38212d22cd9684f2dccd9ee3c0",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "7344ac5133bccc1e3cd5b39c3476a0f6b382850b61a8262c7f6bc0b6edd4e71f",
+        "after_sha256": "e32577009dfea6b390900b1a6bd7295f932d1f38212d22cd9684f2dccd9ee3c0",
+        "deferred_box_calls_replaced": 16,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Unsolved Quartic 2-Matrix Model (g,g,-g).nb",
+        "executed_source_sha256": "e32577009dfea6b390900b1a6bd7295f932d1f38212d22cd9684f2dccd9ee3c0",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 51,
+        "logical_expressions": 51,
+        "elapsed_seconds": 1.649,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "6ae3dd58e3bbcdcf82663663ec61f120e5bd217252bff159f0fc59110b1bce2c",
+        "recorded_output_hashes_verified": 51,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 51,
+          "identical_cell_outputs": 45,
+          "only_runtime_timing_changed": [
+            35,
+            37,
+            38,
+            39,
+            40,
+            42
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    },
+    {
+      "notebook": "KPPS Quartic 2-Matrix Model (g,g,g).nb",
+      "origin": "imported",
+      "status": "verified_generic",
+      "curve_degrees": {
+        "W": 4,
+        "z": 3
+      },
+      "sheet_count": 4,
+      "sheet_expansions_checked": 4,
+      "sheet_method": "newton_remainder",
+      "checks": [
+        "Complete symbolic curve comparison",
+        "All four generic sheets",
+        "Ordered noncommutative action retained"
+      ],
+      "corrections": [
+        "Retained and verified the original complete curve and sheet expansions",
+        "Repaired malformed sequential input structure; historical filename retained"
+      ],
+      "previous_mathematical_audit": {
+        "date": "2026-09-05",
+        "notebook_sha256_recorded_at_that_audit": "1772f89456779c6512ba5c2c6c37f6d94f7513a71858939274ad0580f0ef7305",
+        "fresh_kernel_execution": {
+          "status": "passed",
+          "input_cells": 51,
+          "logical_expressions": 51,
+          "elapsed_seconds": 1.251,
+          "messages": [],
+          "mathematical_assertions": {
+            "expected_degrees": true,
+            "full_curve_comparison": true,
+            "expected_sheet_count": true,
+            "critical_residual_check": true
+          },
+          "output_caches_from_actual_execution": true,
+          "input_boxes_unchanged_during_cache_refresh": true,
+          "provenance": {
+            "executed_source_sha256": "e19e60dd2a7b7cc3d2e3a44dc421ee4f93f6eeaf749eb0d12040cebfaff662d3",
+            "before_output_refresh_sha256": "e19e60dd2a7b7cc3d2e3a44dc421ee4f93f6eeaf749eb0d12040cebfaff662d3",
+            "after_output_refresh_sha256": "1772f89456779c6512ba5c2c6c37f6d94f7513a71858939274ad0580f0ef7305",
+            "recorded_output_sha256_values_verified": 51
+          },
+          "mathematical_evidence": {
+            "method": "independent exact Newton certificates for all freshly computed sheets",
+            "artifact_sha256": {
+              "all_fresh_sheet_certificates.json": "f3904083087cdeef2b275c9573d1a7746d2a663cde623ffacef448e54ea158fd"
+            },
+            "sheet_count": 4
+          }
+        },
+        "scope": "The curve and sheet checks above come from this earlier audit. The current replay is recorded separately below."
+      },
+      "sha256": "d9d4ab4625cbbb96063cdf0cc9f20790595ef03ace3e5faa7a03047e217a2958",
+      "filename_change": {
+        "previous_name": "Unsolved Quartic 2-Matrix Model (g,g,g).nb",
+        "current_name": "KPPS Quartic 2-Matrix Model (g,g,g).nb",
+        "contents_unchanged": true
+      },
+      "native_syntax": {
+        "input_cells": 51,
+        "input_parse_failures": 0,
+        "external_file_or_process_calls_in_inputs": false,
+        "frontend_opening_checked": true
+      },
+      "frontend_opening": {
+        "date": "2026-09-06",
+        "application": "Wolfram Mathematica 14.3",
+        "filename_at_check": "Unsolved Quartic 2-Matrix Model (g,g,g).nb",
+        "opened": true,
+        "visible_by_default": true,
+        "input_cells": 51,
+        "sha256": "d9d4ab4625cbbb96063cdf0cc9f20790595ef03ace3e5faa7a03047e217a2958",
+        "method": "NotebookOpen with default visibility in the running graphical frontend on a byte-identical copy; this is distinct from kernel parsing."
+      },
+      "notebook_repair": {
+        "before_sha256": "1772f89456779c6512ba5c2c6c37f6d94f7513a71858939274ad0580f0ef7305",
+        "after_sha256": "d9d4ab4625cbbb96063cdf0cc9f20790595ef03ace3e5faa7a03047e217a2958",
+        "deferred_box_calls_replaced": 15,
+        "changed_input_cells": [],
+        "input_boxes_preserved_during_output_serialization": true,
+        "text_cells_and_styles_preserved": true
+      },
+      "fresh_kernel_execution": {
+        "date": "2026-09-06",
+        "status": "passed",
+        "filename_at_execution": "Unsolved Quartic 2-Matrix Model (g,g,g).nb",
+        "executed_source_sha256": "d9d4ab4625cbbb96063cdf0cc9f20790595ef03ace3e5faa7a03047e217a2958",
+        "current_input_cells_match_executed_source": true,
+        "only_window_visibility_changed_after_execution": false,
+        "input_cells": 51,
+        "logical_expressions": 51,
+        "elapsed_seconds": 0.8,
+        "messages": [],
+        "failed_or_aborted_expressions": 0,
+        "execution_record_sha256": "b3a186a1b86f1e63098cda774f5d829a4d1d5234698f42a530105e56046e38a2",
+        "recorded_output_hashes_verified": 51,
+        "saved_outputs_used_as_inputs": false,
+        "comparison_with_previous_execution": {
+          "cell_outputs_compared": 51,
+          "identical_cell_outputs": 46,
+          "only_runtime_timing_changed": [
+            35,
+            37,
+            38,
+            39,
+            41
+          ],
+          "only_null_output_grouping_changed": [],
+          "other_differences": 0
+        }
+      }
+    }
+  ],
+  "presentation": {
+    "native_notebook_styles_retained": true,
+    "graphical_frontend_opening_checked_for_all_notebooks": true,
+    "reported_quartic_notebook_evaluated_in_frontend": true,
+    "manuscript_pdf_build": "passed",
+    "pdf_pages": 33,
+    "pdf_overfull_boxes": 0,
+    "pdf_unresolved_references_or_citations": 0,
+    "complete_polynomial_displays": 13,
+    "appendix_sheet_displays": 88,
+    "generated_asymptotic_catalogues": 6,
+    "asymptotic_cutoff": "Explicit coefficients through z^-1; higher moments are in the remainder."
+  },
+  "limitations": [
+    "Opening tests use the actual graphical frontend; kernel parsing alone is insufficient to validate notebook serialization.",
+    "Fresh execution means every current input cell ran. Mathematical proof and independent derivation have the narrower scope stated for each case; older mathematical checks are preserved under their original date and hashes.",
+    "Some symbolic eliminations take minutes or longer. The fresh-kernel timings are measurements on this machine, not runtime guarantees.",
+    "Generic algebraic curves and formal asymptotics do not globally determine physical correlator moduli, integration contours, or critical scaling regimes.",
+    "An independent direct loop-equation elimination for dilute Potts fixed remains unresolved; its recorded curve uses an exact analytic identity.",
+    "The weighted-boundary notebook computes the physical asymptotics and four moments; it does not list all twelve sheets.",
+    "Special parameter loci can change polynomial degree, sheet multiplicity, or expansion type and require separate analysis."
+  ]
+}

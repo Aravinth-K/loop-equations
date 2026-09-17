@@ -38,6 +38,7 @@ The asymptotic behaviour of the planar resolvent $W_{(1)}(z)$ is given by:
 \input{text/asymptotics/potts_fixed}
 
 \subsubsection{Mixed boundary conditions}
+\label{app:mixed-asymptotics}
 
 The asymptotic behaviour of the planar resolvent $W_{(2)}(z)$ is given by:
 %
@@ -53,177 +54,117 @@ The asymptotic behaviour of the planar resolvent $W_{(3)}(z)$ is given by:
 \input{text/asymptotics/potts_general}
 
 \subsection{Mixed boundary saddle-point solution}
+\label{app:mixed-saddle}
 
-Under the change of variables $X_{\pm} = X_1 \pm X_2$ the potential \eqref{3PottsFixed} becomes
-%
-\begin{multline}
+The degree-ten curve for $W_{(2)}$ is compatible with the degree-five curve for the auxiliary
+function $G_{(2)}^Y$ obtained in \cite{Niedner:2016skw,Atkin:2015ksy}. We make this comparison by
+reducing the matrix integral to an eigenvalue problem and following the analytic continuation of
+the mixed resolvent.
+
+\paragraph{Gaussian reduction.}
+Set $X_\pm=X_1\pm X_2$, keeping $X_0$ as the third matrix in \eqref{3Potts_p=1}, and define
+\begin{equation}
+    V_+(x)=\frac{t_2-2}{4}x^2+\frac{t_3}{12}x^3,
+    \qquad V_0(x)=\frac{t_2-1}{2}x^2+\frac{t_3}{3}x^3.
+\end{equation}
+Cyclicity of the trace gives
+\begin{equation}
     \label{saddleMixed}
-    V(X_+,X_-,X_3)  = \text{Tr}\bigg( \frac{(t_2-2)}{4}X_+^2 + \frac{t_3}{12} X_+^3 + \frac{(t_2-1)}{2} X_3^2 + \frac{t_3}{3} X_3^3 \\  - X_3 X_+ + \frac{1}{4}(t_2 \mathbf{I} + t_3 X_+)X_-^2 \bigg).
-\end{multline}
-%
-We can integrate out the final Gaussian term in $X_-$ using the following identity \cite{Eynard:1992cn},
-\begin{align}
-    I = & \int[dA] e^{-\lambda N \text{Tr} A^2 B} = \frac{(\pi/\lambda N)^{N^2/2}}{2^{N(N-1)/2}} \frac{1}{\sqrt{\det{B}} \prod_{i<j} (b_i + b_j)},
-\end{align}
-where $[dA]=\prod_{i=1}^N dA_{i,i} \prod_{i<j} d \text{Re} A_{i,j} d \text{Im} A_{i,j} $ and $b_i$ are the eigenvalues of $B$.
-Applied to \eqref{saddleMixed}, one obtains
-\begin{align}
+    \Tr V=\Tr\left(V_+(X_+)+V_0(X_0)-X_0X_+
+    +\frac14\left(t_2\mathbf I+t_3X_+\right)X_-^2\right).
+\end{equation}
+The $X_-$ integral is Gaussian \cite{Eynard:1992cn}. Diagonalising $X_+$ and $X_0$, with
+eigenvalues $\lambda_i$ and $\mu_i$, and performing the angular integral using the HCIZ formula
+\cite{Harish-Chandra538,Itzykson1979}, we obtain
+\begin{equation}
     \label{MixedSaddle}
-    Z \propto \int [dX_+][dX_3] \frac{e^{-N\text{Tr} \bigg( \frac{(t_2-2)}{4}X_+^2 + \frac{t_3}{12} X_+^3 + \frac{(t_2-1)}{2} X_3^2 + \frac{t_3}{3} X_3^3 - X_3 X_+\bigg)}}{\sqrt{\det{B}}\prod_{i<j} (b_i + b_j)},
-\end{align}
-where $B=t_2 \mathbf{I} + t_3X_+$.
-
-
-To calculate the saddle-point equations of \eqref{MixedSaddle}, we follow the approach described in Section 2.3.2 and exploit the $U(N)$ symmetry of the matrix model to diagonalise $X_+$ and $X_3$. We set 
-%
-\begin{equation}
-    \label{diagMixed}
-    X_+ = U\text{diag}\left(\{\lambda_i\}_{i=1}^N\right)U^{\dagger}, \quad X_3 = V\text{diag}\left( \{ \mu_j \}_{j=1}^N\ \right),
+    Z\propto\int\prod_{i=1}^N d\lambda_i\,d\mu_i\,
+    \frac{\Delta(\lambda)\Delta(\mu)\det_{i,j}e^{N\lambda_i\mu_j}}
+    {\sqrt{\prod_i b_i}\prod_{i<j}(b_i+b_j)}
+    e^{-N\sum_i\left(V_+(\lambda_i)+V_0(\mu_i)\right)},
 \end{equation}
-%
-with $U,V\in U(N)$. We can then perform the unitary group integrals using the HCIZ formula \cite{Harish-Chandra538,Itzykson1979}:
-%
-\begin{equation}
-    \label{HCIZ}
-    \int [dU] e^{N\text{Tr} X U Y U^\dagger} \propto \frac{\underset{1\leqslant i,j\leqslant N}{\text{det}} e^{Ny_i x_j} }{\Delta(x)\Delta(y)},
-\end{equation}
-%
-where $[dU]$ is the normalised Haar measure, and the $\{y_i\}_{i=1}^N$ and $\{x_j\}_{j=1}^N$ are the eigenvalues of the $N\times N$ Hermitian matrices $Y$ and $X$ respectively.
+where $b_i=t_2+t_3\lambda_i$ and $\Delta$ is the Vandermonde determinant. Overall factors
+independent of the eigenvalues have been suppressed.
 
-Consider first the saddle-point equation about the eigenvalues of $X_+$. Diagonalising $X_+$ and evaluating the integral over the unitary group yields 
-%
+Following \cite{Atkin:2015ksy}, write
 \begin{equation}
-    \label{step1}
-    Z \propto \int [dX_3] \int \prod_{i=1}^N d\lambda_i \frac{\Delta(\lambda)}{\Delta(\mu)} \frac{\text{det}_{i,j} e^{N \lambda_i \mu_j} e^{-N\text{Tr}\left( \frac{(t_2-1)}{2} X_3 + \frac{t_3}{3} X_3^3\right) -N \sum_{i=1}^N \frac{(t_2-2)}{4}\lambda_i^2 + \frac{t_3}{12} \lambda_i^3}}{\sqrt{\det{B}} \prod_{i<j} (b_i + b_j)}.
+    \label{mixed:G-definition}
+    G_A^B(z)=\lim_{N\to\infty}\frac1N\frac{\partial}{\partial z}
+    \log\left\langle\det_{i,j}e^{N\xi_i\eta_j}\right\rangle_{\xi_N=z},
 \end{equation}
-%
-We may then write an effective potential for the eigenvalues of $X_+$,
-%
-\begin{multline}
-    V_{\text{eff.}} ( \{ \lambda_i \}_{i=1}^N) =  \bigg(  \sum_{i=1}^N \frac{(t_2-2)}{4} \lambda_i^2 + \frac{t_3}{12} \lambda_i^3  - \frac{1}{N} \sum_{i<j} \log{(\lambda_i - \lambda_j)} - \frac{1}{N}\log{\det_{i,j}{e^{N \lambda_i \mu_j}}} \\   + \frac{1}{2N} \sum_{i,j} \log{((t_2+t_3\lambda_i)+(t_2 + t_3\lambda_j))} \bigg),
-\end{multline}
-%
-Taking the variation with respect an eigenvalue $\lambda_i$, and demanding that this be zero in the large $N$ limit, we find the following saddle-point equation, with $\lambda_i\rightarrow z$:
+where $\xi_i$ and $\eta_j$ are the eigenvalues of $A$ and $B$, respectively. For $t_3\neq0$, define
+the reflection $s(z)=-z-2t_2/t_3$. Stationarity of \eqref{MixedSaddle} gives
 \begin{align}
     \label{2MMsaddle2}
-    \frac{t_3}{4}z^2 + \frac{(t_2-2)}{2} z =  W_{(2)}(z) + G_{X_1 + X_2}^{X_3}(z) +  W_{(2)}\big(-z - \frac{2t_2}{t_3}\big),
+    V_+'(z) & =\overline W_{(2)}(z)+\overline G_{X_+}^{X_0}(z)+W_{(2)}(s(z)), \\
+    V_0'(z) & =\overline W_{(1)}(z)+\overline G_{X_0}^{X_+}(z),
 \end{align}
-%
-where $W_{(2)}(z)$ denotes the resolvent of $X_1 + X_2$ as in \eqref{eq2}, and the $G$-function is defined as in \eqref{eq7}.
+on the corresponding eigenvalue cuts, with $\overline f(x)=\tfrac12\left(f(x+i0)+f(x-i0)\right)$
+denoting the mean boundary value. The reflected resolvent comes from differentiating the Gaussian
+determinant.
 
-The saddle-point equation about the eigenvalues of $X_3$ is straightforward to compute,
-%
-\begin{align}
-    t_3 z^2+(t_2-1) z = W_{(1)}(z) + G_{X_3}^{X_1+X_2}(z),
-\end{align}
-%
-where $W_{(1)}(z)$ is the single matrix resolvent \eqref{eq2}.
-By comparing with \eqref{eq14} one finds
-%
+\paragraph{Auxiliary curve and sheet continuation.}
+Let $G(z)=G_{(2)}^Y(z)$, where $Y$ is the auxiliary Gaussian matrix coupled to $X_0+X_1+X_2$ in
+\cite{Atkin:2015ksy}. Its curve satisfies
 \begin{equation}
-    \label{G1}
-    G_{(1)}^Y(z) = z + G_{X_3}^{X_1 + X_2}(z).
+    \mathcal F_{(2)}(z,G(z))=F_{(1)}(G(z)-z,G(z))=0.
 \end{equation}
-%
-The spectral curve for $G_{(2)}^Y(z)$ derived by Atkin et al. \cite{Niedner:2016skw} satisfies the following,
-%
-\begin{align}
-    F_{(2)}(z,G_{(2)}^Y(z))=F_{(1)}(G_{(2)}^Y(z)-z,G_{(2)}^Y(z))=0,
-\end{align}
-%
-and so, comparing both, we obtain the following relation,
-%
-\begin{align}
-    G_{(2)}^Y(z) = G_{X_1+X_2}^{X_3}(z)+z.
-\end{align}
-%
-\begin{figure}
+We use $\mathcal F_{(2)}$ for this auxiliary curve to distinguish it from the degree-ten resolvent
+curve $F_{(2)}$. The branch adjacent to the physical branch of $G$ is denoted by $G_0$; it is
+$G_{(2)}^Y(z)_{-}$ in the notation of \cite{Atkin:2015ksy}. Combining the saddle-point equations
+with the HCIZ branch relations gives
+\begin{equation}
+    \label{mixed:physical-relation}
+    W_0(z)+W_0(s(z))+G_0(z)=U(z),
+    \qquad U(z)=\frac{t_3}{4}z^2+\frac{t_2}{2}z,
+\end{equation}
+where $W_j(z)=W_{(2)}(z)_j$ and $W_0(z)\sim z^{-1}$. In particular, $U(s(z))=U(z)$ and
+$G_0(s(z))=G_0(z)$.
+
+In the one-cut phase, take $C_0^+=[a,b]$ and $C_\infty^+=[c,\infty)$, with $a<b<c$, and define
+their reflected cuts $C_0^-=s(C_0^+)$ and $C_\infty^-=s(C_\infty^+)$. We assume these cuts are
+disjoint. Continuing $G_0$ through $C_0^+$ gives $G_{-1}$, and then through $C_\infty^+$ gives
+$G_{-2}$; the other two auxiliary sheets are $G_1(z)=G_{-1}(s(z))$ and $G_2(z)=G_{-2}(s(z))$.
+Choose the square-root branches so that $G_{-1}(z)=z+t_3^{-1/2}z^{1/2}+O(1)$ and
+$G_{-2}(z)=z-t_3^{-1/2}z^{1/2}+O(1)$, with $s(z)^{1/2}\sim iz^{1/2}$.
+
+Crossing $C_0^+$ in \eqref{mixed:physical-relation} changes $W_0$ to $W_1$ and $G_0$ to $G_{-1}$,
+while $W_0(s(z))$ remains analytic. Repeating this continuation gives
+\begin{equation}
+    \label{mixed:sheet-relations}
+    W_j(z)=U(z)-G_{\alpha_j}(z)-W_{\beta_j}(s(z)),
+    \qquad
+    \begin{array}{c|rrrrrrrrrr}
+        j        & 0 & 1  & 2  & 3  & 4  & 5  & 6  & 7  & 8  & 9 \\
+        \alpha_j & 0 & -1 & -2 & -2 & -1 & -1 & -2 & -2 & -2 & -2 \\
+        \beta_j  & 0 & 0  & 0  & 1  & 1  & 2  & 2  & 4  & 3  & 7
+    \end{array}
+\end{equation}
+The sheet labels agree with the asymptotic catalogue in section~\ref{app:mixed-asymptotics}. The
+complete continuation is summarised in table~\ref{tab:mixed-continuation}; each pair denotes an
+exchange of sheets, and exchanges on the same cut act simultaneously.
+\begin{table}[htbp]
     \centering
-    \includegraphics[scale=0.85]{figures/MixedG.png}
-    \caption{Analytic structure of $G_{(2)}^Y(z)$ in the 3-state Potts model.}
-    \label{fig:mixedG}
-\end{figure}
-%
-Using their result one can infer the analytic structure of $G_{(2)}^Y(z)$, which is given in Fig.\ref{fig:mixedG}. Therefore, using \eqref{2MMsaddle2} and the branch structure of $G_{(2)}^Y(z)$, we should be able to determine the form of $W_{(2)}(z)$.
+    \begin{tabular}{lll}
+        \toprule
+        Cut          & Sheets of $G$ & Sheets of $W_{(2)}$ \\
+        \midrule
+        $C_0^+$      & $(0,-1)$      & $(0,1)\,(3,7)\,(6,8)$ \\
+        $C_0^-$      & $(0,1)$       & $(1,4)\,(2,3)\,(8,9)$ \\
+        $C_\infty^+$ & $(-1,-2)$     & $(1,2)\,(3,4)\,(5,6)$ \\
+        $C_\infty^-$ & $(1,2)$       & $(3,6)\,(4,5)\,(7,8)$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{Sheet exchanges for the mixed-boundary saddle-point solution. The reflection $s$
+        interchanges the $+$ and $-$ cuts.}
+    \label{tab:mixed-continuation}
+\end{table}
 
-Define $U(z) = \frac{t_3}{4}z^2 + \frac{t_2}{2}z$, and label the physical sheet `0', such that the saddle-point equation becomes
-%
-\begin{equation}
-    W_{(2)}(z)_0 + W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_0 + G_{(2)}^Y(z)_0 = U(z).
-\end{equation}
-%
-Let $W_{(2)}(z)_0$ have a compact branch cut on the interval $C_0^+=[a,b]$ (and thus $W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_0$ has a cut on $C_0^-=[-b-\frac{2t_2}{t_3},-a-\frac{2t_2}{t_3}]$), and $G_{(2)}^Y(z)_{-1}$ have a cut on $C_{\infty}^+=[c,+\infty)$, as demonstrated in Fig.\ref{fig:mixedG}. We take $a,b,c\in \mathbb{R}$ and $a< b < c$. 
-We now study the branch structure by analytically continuing through the various branch cuts sequentially, and matching discontinuities.
-\begin{enumerate}[label=(\roman*)]
-\item First, analytically continuing through the physical cut $C_0^+$ takes $W_{(2)}(z)_0 \rightarrow W_{(2)}(z)_1$, and we get
-\begin{equation}
-    W_{(2)}(z)_1 + G_{(2)}^Y(z)_{-1} + W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_0 = U(z),
-\end{equation}
-from which we can infer that $W_{(2)}(z)_1$ has a cut along $C_0^-,C_0^+$, and $C_\infty^+$.
-
-\item Analytically continuing through $C_{\infty}^+$, we find
-\begin{equation}
-    W_{(2)}(z)_2 + G_{(2)}^Y(z)_{-2}+W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_0 = U(z),
-\end{equation}
-and consequently $W_{(2)}(z)_2$ has a cut along $C_0^-$ and $C_{\infty}^+$.
-
-\item Circling $C_0^-$, 
-\begin{equation}
-    W_{(2)}(z)_3 + G_{(2)}^Y(z)_{-2}+W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_{1}=U(z),
-\end{equation}
-and so now we have a cut along $C_{\infty}^-, C_0^-, C_0^+$, and $C_{\infty}^+$.
-
-\item Circling $C_{\infty}^+$, 
-\begin{equation}
-    W_{(2)}(z)_4 + G_{(2)}^Y(z)_{-1} + W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_1 = U(z),
-\end{equation}
-which implies that $W_{(2)}(z)_4$ has a cut along $C_{\infty}^-, C_0^-$, and $C_{\infty}^+$.
-
-\item If we circle $C_0^-$, $G_{(2)}^Y(z)_{-1}\rightarrow G_{(2)}^Y(z)_0$ and $W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_1\rightarrow W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_0$, which implies that we return to sheet $W_{(2)}(z)_1$, and that these two are connected along $C_0^-$.
-Meanwhile, if we circle $C_{\infty}^-$,
-\begin{equation}
-    W_{(2)}(z)_5 + G_{(2)}^Y(z)_{-1} + W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_2 = U(z),
-\end{equation}
-from which we deduce that $W_{(2)}(z)_5$ has a cut along $C_{\infty}^-$ and $C_{\infty}^+$. 
-
-\item Circling $C_{\infty}^+$, 
-\begin{equation}
-    W_{(2)}(z)_6 + G_{(2)}^Y(z)_{-2}+W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_2=U(z),
-\end{equation}
-from which we infer that $W_{(2)}(z)_6$ has branch cuts along $C_{\infty}^-, C_0^+$, and $C_{\infty}^+$.
-
-\item At this point, if we circle $C_{\infty}^-$, $G_{(2)}^Y(z)_{-2}$ remains unchanged and $W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_2\rightarrow W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_1$, which tells us that $W_{(2)}(z)_6\rightarrow W_{(2)}(z)_3$. 
-However, if we circle $C_0^+$, we find
-\begin{equation}
-    W_{(2)}(z)_7 + G_{(2)}^Y(z)_{-2} + W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_3 = U(z),
-\end{equation}
-and so $W_{(2)}(z)_7$ has cuts along $C_{\infty}^-, C_0^-, C_0^+$.
-
-\item Circling $C_{\infty}^-$ gives
-\begin{equation}
-    W_{(2)}(z)_8 + G_{(2)}^Y(z)_{-2} + W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_4 = U(z),
-\end{equation}
-and so $W_{(2)}(z)_8$ has cuts along $C_{\infty}^-$, and $C_0^+$. If we circle the latter, we find $W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_4\rightarrow W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_1$ and $G_{(2)}^Y(z)_{-2}$ remains unchanged, implying $W_{(2)}(z)_8 \rightarrow W_{(2)}(z)_3$.
-
-\item Finally, if we circle $C_0^-$ of $W_{(2)}(z)_7$
-\begin{equation}
-    W_{(2)}(z)_9 + G_{(2)}^Y(z)_{-2}+W_{(2)}\big(-z-\frac{2t_2}{t_3}\big)_8 = U(z),
-\end{equation}
-which implies $W_{(2)}(z)_9$ has a single cut along $C_0^-$, terminating the sheet structure.
-\end{enumerate}
-%
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.85]{figures/MixedW.png}
-    \caption{Analytic structure of $W_{(2)}(z)$ in the 3-state Potts model.}
-    \label{fig:Wstruct}
-\end{figure}
-%
-The entire analytic structure is depicted in Fig.\ref{fig:Wstruct}.
-
-
-We therefore find that the branch structure predicted by the loop equation solution is in agreement with the solution found in \cite{Niedner:2016skw}. Moreover, one may explicitly compare the asymptotics of the resolvent on each sheet, given in Appendix B, and see that it is in accord with the saddle-point solution on each sheet, using the asymptotics of $G_{(2)}^Y(z)$ given in \cite{Niedner:2016skw}.
-
+These exchanges close on ten resolvent sheets. Expanding \eqref{mixed:sheet-relations} at infinity
+reproduces the ten series in section~\ref{app:mixed-asymptotics} through the displayed order. The
+additional sheets arise because the reflected resolvent can change sheets while the auxiliary
+function remains on the same branch. This explains why the quintic auxiliary curve is consistent
+with the degree-ten curve obtained from the loop equations.
 
 \section{Planar solutions and critical behaviour}
 \label{sec:qtm-solutions}

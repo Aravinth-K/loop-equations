@@ -53,27 +53,20 @@ The asymptotic behaviour of the planar resolvent $W_{(3)}(z)$ is given by:
 \subsection{General 3-state Potts}
 \input{text/asymptotics/potts_general}
 
-\subsection{Mixed boundary saddle-point solution}
+\section{Mixed boundary saddle-point solution}
 \label{app:mixed-saddle}
 
-The degree-ten curve for $W_{(2)}$ is compatible with the degree-five curve for the auxiliary
-function $G_{(2)}^Y$ obtained in \cite{Niedner:2016skw,Atkin:2015ksy}. We make this comparison by
+Here we show the degree-ten curve for $W_{(2)}$ is compatible with the degree-five curve for the auxiliary
+function $G_{(2)}^Y$ obtained in \cite{Niedner:2016skw}. We make this comparison by
 reducing the matrix integral to an eigenvalue problem and following the analytic continuation of
 the mixed resolvent.
 
-\paragraph{Gaussian reduction.}
 Set $X_\pm=X_1\pm X_2$, keeping $X_0$ as the third matrix in \eqref{3Potts_p=1}, and define
 \begin{equation}
     V_+(x)=\frac{t_2-2}{4}x^2+\frac{t_3}{12}x^3,
     \qquad V_0(x)=\frac{t_2-1}{2}x^2+\frac{t_3}{3}x^3.
 \end{equation}
-Cyclicity of the trace gives
-\begin{equation}
-    \label{saddleMixed}
-    \Tr V=\Tr\left(V_+(X_+)+V_0(X_0)-X_0X_+
-    +\frac14\left(t_2\mathbf I+t_3X_+\right)X_-^2\right).
-\end{equation}
-The $X_-$ integral is Gaussian \cite{Eynard:1992cn}. Diagonalising $X_+$ and $X_0$, with
+The $X_-$ integral is Gaussian and can be integrated out. Diagonalising $X_+$ and $X_0$, with
 eigenvalues $\lambda_i$ and $\mu_i$, and performing the angular integral using the HCIZ formula
 \cite{Harish-Chandra538,Itzykson1979}, we obtain
 \begin{equation}
@@ -92,8 +85,8 @@ Following \cite{Atkin:2015ksy}, write
     G_A^B(z)=\lim_{N\to\infty}\frac1N\frac{\partial}{\partial z}
     \log\left\langle\det_{i,j}e^{N\xi_i\eta_j}\right\rangle_{\xi_N=z},
 \end{equation}
-where $\xi_i$ and $\eta_j$ are the eigenvalues of $A$ and $B$, respectively. For $t_3\neq0$, define
-the reflection $s(z)=-z-2t_2/t_3$. Stationarity of \eqref{MixedSaddle} gives
+where $\xi_i$ and $\eta_j$ are the eigenvalues of $A$ and $B$, respectively. Define
+the reflection $s(z)=-z-2t_2/t_3$. Stationarity of \eqref{MixedSaddle} in the planar limit gives
 \begin{align}
     \label{2MMsaddle2}
     V_+'(z) & =\overline W_{(2)}(z)+\overline G_{X_+}^{X_0}(z)+W_{(2)}(s(z)), \\
@@ -103,15 +96,13 @@ on the corresponding eigenvalue cuts, with $\overline f(x)=\tfrac12\left(f(x+i0)
 denoting the mean boundary value. The reflected resolvent comes from differentiating the Gaussian
 determinant.
 
-\paragraph{Auxiliary curve and sheet continuation.}
 Let $G(z)=G_{(2)}^Y(z)$, where $Y$ is the auxiliary Gaussian matrix coupled to $X_0+X_1+X_2$ in
 \cite{Atkin:2015ksy}. Its curve satisfies
 \begin{equation}
     \mathcal F_{(2)}(z,G(z))=F_{(1)}(G(z)-z,G(z))=0.
 \end{equation}
 We use $\mathcal F_{(2)}$ for this auxiliary curve to distinguish it from the degree-ten resolvent
-curve $F_{(2)}$. The branch adjacent to the physical branch of $G$ is denoted by $G_0$; it is
-$G_{(2)}^Y(z)_{-}$ in the notation of \cite{Atkin:2015ksy}. Combining the saddle-point equations
+curve $F_{(2)}$. Denote branch adjacent to the physical branch of $G$ by $G_0$. Combining the saddle-point equations
 with the HCIZ branch relations gives
 \begin{equation}
     \label{mixed:physical-relation}
@@ -129,8 +120,7 @@ Choose the square-root branches so that $G_{-1}(z)=z+t_3^{-1/2}z^{1/2}+O(1)$ and
 $G_{-2}(z)=z-t_3^{-1/2}z^{1/2}+O(1)$, with $s(z)^{1/2}\sim iz^{1/2}$. The auxiliary sheet structure
 is shown in figure~\ref{fig:mixed-G-continuation}.
 \begin{figure}[htbp]
-    \centering
-    \includegraphics{figures/MixedG.pdf}
+    \centering    \includegraphics[scale=0.85]{figures/MixedG.pdf}
     \caption{The five sheets of the auxiliary function $G$. Arrows join the sheets exchanged
         across each labelled cut; the reflection $s$ interchanges the $+$ and $-$ cuts.}
     \label{fig:mixed-G-continuation}
@@ -148,23 +138,19 @@ while $W_0(s(z))$ remains analytic. Repeating this continuation gives
         \beta_j  & 0 & 0  & 0  & 1  & 1  & 2  & 2  & 4  & 3  & 7
     \end{array}
 \end{equation}
-The sheet labels agree with the asymptotic catalogue in section~\ref{app:mixed-asymptotics}. The
-complete continuation is shown in figure~\ref{fig:mixed-W-continuation}; exchanges on the same cut
-act simultaneously.
+The sheet labels agree with the asymptotic catalogue in section~\ref{app:mixed-asymptotics}
+and expanding \eqref{mixed:sheet-relations} at infinity
+reproduces the ten series. The
+complete continuation is shown in figure~\ref{fig:mixed-W-continuation}.
 \begin{figure}[htbp]
     \centering
-    \includegraphics{figures/MixedW.pdf}
+    \includegraphics[scale=0.85]{figures/MixedW.pdf}
     \caption{The ten sheets of $W_{(2)}$, with $W_0$ the physical sheet. Arrows with the same cut
         label act simultaneously. Only circled endpoints indicate sheet exchanges; crossings of
         intervening sheet lines do not.}
     \label{fig:mixed-W-continuation}
 \end{figure}
-
-These exchanges close on ten resolvent sheets. Expanding \eqref{mixed:sheet-relations} at infinity
-reproduces the ten series in section~\ref{app:mixed-asymptotics} through the displayed order. The
-additional sheets arise because the reflected resolvent can change sheets while the auxiliary
-function remains on the same branch. This explains why the quintic auxiliary curve is consistent
-with the degree-ten curve obtained from the loop equations.
+These exchanges close on ten resolvent sheets, consistent with our results.
 
 \FloatBarrier
 \section{Planar solutions and critical behaviour}

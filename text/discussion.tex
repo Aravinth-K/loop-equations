@@ -1,30 +1,40 @@
 \section{Discussion}
 
 In this work we developed an algorithm for systematically computing and solving the loop equations
-of general multi-matrix models, with the goal of finding the spectral curve for the planar resolvent
-of a given matrix degree of freedom.
-We demonstrated the utility of approach by deploying it to solve several unsolved matrix models described in the literature.
-We then focused our attention on the 3-state Potts model,
-where we successfully computed the planar resolvents describing fixed, mixed, and free boundary
-conditions using this technique. While the fixed and free boundary conditions were manifestly in
-agreement with the literature, more care was required for the mixed boundary condition. However, through
-studying the analytic structure predicted by the saddle-point solution
-this too is consistent with the results of Atkin et al. We finally relaxed the $S_3$ symmetry of the 3-state Potts model and demonstrated that this is solvable.
+of general multi-matrix models, with the goal of finding the spectral curve for the planar
+resolvent of a given matrix degree of freedom. We demonstrated the utility of approach by deploying
+it to solve several unsolved matrix models described in the literature. We then focused our
+attention on the 3-state Potts model, where we successfully computed the planar resolvents
+describing fixed, mixed, and free boundary conditions using this technique. While the fixed and
+free boundary conditions were manifestly in agreement with the literature, more care was required
+for the mixed boundary condition. However, through studying the analytic structure predicted by the
+saddle-point solution this too is consistent with the results of Atkin et al. We finally relaxed
+the $S_3$ symmetry of the 3-state Potts model and demonstrated that this is solvable.
 
 There are many ways to continue this work. Our procedure is algorithmic in nature, and so it would
 be interesting to apply this to a wide variety of models for which the planar resolvent is known or
 unknown. Determining a general principle that governs the solvability of correlators in the
-multi-matrix models would be an exciting challenge. 
+multi-matrix models would be an exciting challenge. It would also be useful to connect this
+approach with the matrix bootstrap
+\cite{Lin_2020,khalkhali2025bootstrappingcriticalbehaviormultimatrix}: the algebraic reduction
+developed here could reduce the number of independent moments entering its positivity constraints.
+A further direction is to apply this framework to the matrix-model realisations of the $ADE$
+minimal strings \cite{Rodriguez:2025ade} and investigate their planar spectral curves and boundary
+observables.
 
-An immediate offshoot of would be the
-calculation of planar resolvents describing boundary conditions that interpolate between the fixed,
-mixed, and free boundary states analogous to \cite{Carroll:1997tr,Atkin:2012fx}. This would allow us
-to directly study the boundary renormalisation group flow relating the different boundary states,
-which is expected to induce a partial ordering of the spectrum of boundary states, conforming with
-the boundary analogue of the $c$-theorem \cite{Zamolodchikov:1986gt}, which was first conjectured
-in \cite{Affleck:1991tk}, and subsequently proven by Friedan and Konechny \cite{Friedan:2003yc}. It would also be interesting to see whether one could
-compute the New boundary condition, which is likely given by a
-non-standard resolvent function \cite{Kulanthaivelu:2019atg}, using this framework.
+Work is in progress to systematise this procedure in a general-purpose software library for
+generating and analysing loop equations, with the aim of making the framework applicable to
+arbitrary matrix models.
+
+An immediate offshoot of would be the calculation of planar resolvents describing boundary
+conditions that interpolate between the fixed, mixed, and free boundary states analogous to
+\cite{Carroll:1997tr,Atkin:2012fx}. This would allow us to directly study the boundary
+renormalisation group flow relating the different boundary states, which is expected to induce a
+partial ordering of the spectrum of boundary states, conforming with the boundary analogue of the
+$c$-theorem \cite{Zamolodchikov:1986gt}, which was first conjectured in \cite{Affleck:1991tk}, and
+subsequently proven by Friedan and Konechny \cite{Friedan:2003yc}. It would also be interesting to
+see whether one could compute the New boundary condition, which is likely given by a non-standard
+resolvent function \cite{Kulanthaivelu:2019atg}, using this framework.
 
 Finally, it would be fruitful to extend our work to the calculation of observables in multi-matrix
 models beyond the planar limit. It is well known that the planar resolvent forms the initial data

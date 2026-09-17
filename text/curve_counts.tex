@@ -6,8 +6,7 @@
         \midrule
         Generic cubic two-matrix                 & 4                  & 10                 & 6 \\
         Quartic two-matrix $(g,g,g)$, $(g,-g,g)$ & 6                  & 11                 & 1 \\
-        Quartic two-matrix $(g,g,-g)$            & 7                  & 27                 & 4 \\
-        Quartic two-matrix $(-g,g,g)$            & 7                  & 27                 & 4 \\
+        Quartic two-matrix $(g,g,-g)$, $(-g,g,g)$ & 7                  & 27                 & 4 \\
         Cubic three-matrix                       & 5                  & 64                 & 7 \\
         3-state Potts, fixed                     & 5                  & 64                 & 7 \\
         3-state Potts, mixed                     & 6                  & 245                & 17 \\
@@ -18,11 +17,8 @@
     \caption{Levels and equation counts in the accompanying notebook derivations.
         Here $n_{\mathrm{max}}$ is the largest resolvent-word level in the generated
         system, and $N_{\mathrm{res}}$ and $N_{\mathrm{cor}}$ count the nonzero
-        resolvent and correlator equations after the notebook's symmetry identifications
-        and removal of duplicates, before elimination. The two quartic cases in the
-        second row each have the stated counts; their signed-sector zero rules have
-        already been applied. These are sufficient systems used in the notebooks,
-        not claims of minimal equation counts or minimal levels.}
+        resolvent and correlator equations after symmetry identifications
+        and removal of duplicates, before elimination.}
     \label{tab:curve-counts}
 \end{table}
 
@@ -30,3 +26,9 @@ Table~\ref{tab:curve-counts} records the size of the loop systems used below. Fo
 the maximal variation-word length is $n_{\mathrm{max}}-2$, and for quartic potentials it is
 $n_{\mathrm{max}}-3$. The generic cubic two-matrix notebook generates ten resolvent equations; the
 eight equations displayed below form a smaller sufficient subset.
+
+In the following we write each spectral curve as $F(x,y)=0$, with $F_{(p)}(x,y)=0$ for the boundary condition
+associated with a sum of $p$ matrices. Coefficients containing undetermined correlation functions
+are denoted by $c_{i,j}$, where $i$ and $j$ are the exponents of $x$ and $y$. These coefficients
+depend on the couplings and the correlators; they are not independent parameters, and exist purely
+to simplify the presentation.

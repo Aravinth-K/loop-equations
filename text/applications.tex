@@ -150,11 +150,7 @@ of the matrices, and the discrete symmetry $X_i \rightarrow X_i^T \; \forall i$.
 $n_{\mathrm{max}} = 5$ the total number of inequivalent loop equations is 64. We have $\sum_{i=0}^5
     |\mathcal{W}_i| = 54$ resolvent functions. This is a closed and consistent system of polynomial
 equations and so many equations are not independent. Therefore only a subset of these are required
-to determine the resolvent.
-
-\begin{equation}
-    F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0.
-\end{equation}
+to determine the resolvent. Taking $F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0$ we get
 
 \input{text/curves/potts_fixed}
 
@@ -172,7 +168,7 @@ this change of basis the potential becomes
 \end{eqnarray}
 
 %
-The resulting potential retains the $S_3\times\mathbb{Z}_2$ symmetry of \eref{3Potts_p=1}, but
+\noindent The resulting potential retains the $S_3\times\mathbb{Z}_2$ symmetry of \eref{3Potts_p=1}, but
 possesses many more interaction terms. The choice of basis is arbitrary, one should be able to
 reproduce the planar resolvent regardless of how we parameterised the potential. In this case our
 goal is to compute
@@ -191,25 +187,20 @@ equations. Once redundancies have been removed, these loop equations possess a c
 equations. We have not determined a minimal set of equations that form closed algebraic system of
 equations.
 
-The final expression for the spectral curve is degree $10$ in the resolvent $W_{(2)}(z)$ and degree
-$13$ in the boundary cosmological constant $z$. At first glance, this is rather surprising, as it
-was shown in \cite{Niedner:2016skw} that the function $G_{(2)}^Y(z)$, which contains the
-information of the eigenvalue density distribution, satisfies a spectral curve that is degree 5 in
-$G_{(2)}^Y(z)$ and degree 6 in $z$. However, through detailed analysis of the analytic structure of
-the two functions one is able to reconcile these observations.
-
-\begin{equation}
-    F_{(2)}\!\left(z,W_{(2)}(z)\right)=0.
-\end{equation}
+The final expression for the spectral curve,     $F_{(2)}\!\left(z,W_{(2)}(z)\right)=0$, is degree $10$ in the resolvent $W_{(2)}(z)$ and degree
+$13$ in the boundary cosmological constant $z$. 
 
 \begin{samepage}
-    Retaining the complete coefficient of $y^9$ and the two leading powers of $x$ in the coefficients
-    of $y^j$, $1\leq j\leq8$, we find
     \input{text/curves/potts_mixed}
 \end{samepage}
-Each ellipsis denotes lower powers of $x$ in the corresponding coefficient, including the
-correlator-dependent terms. The complete curve is given in the accompanying notebook
-\cite{github:ak}.
+\noindent Each ellipsis denotes lower powers of $x$ in the corresponding coefficient, including 
+correlator-dependent terms. 
+
+At first glance, this is rather surprising, as it
+was shown in \cite{Niedner:2016skw} that the function $G_{(2)}^Y(z)$, which contains the
+information of the eigenvalue density distribution, satisfies a spectral curve that is degree 5 in
+$G_{(2)}^Y(z)$ and degree 6 in $z$. In Appendix B we reconcile these observations through detailed analysis of the analytic structure of
+the two functions.
 
 \subsubsection{$p=3$}
 
@@ -248,11 +239,8 @@ and degree 5 in the resolvent $W_{(3)}(z)$. Furthermore, with the relation
     G_{(3)}^Y(z) = z + W_{(3)}(z),
 \end{equation}
 %
-one recovers the spectral curve for $G_{(3)}^Y(z)$ of \cite{Atkin:2015ksy}
-
-\begin{equation}
-    F_{(3)}\!\left(z,z+W_{(3)}(z)\right)=0.
-\end{equation}
+one recovers the spectral curve for $G_{(3)}^Y(z)$ of \cite{Atkin:2015ksy}, $
+    F_{(3)}\!\left(z,z+W_{(3)}(z)\right)=0$, where
 
 \input{text/curves/potts_free}
 
@@ -265,18 +253,8 @@ one recovers the spectral curve for $G_{(3)}^Y(z)$ of \cite{Atkin:2015ksy}
         - X_0 X_1 - X_1 X_2 - X_2 X_0
     \end{aligned}
 \eeq
-In this case we have broken the $S_3$ symmetry.
-
-\begin{equation}
-    F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0.
-\end{equation}
+In this case we have broken the $S_3$ symmetry. Like in the symmetric $p=1$ case we show $F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0$.
 \begin{samepage}
-    Following the abbreviated presentation of \cite{ZinnJustin:1999jg}, we display the complete
-    coefficient of $y^6$ and the two leading powers of $x$ in the remaining coefficients:
     \input{text/curves/potts_general}
 \end{samepage}
-In the coefficient of $y^j$, $1\leq j\leq5$, the ellipsis denotes powers of $x$ of degree at most
-$6-j$; the final ellipsis denotes a polynomial of degree at most six in $x$. These omitted terms
-include both explicit coupling-dependent coefficients and the correlator-dependent coefficients
-$c_{i,j}$. The complete expression is given in the accompanying notebook \cite{github:ak}. The
-displayed terms make the degrees $(\deg_xF_{(1)},\deg_yF_{(1)})=(8,7)$ manifest.
+\noindent Unlike the symmetric case we find the degree of the curve to be $(\deg_xF_{(1)},\deg_yF_{(1)})=(8,7)$.

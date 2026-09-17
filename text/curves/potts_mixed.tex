@@ -1,41 +1,17 @@
-% Generated from notebooks/potts_mixed.nb.
-% All monomials retained; c_{i,j} replaces the complete correlator-dependent coefficient.
+% Abbreviated display of notebooks/potts_mixed.nb.
+% The complete coefficient display is in potts_mixed_full.tex.
 \begin{align}
     \label{curve:potts_mixed}
-    F_{(2)}(x,y)={} & \frac{4}{t_3^2}y^{10}\notag \\
-                    & {}+\left(-\frac{4}{t_3}x^{2} - \frac{8 \left(t_2-10\right)}{t_3^2}x + \frac{8 \left(7 t_2+1\right)}{t_3^3}\right)y^{9}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & \frac{3}{2}x^{4} + \frac{6 \left(t_2-12\right)}{t_3}x^{3} + \frac{6 \left(t_2^2-33 t_2+115\right)}{t_3^2}x^{2} \\
-                                    & \quad{}- \frac{12 \left(9 t_2^2-79 t_2-12\right)}{t_3^3}x + c_{0,8}
-                               \end{aligned}\right)y^{8}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & -\frac{t_3}{4}x^{6} - \frac{3}{2} \left(t_2-16\right)x^{5} - \frac{6 t_2^2-231 t_2+1109}{2 t_3}x^{4} \\
-                                    & \quad{}- \frac{2 \left(t_2^3-87 t_2^2+965 t_2-1680\right)}{t_3^2}x^{3} + \sum_{i=0}^{2}c_{i,7}x^i
-                               \end{aligned}\right)y^{7}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & \frac{t_3^2}{64}x^{8} + \frac{1}{8} \left(t_2-28\right) t_3x^{7} \\
-                                    & \quad{}+ \frac{1}{8} \left(3 t_2^2-193 t_2+1291\right)x^{6} + \frac{2 t_2^3-243 t_2^2+3621 t_2-9548}{4 t_3}x^{5} \\
-                                    & \quad{}+ \sum_{i=0}^{4}c_{i,6}x^i
-                               \end{aligned}\right)y^{6}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & \frac{3 t_3^2}{16}x^{9} + \frac{1}{16} \left(27 t_2-320\right) t_3x^{8} \\
-                                    & \quad{}+ \frac{1}{2} \left(12 t_2^2-311 t_2+1185\right)x^{7} + \sum_{i=0}^{6}c_{i,5}x^i
-                               \end{aligned}\right)y^{5}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & \frac{7 t_3^2}{8}x^{10} + \frac{5}{4} \left(7 t_2-48\right) t_3x^{9} \\
-                                    & \quad{}+ \frac{1}{64} \left(2295 t_2^2-33210 t_2-4 t_3^2+82239\right)x^{8} + \sum_{i=0}^{7}c_{i,4}x^i
-                               \end{aligned}\right)y^{4}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & 2 t_3^2x^{11} + 2 \left(11 t_2-50\right) t_3x^{10} + \frac{1}{8} \left(815 t_2^2-7610 t_2-4 t_3^2+13183\right)x^{9} \\
-                                    & \quad{}+ \sum_{i=0}^{8}c_{i,3}x^i
-                               \end{aligned}\right)y^{3}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & \frac{9 t_3^2}{4}x^{12} + \left(27 t_2-88\right) t_3x^{11} \\
-                                    & \quad{}+ \frac{1}{16} \left(2227 t_2^2-14594 t_2-24 t_3^2+18524\right)x^{10} + \sum_{i=0}^{9}c_{i,2}x^i
-                               \end{aligned}\right)y^{2}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & t_3^2x^{13} + \left(13 t_2-32\right) t_3x^{12} + \frac{1}{4} \left(295 t_2^2-1434 t_2-8 t_3^2+1376\right)x^{11} \\
-                                    & \quad{}+ \sum_{i=0}^{10}c_{i,1}x^i
-                               \end{aligned}\right)y\notag \\
-                    & {}-t_3^2x^{12} + \sum_{i=0}^{11}c_{i,0}x^i.
+    F_{(2)}(x,y)={} & \frac{4}{t_3^2}y^{10}
+    +y^9\left(-\frac{4}{t_3}x^2-\frac{8(t_2-10)}{t_3^2}x
+    +\frac{8(7t_2+1)}{t_3^3}\right)\notag \\*
+                    & {}+y^8\left(\frac{3}{2}x^4+\frac{6(t_2-12)}{t_3}x^3+\cdots\right)
+    +y^7\left(-\frac{t_3}{4}x^6-\frac{3}{2}(t_2-16)x^5+\cdots\right)\notag \\*
+                    & {}+y^6\left(\frac{t_3^2}{64}x^8+\frac{(t_2-28)t_3}{8}x^7+\cdots\right)
+    +y^5\left(\frac{3t_3^2}{16}x^9+\frac{(27t_2-320)t_3}{16}x^8+\cdots\right)\notag \\*
+                    & {}+y^4\left(\frac{7t_3^2}{8}x^{10}+\frac{5(7t_2-48)t_3}{4}x^9+\cdots\right)\notag \\*
+                    & {}+y^3\left(2t_3^2x^{11}+2(11t_2-50)t_3x^{10}+\cdots\right)\notag \\*
+                    & {}+y^2\left(\frac{9t_3^2}{4}x^{12}+(27t_2-88)t_3x^{11}+\cdots\right)
+    +y\left(t_3^2x^{13}+(13t_2-32)t_3x^{12}+\cdots\right)\notag \\*
+                    & {}-t_3^2x^{12}+\cdots.
 \end{align}

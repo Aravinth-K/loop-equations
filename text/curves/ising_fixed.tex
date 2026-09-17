@@ -2,19 +2,11 @@
 % All monomials retained; c_{i,j} replaces the complete correlator-dependent coefficient.
 \begin{align}
     \label{curve:ising_fixed}
-    F_{(1)}(x,y)={} & -t_0y^{5}\notag \\
-                    & {}+\left(4 t_0 t_3x^{2} + 4 t_0 t_2x + 2\right)y^{4}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & -6 t_0 t_3^2x^{4} - 12 t_0 t_2 t_3x^{3} - 6 \left(t_0 t_2^2+t_3\right)x^{2} + \bigl(-6 t_2-t_0 t_3+2\bigr)x \\
-                                    & \quad{}+ c_{0,3}
-                               \end{aligned}\right)y^{3}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & 4 t_0 t_3^3x^{6} + 12 t_0 t_2 t_3^2x^{5} + 6 t_3 \left(2 t_0 t_2^2+t_3\right)x^{4} \\
-                                    & \quad{}+ \bigl(4 t_0 t_2^3+12 t_3 t_2+3 t_0 t_3^2-4 t_3\bigr)x^{3} + \sum_{i=0}^{2}c_{i,2}x^i
-                               \end{aligned}\right)y^{2}\notag \\
-                    & {}+\left(\begin{aligned}
-                                    & -t_0 t_3^4x^{8} - 4 t_0 t_2 t_3^3x^{7} - 2 t_3^2 \left(3 t_0 t_2^2+t_3\right)x^{6} \\
-                                    & \quad{}- t_3 \left(4 t_0 t_2^3+6 t_3 t_2+3 t_0 t_3^2-2 t_3\right)x^{5} + \sum_{i=0}^{4}c_{i,1}x^i
-                               \end{aligned}\right)y\notag \\
+    F_{(1)}(x,y)={} & -t_0y^{5}{}+y^{4}\left(4 t_0 t_3x^{2} + 4 t_0 t_2x + 2\right)\notag \\
+                    & {}+y^{3}\left(-6 t_0 t_3^2x^{4} - 12 t_0 t_2 t_3x^{3} - 6 \left(t_0 t_2^2+t_3\right)x^{2} + \bigl(-6 t_2-t_0 t_3+2\bigr)x + c_{0,3}\right)\notag \\
+                    & {}+y^{2}\left(4 t_0 t_3^3x^{6} + 12 t_0 t_2 t_3^2x^{5} + 6 t_3 \left(2 t_0 t_2^2+t_3\right)x^{4}\right.\notag \\*
+                    & \qquad{}\left.{}+ \bigl(4 t_0 t_2^3+12 t_3 t_2+3 t_0 t_3^2-4 t_3\bigr)x^{3} + \sum_{i=0}^{2}c_{i,2}x^i\right)\notag \\
+                    & {}+y\left(-t_0 t_3^4x^{8} - 4 t_0 t_2 t_3^3x^{7} - 2 t_3^2 \left(3 t_0 t_2^2+t_3\right)x^{6}\right.\notag \\*
+                    & \qquad{}\left.{}- t_3 \left(4 t_0 t_2^3+6 t_3 t_2+3 t_0 t_3^2-2 t_3\right)x^{5} + \sum_{i=0}^{4}c_{i,1}x^i\right)\notag \\
                     & {}+t_0 t_3^4x^{7} + \sum_{i=0}^{6}c_{i,0}x^i.
 \end{align}

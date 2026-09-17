@@ -202,7 +202,14 @@ the two functions one is able to reconcile these observations.
     F_{(2)}\!\left(z,W_{(2)}(z)\right)=0.
 \end{equation}
 
-\input{text/curves/potts_mixed}
+\begin{samepage}
+    Retaining the complete coefficient of $y^9$ and the two leading powers of $x$ in the coefficients
+    of $y^j$, $1\leq j\leq8$, we find
+    \input{text/curves/potts_mixed}
+\end{samepage}
+Each ellipsis denotes lower powers of $x$ in the corresponding coefficient, including the
+correlator-dependent terms. The complete curve is given in the accompanying notebook
+\cite{github:ak}.
 
 \subsubsection{$p=3$}
 
@@ -252,21 +259,24 @@ one recovers the spectral curve for $G_{(3)}^Y(z)$ of \cite{Atkin:2015ksy}
 \subsection{General 3-state Potts}
 \beq
     \label{3PottsGeneral_p=1}
-    V(\mathbf{X}) = \sum_{i=0}^2 \left(\frac{t_{2,i}-1}{2}X_i^2 + \frac{t_{3,i}}{3}X_i^3\right) - X_0 X_1 -X_1 X_2 - X_2 X_0
+    \begin{aligned}
+        V(\mathbf{X}) ={} & \frac{t_2-1}{2}X_0^2 + \frac{s_2-1}{2}X_1^2 + \frac{r_2-1}{2}X_2^2 \\
+                          & {}+ \frac{t_3}{3}X_0^3 + \frac{s_3}{3}X_1^3 + \frac{r_3}{3}X_2^3
+        - X_0 X_1 - X_1 X_2 - X_2 X_0
+    \end{aligned}
 \eeq
 In this case we have broken the $S_3$ symmetry.
 
-\begin{gather}
-    (t_{2,0},t_{3,0})=(t_2,t_3),\qquad
-    (t_{2,1},t_{3,1})=(s_2,s_3),\qquad
-    (t_{2,2},t_{3,2})=(r_2,r_3),\\
+\begin{equation}
     F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0.
-\end{gather}
-Following the abbreviated presentation of \cite{ZinnJustin:1999jg}, we display the complete
-coefficient of $y^6$ and the leading powers of $x$ in the remaining coefficients:
-\input{text/curves/potts_general}
+\end{equation}
+\begin{samepage}
+    Following the abbreviated presentation of \cite{ZinnJustin:1999jg}, we display the complete
+    coefficient of $y^6$ and the two leading powers of $x$ in the remaining coefficients:
+    \input{text/curves/potts_general}
+\end{samepage}
 In the coefficient of $y^j$, $1\leq j\leq5$, the ellipsis denotes powers of $x$ of degree at most
-$7-j$; the final ellipsis denotes a polynomial of degree at most six in $x$. These omitted terms
+$6-j$; the final ellipsis denotes a polynomial of degree at most six in $x$. These omitted terms
 include both explicit coupling-dependent coefficients and the correlator-dependent coefficients
 $c_{i,j}$. The complete expression is given in the accompanying notebook \cite{github:ak}. The
 displayed terms make the degrees $(\deg_xF_{(1)},\deg_yF_{(1)})=(8,7)$ manifest.

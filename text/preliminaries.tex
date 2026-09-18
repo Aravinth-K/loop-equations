@@ -114,12 +114,11 @@ gives the Jacobian contribution prescribed by the `split rule' \cite{Eynard:2004
 \eeq
 There are additional Jacobian terms from differentiating any occurrences of the varied matrix in
 $w_1$ and $w_2$. For variations of $X_i$ with $i\neq0$, only these inserted-word terms contribute,
-since the resolvent is independent of $X_i$. The resulting constraints may be expressed in terms of
+since the resolvent is independent of $X_i$. In the large $N$ limit we assume the factorisation property $\frac{1}{N}\langle \Tr A \Tr B \rangle = \frac{1}{N^2}\langle \Tr A \rangle \frac{1}{N} \langle \Tr B \rangle + \mathcal{O}(N^{-2})$. The resulting constraints may then be expressed in terms of
 the resolvent functions \eref{loopRes} and trace correlation functions \eref{trace}.
 
 We can classify loop equations by the level of their highest-level resolvent functions. If
-$V'(\mathbf{X})$ is degree $d$ in $\tilde{\mathbf{X}}$\footnote{The degree will generally be
-    different for variations corresponding to different $X_i\in\mathbf{X}$.}, then level-$k$ loop
+$V'(\mathbf{X})$ is degree $d$ in $\tilde{\mathbf{X}}$ then level-$k$ loop
 equations are given by \eref{reparam} with $L(w_2)=k-d-L(w_1)$. We can therefore define a
 corresponding set of level $k$ variations,
 %
@@ -129,7 +128,7 @@ corresponding set of level $k$ variations,
 \end{equation}
 %
 where $\mathbf{V}_m=\mathbf{X}^{m-1}\times \tilde{\mathbf{X}}$ and $\overline{\mathbf{V}}_m =
-    \tilde{\mathbf{X}}\times\mathbf{X}^{m-1}$. That is, the words $w_1$ and $w_2$ are constrained such
+    \tilde{\mathbf{X}}\times\mathbf{X}^{m-1}$, and we set $\mathbf{V}_0 = \overline{\mathbf{V}}_0 = \{1\}$, the empty word. That is, the words $w_1$ and $w_2$ are constrained such
 that the letters in contact with the loop operator are in $\tilde{\mathbf{X}}$. This is so that the
 resulting loop equations are distinct from lower-level loop equations.
 
@@ -141,7 +140,7 @@ resolvent. Comparing the number of equations with the number of auxiliary resolv
 eliminated provides a useful guide to the required level. Of course this alone does not establish
 closure as dependencies among the equations and relations among the correlators can change the effective rank. Instead, closure must be checked by the
 elimination itself. This may be regarded as a discrete version of loop equation solution to the
-two-matrix model \cite{Eynard:2004mh}, since one may expand the product of resolvent operators as
+two-matrix model \cite{Eynard:2002kg}, since one may expand the product of resolvent operators as
 an infinite sum of words in matrices of arbitrary length multiplying a single resolvent operator.
 It is hoped that this refined set of equations contains more information than if one only considers
 a small set of reparameterisations by products of loop operators, allowing us to compute the planar

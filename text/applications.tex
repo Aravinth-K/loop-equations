@@ -9,12 +9,11 @@ consider the simple example of a two-matrix model with a generic cubic potential
 \end{align}
 %
 This furnishes an example of a multi-matrix model which is not solvable through any known
-saddle-point or orthogonal polynomial approach. In particular, the loop equation method of section
-2 is not sufficient to compute the planar resolvent. However, as first demonstrated in
+saddle-point or orthogonal polynomial approach. In particular, this appears to fall outside the domain of applicability of the loop equation method of \cite{Eynard:2002kg}. However, as first demonstrated in
 \cite{Carroll:1995nj}, one may compute the resolvent of this model using our more granular loop
 equation strategy.
 
-For \eqref{2MMGeneric} the following are the minimal set of reparameterisations:
+For \eqref{2MMGeneric} the following are a sufficient set of reparameterisations:
 %
 \begin{align}
     \label{2MMGenericReps}
@@ -49,6 +48,15 @@ $F(z,W(z))=0$, with $(\deg_x F,\deg_y F)=(5,4)$ for generic couplings.
 \section{Quartic and cubic multi-matrix models}
 \label{sec:multimatrix}
 
+In this section we apply our method to the family of quartic two-matrix models and the three-matrix model considered by \cite{khalkhali2025bootstrappingcriticalbehaviormultimatrix}. There the authors adopted the matrix bootstrap which combined
+loop equations with positivity constraints to bound the planar correlators of these models. They used these to estimate 
+the critical couplings and the string susceptibility exponents.
+
+Here we revisit these models using the loop-equation procedure of Section 3. We show that a finite set of loop equations can 
+be reduced to an algebraic equation for each planar resolvent, providing an analytic description. The resulting spectral curves 
+are presented below, while Appendix C provides a complementary treatment of the quartic models using standard matrix-model methods 
+to confirm these results in the quartic two-matrix model cases and determine their planar moments and critical behaviour.
+
 \subsection{Quartic two-matrix models}
 Consider the ordered trace potential
 \begin{equation}
@@ -64,7 +72,7 @@ The coefficients $c_{i,j}$ refer to the curve in the corresponding case.
 \subsubsection{$(\alpha,\beta,\gamma)=(g,g,g)$ or $(g,-g,g)$}
 Both choices give the same form of the spectral curve,
 \input{text/curves/quartic_ggg}
-where $c_{0,2}=-1-4g p_{0,0}$. The curve has degrees $(\deg_xF,\deg_yF)=(3,4)$.
+The curve has degrees $(\deg_xF,\deg_yF)=(3,4)$.
 
 \subsubsection{$(\alpha,\beta,\gamma)=(g,g,-g)$}
 \input{text/curves/quartic_ggm}
@@ -72,7 +80,7 @@ The curve has degrees $(\deg_xF,\deg_yF)=(7,6)$.
 
 \subsubsection{$(\alpha,\beta,\gamma)=(-g,g,g)$}
 \input{text/curves/quartic_mgg}
-The curve again has degrees $(\deg_xF,\deg_yF)=(7,6)$.
+The curve again has degrees $(\deg_xF,\deg_yF)=(7,6)$. Remarkably we observe the same curve \eqref{curve:quartic_ggm} under the map $g\rightarrow -g$.
 
 \subsection{Cubic three-matrix model}
 For the potential
@@ -90,31 +98,23 @@ with
 
 \section{Boundary conditions of the Potts model}
 
-The Potts matrix model was proposed in \cite{Kazakov1988} wherein the solution was discussed for
+The $q$-state Potts matrix model was proposed in \cite{Kazakov1988} wherein the solution was discussed for
 the case of $q = 1$ and $q = 0$. For $q = 2$ we recover the Ising model on random surfaces, a
-two-matrix model, which has been solved \cite{Kazakov1986, Boulatov1987, Eynard:2004mh}. For the
-particular case of triangulations ($k=1$) and integer $0\leqslant q \leqslant 4$, the analytic
+two-matrix model, which has been solved \cite{Kazakov1986, Boulatov1987, Eynard:2002kg}. For the
+particular case of triangulations, corresponding to cubic potentials, and integer $0\leqslant q \leqslant 4$, the analytic
 properties of the single-matrix resolvent were first computed by Daul \cite{Daul:1994qy} using
 saddle-point methods. This was extended by Zinn-Justin \cite{ZinnJustin:1999jg}, who first defined
 the dilute $q$-state Potts matrix model and was able to derive an algebraic expression for the
 resolvent function. Using the method of loop equations Bonnet and Eynard \cite{Eynard:1999gp} were
 able to demonstrate that the resolvent satisfies an algebraic equation for rational
 $\arccos\!\left((q - 2)/2\right) / \pi $. Atkin, Niedner, and Wheater \cite{Atkin:2015ksy}
-demonstrated that the resolvents for sums of random matrices also satisfiy algebraic equations for
-integer $0\leqslant q \leqslant 4$ using saddle-point methods.
-
-%The 3-state Potts model on random triangulated surfaces is defined by a multi-matrix integral with potential
-%
-%\beq
-%V(\mathbf{X}) = \sum_{i=0}^2\frac{t_2 -1}{2} X_i^2 + \frac{t_3}{3} X_i^3 - X_0X_1 -X_1 X_2 - X_2X_0
-%\eeq
-%
-%where we have chosen the coefficients to align with the notation of \cite{Atkin:2015ksy}. This action is manifestly $S_3$-symmetric under exchange of the matrix degrees of freedom.
+demonstrated that the resolvents for sums of random matrices also satisfy algebraic equations for
+integer $0\leq q \leq 4$ using saddle-point methods.
 
 It is common to regard resolvents as describing boundary conditions on random graphs. In the
 diagrammatic expansion of the matrix integral each monomial of order $k+2>2$ generates a
 $(k+2)$-sided polygon. To leading order in the large $N$ expansion, where planar graphs dominate,
-we may interpret each term as a tesselation of the sphere by polygons in $q$ weighted colours,
+we may interpret each term as a tessellation of the sphere by polygons in $q$ weighted colours,
 corresponding to the $q$ different matrices. Given $\sigma\in S_q/(S_p\times S_{q-p})$, we define
 an associated resolvent function
 %
@@ -127,7 +127,7 @@ In the $S_q$-invariant case, for given $p$, all $|S_q/(S_p\times S_{q-p})|={q \c
 functions $W_{(p|\sigma)}(z)$ are described by the same function, so that we henceforth abbreviate
 $W_{(p)}(z):=W_{(p|\sigma_0)}(z)$ for a representative $\sigma_0$. For $p=1$, our definition of
 $W_{(p)}(z)$ reduces to the one studied in
-\cite{Kazakov1988,Daul:1994qy,ZinnJustin:1999jg,Bonnet:1999nf,Eynard:1999gp}. These functions
+\cite{Kazakov1988,Daul:1994qy,ZinnJustin:1999jg,Bonnet:1999nf,Eynard:1999gp,kulanthaivelu2019freevariableloopequations}. These functions
 generate graphs with a single connected boundary containing $p$ equally weighted colours. The
 matrix, and hence spin, used to define the resolvent defines the set of spins allowed on the
 boundary. Therefore we term the resolvent of a single matrix the \textit{fixed} boundary condition.
@@ -169,8 +169,7 @@ this change of basis the potential becomes
 
 %
 \noindent The resulting potential retains the $S_3\times\mathbb{Z}_2$ symmetry of \eref{3Potts_p=1}, but
-possesses many more interaction terms. The choice of basis is arbitrary, one should be able to
-reproduce the planar resolvent regardless of how we parameterised the potential. In this case our
+possesses many more interaction terms. The choice of basis is arbitrary. In this case our
 goal is to compute
 %
 \begin{equation}
@@ -183,8 +182,8 @@ algebraic constraints on the planar resolvent only if we extend to level $n_{\ma
 loop equations. The increased number of terms in the potential relative to \eref{3Potts_p=1}
 results in a greater number of resolvent functions present in the loop equations. At this level we
 have $\sum_{i=0}^6|\mathcal{W}_i|=144$ resolvent functions and $\sum_{i=0}^6|\mathcal{V}_i|=245$
-equations. Once redundancies have been removed, these loop equations possess a closed system of
-equations. We have not determined a minimal set of equations that form closed algebraic system of
+equations. Once redundancies have been removed, these loop equations contain a closed system of
+equations. We have not determined a minimal set of equations that form a closed algebraic system of
 equations.
 
 The final expression for the spectral curve,     $F_{(2)}\!\left(z,W_{(2)}(z)\right)=0$, is degree $10$ in the resolvent $W_{(2)}(z)$ and degree
@@ -217,7 +216,7 @@ $M_0$ with the following potential,
 \end{eqnarray}
 %
 The symmetry group of \eref{freeAction} possesses a $\mathbb{Z}_2\times\mathbb{Z}_2$ symmetry, with
-one $\mathbb{Z}_2$ symmetry relating $M_1$ and $M_2$. However, the correlators also possesses a
+one $\mathbb{Z}_2$ symmetry relating $M_1$ and $M_2$. However, the correlators also possess a
 further set of constraints, owing to their origin in the 3-state Potts model, that are not manifest
 in \eref{freeAction}. These are given by
 %
@@ -257,4 +256,4 @@ In this case we have broken the $S_3$ symmetry. Like in the symmetric $p=1$ case
 \begin{samepage}
     \input{text/curves/potts_general}
 \end{samepage}
-\noindent Unlike the symmetric case we find the degree of the curve to be $(\deg_xF_{(1)},\deg_yF_{(1)})=(8,7)$.
+\noindent Unlike the symmetric case we find the degree of the curve to be $(\deg_xF_{(1)},\deg_yF_{(1)})=(8,7)$. However one still finds that in the symmetric limit $r_2=s_2=t_2$ and $r_3=s_3=t_3$, the physical branch reproduces the fixed-boundary resolvent of Section 6.1.1.

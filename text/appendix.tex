@@ -5,9 +5,8 @@
 In this appendix we list the asymptotic expansions sheet by sheet, with coefficients in the
 parameters of the corresponding potential, retaining terms through $z^{-1}$. The physical sheet is
 labelled $0$ and has $W(z)_0=z^{-1}+\mathcal O(z^{-2})$. The remaining labels enumerate the local
-branches at infinity, keeping ramified families together. We follow the presentation of the
-expansions in \cite{Atkin:2015ksy}; the labels here do not prescribe the finite branch cuts. The
-accompanying notebooks contain the complete calculations \cite{github:ak}.
+branches at infinity, keeping ramified families together. The labels here do not prescribe the finite branch cuts. The
+accompanying notebooks contain the complete calculations \cite{Kulanthaivelu:LoopEquationsCode}.
 
 \subsection{Generic Cubic Two-Matrix Model}
 The four sheets of the generic cubic two-matrix curve have the expansions
@@ -68,7 +67,7 @@ Set $X_\pm=X_1\pm X_2$, keeping $X_0$ as the third matrix in \eqref{3Potts_p=1},
 \end{equation}
 The $X_-$ integral is Gaussian and can be integrated out. Diagonalising $X_+$ and $X_0$, with
 eigenvalues $\lambda_i$ and $\mu_i$, and performing the angular integral using the HCIZ formula
-\cite{Harish-Chandra538,Itzykson1979}, we obtain
+\cite{Harish-Chandra538}, we obtain
 \begin{equation}
     \label{MixedSaddle}
     Z\propto\int\prod_{i=1}^N d\lambda_i\,d\mu_i\,
@@ -102,7 +101,7 @@ Let $G(z)=G_{(2)}^Y(z)$, where $Y$ is the auxiliary Gaussian matrix coupled to $
     \mathcal F_{(2)}(z,G(z))=F_{(1)}(G(z)-z,G(z))=0.
 \end{equation}
 We use $\mathcal F_{(2)}$ for this auxiliary curve to distinguish it from the degree-ten resolvent
-curve $F_{(2)}$. Denote branch adjacent to the physical branch of $G$ by $G_0$. Combining the
+curve $F_{(2)}$. Denote the branch adjacent to the physical branch of $G$ by $G_0$. Combining the
 saddle-point equations with the HCIZ branch relations gives
 \begin{equation}
     \label{mixed:physical-relation}
@@ -316,12 +315,12 @@ Expanding these expressions perturbatively in $g$ yields
     \label{eq:qtm-second-series-m4}
 \end{align}
 
-For criticality, recall that generic finite endpoint $x_e=x(e)$ of the selected resolvent branch
+For criticality, recall that a generic finite endpoint $x_e=x(e)$ of the selected resolvent branch
 satisfies
 \begin{equation}
     x'(e)=0,\qquad x''(e)\neq0,\qquad y'(e)\neq0.
 \end{equation}
-Expanding $W_U(x(z))=V_1'(x(z))-y(z)$ gives,
+Expanding $W_U(x(z))=V_1'(x(z))-y(z)$ gives
 \begin{equation}
     W_U(x)=W_{\mathrm{reg}}(x)
     -y'(e)\sqrt{\frac{2(x-x_e)}{x''(e)}}
@@ -331,5 +330,5 @@ Expanding $W_U(x(z))=V_1'(x(z))-y(z)$ gives,
 where $W_{\mathrm{reg}}$ is analytic near $x_e$ and the sign of the square root specifies the
 sheet. Thus $x'(e)=0$ locates an ordinary endpoint; criticality additionally requires $y'(e)=0$,
 eliminating the leading square-root term. Imposing this condition gives the critical point
-$g_c=\pm\frac19$. We are unable to tune the parameter to achieve a higher critical point, and thus
+$g_c=\pm\frac19$. Expanding the correlators about this point we find the singular part of the second moment behaves as $m_2 \propto \epsilon^{3/2}$ with $\epsilon = (g-g_c)$.  We are unable to tune the parameter to achieve a higher critical point, and thus
 we conclude that the string susceptibility is again $\gamma_s = -\frac{1}{2}$

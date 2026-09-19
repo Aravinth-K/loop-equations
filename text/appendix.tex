@@ -18,11 +18,10 @@ The four sheets of the generic cubic two-matrix curve have the expansions
 For $(\alpha,\beta,\gamma)=(g,g,g)$ and $(g,-g,g)$, the four sheets are
 \input{text/asymptotics/quartic_ggg}
 \Needspace{7\baselineskip}
-For $(\alpha,\beta,\gamma)=(g,g,-g)$, the six sheets are
+\noindent For $(\alpha,\beta,\gamma)=(g,g,-g)$, the six sheets are
 \input{text/asymptotics/quartic_ggm}
 \Needspace{7\baselineskip}
-For $(\alpha,\beta,\gamma)=(-g,g,g)$, the six sheets are
-\input{text/asymptotics/quartic_mgg}
+\noindent For $(\alpha,\beta,\gamma)=(-g,g,g)$, the six sheets are the same as in the $(g,g,-g)$ case but with $g\rightarrow -g$.
 
 \subsubsection{Cubic three-matrix model}
 \input{text/asymptotics/cubic_three}
@@ -117,7 +116,7 @@ disjoint. Continuing $G_0$ through $C_0^+$ gives $G_{-1}$, and then through $C_\
 $G_{-2}$; the other two auxiliary sheets are $G_1(z)=G_{-1}(s(z))$ and $G_2(z)=G_{-2}(s(z))$.
 Choose the square-root branches so that $G_{-1}(z)=z+t_3^{-1/2}z^{1/2}+O(1)$ and
 $G_{-2}(z)=z-t_3^{-1/2}z^{1/2}+O(1)$, with $s(z)^{1/2}\sim iz^{1/2}$. The auxiliary sheet structure
-is shown in figure~\ref{fig:mixed-G-continuation}.
+is shown in Figure~\ref{fig:mixed-G-continuation}.
 \begin{figure}[htbp]
     \centering    \includegraphics[scale=0.85]{figures/MixedG.pdf}
     \caption{The five sheets of the auxiliary function $G$. Arrows join the sheets exchanged
@@ -140,7 +139,7 @@ while $W_0(s(z))$ remains analytic. Repeating this continuation gives
 \end{equation}
 The sheet labels agree with the asymptotic catalogue in section~\ref{app:mixed-asymptotics} and
 expanding \eqref{mixed:sheet-relations} at infinity reproduces the ten series. The complete
-continuation is shown in figure~\ref{fig:mixed-W-continuation}.
+continuation is shown in Figure~\ref{fig:mixed-W-continuation}.
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.85]{figures/MixedW.pdf}
@@ -156,12 +155,11 @@ These exchanges close on ten resolvent sheets, consistent with our results.
 \label{sec:qtm-solutions}
 
 In this section we show that the four quartic two-matrix models are more tractable than their
-original interactions suggest. Their spectral curves fall into two pairs. One pair reduces to the
-ordinary quartic one-matrix problem, while the other admits a simple rational parametrisation in
-the standard two-matrix framework. Routine methods then determine the remaining moments, the
+original interactions suggest. We show that their spectral curves can be grouped into two pairs. One pair reduces to the
+ordinary quartic one-matrix problem, while the other admits the usual rational parameterisation \cite{Eynard:2002kg}. Routine methods then determine the remaining moments, the
 critical couplings, and the string susceptibility.
 
-We use the normalisation of \cite{khalkhali2025bootstrappingcriticalbehaviormultimatrix} and label
+We use the normalisation and notation of \cite{khalkhali2025bootstrappingcriticalbehaviormultimatrix} and label
 the four sets of couplings by
 \begin{equation}
     \mathrm I:(g,g,g),\qquad
@@ -195,7 +193,7 @@ For model I, introduce the real orthogonal change of basis
 \end{equation}
 Expanding and using cyclicity of the trace gives
 \begin{equation}
-    \operatorname{Tr}\mathcal V_{\mathrm I}
+    \operatorname{Tr} V(A,B)_{\mathrm I}
     =\operatorname{Tr}\bigl[V(X)+V(Y)\bigr],
     \qquad V(x)=\frac12x^2+\frac g2x^4.
     \label{eq:qtm-factorization}
@@ -242,7 +240,7 @@ It suffices to solve model IV. The complex linear transformation
 \end{equation}
 gives
 \begin{equation}
-    \operatorname{Tr}\mathcal V_{\mathrm{IV}}
+    \operatorname{Tr} V(A,B)_{\mathrm{IV}}
     =\operatorname{Tr}\bigl[V_1(U)+V_2(V)-UV\bigr],
     \quad V_1(u)=V_2(u)=-\frac g2u^4.
     \label{eq:qtm-bilinear}
@@ -253,7 +251,7 @@ model in the standard bilinear class studied by Eynard \cite{Eynard:2002kg}.
 The spectral curve derived above takes Eynard's form
 \begin{equation}
     E(x,y)=(ax^3-y)(ay^3-x)
-    -a^2(x^2y^2-mxy+q)+1=0.
+    -a^2(x^2y^2-mxy+q)+1=0,
     \label{eq:qtm-second-curve}
 \end{equation}%
 where $a=-2g$, $m=-\frac1N\bigl\langle\operatorname{Tr}UV\bigr\rangle$,
@@ -330,5 +328,4 @@ Expanding $W_U(x(z))=V_1'(x(z))-y(z)$ gives
 where $W_{\mathrm{reg}}$ is analytic near $x_e$ and the sign of the square root specifies the
 sheet. Thus $x'(e)=0$ locates an ordinary endpoint; criticality additionally requires $y'(e)=0$,
 eliminating the leading square-root term. Imposing this condition gives the critical point
-$g_c=\pm\frac19$. Expanding the correlators about this point we find the singular part of the second moment behaves as $m_2 \propto \epsilon^{3/2}$ with $\epsilon = (g-g_c)$.  We are unable to tune the parameter to achieve a higher critical point, and thus
-we conclude that the string susceptibility is again $\gamma_s = -\frac{1}{2}$
+$g_c=\pm\frac19$. Expanding the correlators about $g_c$, we find $m_2^{\mathrm{sing}}\propto\delta^{3/2}$, where $\delta=1-81g^2$. The corresponding singular planar free energy behaves as $F_0^{\mathrm{sing}}\propto\delta^{5/2}$, giving $\gamma_s=-1/2$.

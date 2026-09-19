@@ -55,7 +55,7 @@ the critical couplings and the string susceptibility exponents.
 Here we revisit these models using the loop-equation procedure of Section 3. We show that a finite set of loop equations can 
 be reduced to an algebraic equation for each planar resolvent, providing an analytic description. The resulting spectral curves 
 are presented below, while Appendix C provides a complementary treatment of the quartic models using standard matrix-model methods 
-to confirm these results in the quartic two-matrix model cases and determine their planar moments and critical behaviour.
+to confirm and determine the planar moments and critical behaviour.
 
 \subsection{Quartic two-matrix models}
 Consider the ordered trace potential
@@ -72,7 +72,7 @@ The coefficients $c_{i,j}$ refer to the curve in the corresponding case.
 \subsubsection{$(\alpha,\beta,\gamma)=(g,g,g)$ or $(g,-g,g)$}
 Both choices give the same form of the spectral curve,
 \input{text/curves/quartic_ggg}
-The curve has degrees $(\deg_xF,\deg_yF)=(3,4)$.
+where $p_{0,0}=\frac{1}{N}\langle\Tr A^2\rangle$. The curve has degrees $(\deg_xF,\deg_yF)=(3,4)$.
 
 \subsubsection{$(\alpha,\beta,\gamma)=(g,g,-g)$}
 \input{text/curves/quartic_ggm}
@@ -109,7 +109,7 @@ resolvent function. Using the method of loop equations Bonnet and Eynard \cite{E
 able to demonstrate that the resolvent satisfies an algebraic equation for rational
 $\arccos\!\left((q - 2)/2\right) / \pi $. Atkin, Niedner, and Wheater \cite{Atkin:2015ksy}
 demonstrated that the resolvents for sums of random matrices also satisfy algebraic equations for
-integer $0\leq q \leq 4$ using saddle-point methods.
+integer $0< q < 4$ using saddle-point methods.
 
 It is common to regard resolvents as describing boundary conditions on random graphs. In the
 diagrammatic expansion of the matrix integral each monomial of order $k+2>2$ generates a
@@ -183,8 +183,7 @@ loop equations. The increased number of terms in the potential relative to \eref
 results in a greater number of resolvent functions present in the loop equations. At this level we
 have $\sum_{i=0}^6|\mathcal{W}_i|=144$ resolvent functions and $\sum_{i=0}^6|\mathcal{V}_i|=245$
 equations. Once redundancies have been removed, these loop equations contain a closed system of
-equations. We have not determined a minimal set of equations that form a closed algebraic system of
-equations.
+equations. We have not determined a minimal closed subsystem.
 
 The final expression for the spectral curve,     $F_{(2)}\!\left(z,W_{(2)}(z)\right)=0$, is degree $10$ in the resolvent $W_{(2)}(z)$ and degree
 $13$ in the boundary cosmological constant $z$. 
@@ -218,7 +217,7 @@ $M_0$ with the following potential,
 The symmetry group of \eref{freeAction} possesses a $\mathbb{Z}_2\times\mathbb{Z}_2$ symmetry, with
 one $\mathbb{Z}_2$ symmetry relating $M_1$ and $M_2$. However, the correlators also possess a
 further set of constraints, owing to their origin in the 3-state Potts model, that are not manifest
-in \eref{freeAction}. These are given by
+in \eref{freeAction}. This full inherited $S_3$ symmetry gives additional relations, including
 %
 \begin{equation}
     \label{extraCon}
@@ -244,6 +243,7 @@ one recovers the spectral curve for $G_{(3)}^Y(z)$ of \cite{Atkin:2015ksy}, $
 \input{text/curves/potts_free}
 
 \subsection{General 3-state Potts}
+We finally deploy our method to the 3-state Potts model with unequal cubic potentials.
 \beq
     \label{3PottsGeneral_p=1}
     \begin{aligned}
@@ -252,7 +252,7 @@ one recovers the spectral curve for $G_{(3)}^Y(z)$ of \cite{Atkin:2015ksy}, $
         - X_0 X_1 - X_1 X_2 - X_2 X_0
     \end{aligned}
 \eeq
-In this case we have broken the $S_3$ symmetry. Like in the symmetric $p=1$ case we show $F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0$.
+In this case we have broken the $S_3$ symmetry. A slightly simpler variant of this was considered in \cite{Atkin:2012fx} but to our knowledge no complete relation has been written down. Like in the symmetric $p=1$ case we show $F_{(1)}\!\left(z,t_3z^2+t_2z-W_{(1)}(z)\right)=0$.
 \begin{samepage}
     \input{text/curves/potts_general}
 \end{samepage}
